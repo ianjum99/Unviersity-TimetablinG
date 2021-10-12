@@ -1,12 +1,13 @@
-//actual nQueens algo
-fun nQueens(row: Int, n: Int) {
-    outer@ for (x in 1..n) {
-        for (y in 1..row - 1) {
-            if (c[y] == x) continue@outer
-            if (row - y == Math.abs(x - c[y])) continue@outer           
+class nQueens {
+    fun nQueensAlgo(row: Int, n: Int) {
+        outer@ for (x in 1..n) {
+            for (y in 1..row - 1) {
+                if (c[y] == x) continue@outer
+                if (row - y == Math.abs(x - c[y])) continue@outer
+            }
+            c[row] = x
+            if (row < n) nQueensAlgo(row + 1, n)
+            else if (++count == 1) f = c.drop(1).map { it - 1 }.toString()
         }
-        c[row] = x
-        if (row < n) nQueens(row + 1, n)
-        else if (++count == 1) f = c.drop(1).map { it - 1 }.toString()
     }
 }
