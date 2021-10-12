@@ -12,6 +12,7 @@
    - [ ] Refactor the code to our use case
  - [ ] Java GUI (Preferably using Swing/other prebuilt GUI libs)
  - [ ] Implement OOP design- Kotlin/Java
+   - [ ] Inheritance, Polymorphism, and abstraction are implemented
  - [ ] Persistence and Lambda (Save state functionality)- Kotlin/Java
  - [ ] Clash Detection- Kotlin/Java
  - [ ] Clash Detection- Scala
