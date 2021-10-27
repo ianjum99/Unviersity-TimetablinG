@@ -3,7 +3,7 @@
  
  ## Group Members
  - Alfie Murphy
- - Edvinas Radvilavicius
+ - Edvinas Radvilavicius (how the fuck does one pronounce this?)
  - Francesco Romano
  - Ibrahim Anjum
  
