@@ -1,20 +1,18 @@
 # COMP-1815
- This is a repo with all work regarding Comp-1815 JVM programming languages
+ This is a repo with all work regarding COMP-1815 JVM programming languages
  
  ## Group Members
  - Alfie Murphy
- - Edvinas Radvilavicius (how the fuck does one pronounce this?)
+ - Edvinas Radvilavicius
  - Francesco Romano
  - Ibrahim Anjum
  
  ## Tasks to do
- - [x] Have the main n Queens Algo working
-   - [ ] Refactor the code to our use case
  - [ ] Java GUI (Preferably using Swing/other prebuilt GUI libs)
  - [ ] Implement OOP design- Kotlin/Java
    - [ ] Inheritance, Polymorphism, and abstraction are implemented
  - [ ] Persistence and Lambda (Save state functionality)- Kotlin/Java
- - [ ] Clash Detection- Kotlin/Java
+ - [ ] Clash Detection- Kotlin
  - [ ] Clash Detection- Scala
  - [ ] Integration of all languages- Scala/Kotlin/Java
  
