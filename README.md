@@ -12,7 +12,7 @@
  - [ ] Implement OOP design- Kotlin/Java
    - [ ] Inheritance, Polymorphism, and abstraction are implemented
  - [ ] Persistence and Lambda (Save state functionality)- Kotlin/Java
- - [ ] Clash Detection- Kotlin/Java
+ - [ ] Clash Detection- Kotlin
  - [ ] Clash Detection- Scala
  - [ ] Integration of all languages- Scala/Kotlin/Java
  
