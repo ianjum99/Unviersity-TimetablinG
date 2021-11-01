@@ -8,8 +8,6 @@
  - Ibrahim Anjum
  
  ## Tasks to do
- - [x] Have the main n Queens Algo working
-   - [ ] Refactor the code to our use case
  - [ ] Java GUI (Preferably using Swing/other prebuilt GUI libs)
  - [ ] Implement OOP design- Kotlin/Java
    - [ ] Inheritance, Polymorphism, and abstraction are implemented
