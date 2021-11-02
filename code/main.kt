@@ -1,18 +1,22 @@
-var count = 0
-var c = IntArray(0)
-var f = ""
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
+import java.io.File
+
+data class Course(val name: String, val underOrPost: String, val modules: MutableList<String>) {
+
+}
+
+val mapper = jacksonObjectMapper()
+var filePath = "code/db.json"
 
 fun main() {
-    for (n in 1..8)
-    {
-        count = 0
-        c = IntArray(n + 1)
-        f = ""
-         val nQueens= N_Queens()
-        nQueens.N_QueensAlgo(1, n)
-        println("For a $n x $n board:")
-        println("  Solutions = $count")
-        if (count > 0) println("  First is $f")
-        println()
-    }
+//    val modulesList = mutableListOf<String>("JVM", "FYP")
+//    val cs = Course(name = "Computer Science", underOrPost = "Undergraduate", modules = modulesList)
+//    val userJson = mapper.writeValueAsString(cs)
+//    File("code/db.json").writeText(userJson)
+
+    val courses = mapper.readValue<Course>(File(filePath))
+    println(courses.modules)
 }
+
+

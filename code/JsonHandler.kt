@@ -12,6 +12,5 @@ class JsonHandler (val filename: String) {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
     }
 }
