@@ -10,13 +10,19 @@ val mapper = jacksonObjectMapper()
 var filePath = "code/db.json"
 
 fun main() {
-//    val modulesList = mutableListOf<String>("JVM", "FYP")
-//    val cs = Course(name = "Computer Science", underOrPost = "Undergraduate", modules = modulesList)
-//    val userJson = mapper.writeValueAsString(cs)
-//    File("code/db.json").writeText(userJson)
+    readFromJson()
+}
 
+// turns a kotlin object into a json file
+fun writeToJson() {
+    val modulesList = mutableListOf<String>("JVM", "FYP")
+    val cs = Course(name = "Computer Science", underOrPost = "Undergraduate", modules = modulesList)
+    val userJson = mapper.writeValueAsString(cs)
+    File("code/db.json").writeText(userJson)
+}
+
+// reads the json file and maps it back into a kotlin object
+fun readFromJson() {
     val courses = mapper.readValue<Course>(File(filePath))
     println(courses.modules)
 }
-
-
