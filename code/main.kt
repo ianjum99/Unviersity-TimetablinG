@@ -11,10 +11,19 @@ fun main() {
 
     val week_one = Timetable()
 
-    for (day in 0..4) {
-        print(week_one.days[day].hours)
-        println()
+
+    for (i in activitiesInstances) {
+        if (week_one.days[i.day].hours[i.start_time] == null) {
+            week_one.days[i.day].hours[i.start_time] = i
+        } else {
+            println("clash")
+        }
     }
-
-
+    val weekdays: Array<String> = arrayOf("Monday","Tuesday","Wednesday","Thursday","Friday")
+    for (day in 0..4) {
+        println()
+        println(weekdays[day])
+        print(week_one.days[day].hours.toSortedMap())
+    }
 }
+
