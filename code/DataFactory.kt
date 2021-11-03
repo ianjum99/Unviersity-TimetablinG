@@ -1,11 +1,12 @@
 package quicktype
 
 import com.beust.klaxon.*
+import com.google.gson.Gson
 
 private val klaxon = Klaxon()
 
 class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elements) {
-    public fun toJson() = klaxon.toJsonString(this)
+    public fun toJson() = Gson().toJson(this)
 
     companion object {
         public fun fromJson(json: String) = DataFactory(klaxon.parseArray<Programme>(json)!!)
@@ -15,7 +16,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
 data class Programme (
     val name: String,
     val type: String,
-    val modules: ArrayList<Module>
+    val modules: ArrayList<Module>?
 )
 
 data class Module (
@@ -23,16 +24,16 @@ data class Module (
     val name: String,
     val compulsory: Boolean,
 
-    @Json(name = "module_leader")
+    @Json(name = "moduleLeader")
     val moduleLeader: String,
     val term: Long,
-    val activities: ArrayList<Activity>
+    val activities: ArrayList<Activity>?
 )
 
-data class Activity (
-    @Json(name = "type_of_activity")
-    val typeOfActivity: String,
-    val day: Long,
-    val time: Long,
-    val duration: Long
+data class Activity(
+    @Json(name = "typeOfActivity")
+    val typeOfActivity: String?,
+    val day: Int?,
+    val time: Int?,
+    val duration: Int?
 )

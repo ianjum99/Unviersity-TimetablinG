@@ -1,13 +1,18 @@
 import code.JsonHandler
+import com.google.gson.Gson
 import quicktype.Activity
-import quicktype.Programme
-import quicktype.DataFactory
 import quicktype.DataFactory.Companion.fromJson
 import quicktype.Module
+import quicktype.Programme
 
 
 fun main() {
     val jsonString = JsonHandler("programmes.json").readJSONFile().toString()
-    var programmes = DataFactory.fromJson(jsonString)
+    var programmes = fromJson(jsonString)
+
+//    programmes[0].modules[0].activities.add(Activity("TEST2",2,12,1))
+//    programmes[0].modules?.add(Module(1,"computer",false,"Peter Smith",2, ArrayList<Activity>()))
+//    println(programmes[0].modules!![2].activities!!.add(Activity("TEST2",2,12,1)))
+    JsonHandler("programmes.json").saveJsonFile(programmes.toJson())
 }
 
