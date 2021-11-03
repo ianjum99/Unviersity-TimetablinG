@@ -21,7 +21,9 @@ class JsonHandler (val fileName: String) {
         }
         return json_data
     }
-    fun saveJsonFile() {
-        print(fileName)
+    fun saveJsonFile(JsonData : String) {
+        File(fileName).bufferedWriter().use { out ->
+            out.write(JsonData)
+        }
     }
 }

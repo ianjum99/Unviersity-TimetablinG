@@ -11,13 +11,13 @@
                 "term":1,
                 "activities":[
                     {
-                        "type_of_activity":"L",
+                        "typeOfActivity":"L",
                         "day":2,
                         "time":16,
                         "duration":1
                     },
                     {
-                        "type_of_activity":"T",
+                        "typeOfActivity":"T",
                         "day":4,
                         "time":12,
                         "duration":1
@@ -32,13 +32,13 @@
                 "term":1,
                 "activities":[
                     {
-                        "type_of_activity":"L",
+                        "typeOfActivity":"L",
                         "day":1,
                         "time":12,
                         "duration":1
                     },
                     {
-                        "type_of_activity":"S",
+                        "typeOfActivity":"S",
                         "day":2,
                         "time":13,
                         "duration":1
@@ -59,13 +59,13 @@
                 "term":1,
                 "activities":[
                     {
-                        "type_of_activity":"L",
+                        "typeOfActivity":"L",
                         "day":2,
                         "time":16,
                         "duration":1
                     },
                     {
-                        "type_of_activity":"T",
+                        "typeOfActivity":"T",
                         "day":4,
                         "time":12,
                         "duration":1
@@ -80,13 +80,13 @@
                 "term":1,
                 "activities":[
                     {
-                        "type_of_activity":"L",
+                        "typeOfActivity":"L",
                         "day":1,
                         "time":12,
                         "duration":1
                     },
                     {
-                        "type_of_activity":"S",
+                        "typeOfActivity":"S",
                         "day":2,
                         "time":13,
                         "duration":1
