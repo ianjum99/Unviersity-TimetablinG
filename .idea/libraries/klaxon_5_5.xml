@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="gson-2.8.9">
+  <library name="klaxon-5.5">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/gson-2.8.9.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/klaxon-5.5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

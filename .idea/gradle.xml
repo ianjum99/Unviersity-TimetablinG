@@ -7,11 +7,11 @@
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/untitled" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../../../../Gradle/gradle-6.9.1" />
-            <id>mavenCentral</id>
-            <name>mavenCentral</name>
-            <url>https://repo1.maven.org/maven2/</url>
-          </repository>
-        </repositories>
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/untitled" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
