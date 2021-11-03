@@ -7,7 +7,7 @@
                 "id":2,
                 "name":"Geoffry",
                 "compulsory":false,
-                "module_leader":"Herby",
+                "moduleLeader":"Herby",
                 "term":1,
                 "activities":[
                     {
@@ -28,7 +28,7 @@
                 "id":3,
                 "name":"Jack",
                 "compulsory":false,
-                "module_leader":"Herby",
+                "moduleLeader":"Herby",
                 "term":1,
                 "activities":[
                     {
@@ -55,7 +55,7 @@
                 "id":2,
                 "name":"FRA",
                 "compulsory":false,
-                "module_leader":"Herby",
+                "moduleLeader":"Herby",
                 "term":1,
                 "activities":[
                     {
@@ -76,7 +76,7 @@
                 "id":3,
                 "name":"Jack",
                 "compulsory":false,
-                "module_leader":"Herby",
+                "moduleLeader":"Herby",
                 "term":1,
                 "activities":[
                     {
