@@ -1,98 +1,94 @@
-[
-    {
+{
+    "1":{
         "name":"Software Engineering",
         "type":"U",
-        "modules":[
-            {
-                "id":2,
+        "modules":{
+            "COMP1234":{
                 "name":"Geoffry",
                 "compulsory":false,
                 "moduleLeader":"Herby",
                 "term":1,
-                "activities":[
-                    {
+                "activities":{
+                    "1":{
                         "typeOfActivity":"L",
                         "day":2,
                         "time":16,
                         "duration":1
                     },
-                    {
+                    "2":{
                         "typeOfActivity":"T",
                         "day":4,
                         "time":12,
                         "duration":1
                     }
-                ]
+                }
             },
-            {
-                "id":3,
-                "name":"Jack",
+            "COMP4567":{
+                "name":"TEST",
                 "compulsory":false,
                 "moduleLeader":"Herby",
                 "term":1,
-                "activities":[
-                    {
+                "activities":{
+                    "1":{
                         "typeOfActivity":"L",
-                        "day":1,
-                        "time":12,
-                        "duration":1
-                    },
-                    {
-                        "typeOfActivity":"S",
-                        "day":2,
+                        "day":3,
                         "time":13,
                         "duration":1
+                    },
+                    "2":{
+                        "typeOfActivity":"T",
+                        "day":2,
+                        "time":11,
+                        "duration":1
                     }
-                ]
+                }
             }
-        ]
+        }
     },
-    {
+    "2":{
         "name":"Computer Science",
         "type":"U",
-        "modules":[
-            {
-                "id":2,
-                "name":"FRA",
+        "modules":{
+            "COMP1234":{
+                "name":"Geoffry",
                 "compulsory":false,
                 "moduleLeader":"Herby",
                 "term":1,
-                "activities":[
-                    {
+                "activities":{
+                    "1":{
                         "typeOfActivity":"L",
                         "day":2,
                         "time":16,
                         "duration":1
                     },
-                    {
+                    "2":{
                         "typeOfActivity":"T",
                         "day":4,
                         "time":12,
                         "duration":1
                     }
-                ]
+                }
             },
-            {
-                "id":3,
-                "name":"Jack",
+            "COMP4567":{
+                "name":"TEST",
                 "compulsory":false,
                 "moduleLeader":"Herby",
                 "term":1,
-                "activities":[
-                    {
+                "activities":{
+                    "1":{
                         "typeOfActivity":"L",
-                        "day":1,
-                        "time":12,
-                        "duration":1
-                    },
-                    {
-                        "typeOfActivity":"S",
-                        "day":2,
+                        "day":3,
                         "time":13,
                         "duration":1
+                    },
+                    "2":{
+                        "typeOfActivity":"T",
+                        "day":2,
+                        "time":11,
+                        "duration":1
                     }
-                ]
+                }
             }
-        ]
+        }
     }
-]
+}
