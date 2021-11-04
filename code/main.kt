@@ -13,6 +13,6 @@ fun main() {
 //    programmes[0].modules[0].activities.add(Activity("TEST2",2,12,1))
 //    programmes[0].modules?.add(Module(1,"computer",false,"Peter Smith",2, ArrayList<Activity>()))
 //    println(programmes[0].modules!![2].activities!!.add(Activity("TEST2",2,12,1)))
-    JsonHandler("programmes.json").saveJsonFile(programmes.toJson())
-}
+    println(programmes[0])
 
+}
