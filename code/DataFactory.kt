@@ -1,5 +1,3 @@
-package quicktype
-
 import com.beust.klaxon.*
 import com.google.gson.Gson
 
@@ -12,7 +10,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         public fun fromJson(json: String) = DataFactory(klaxon.parseArray<Programme>(json)!!)
     }
 
-        fun createProgramme(programme: Programme) {
+    fun createProgramme(programme: Programme) {
         this.add(programme)
     }
 
@@ -42,7 +40,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
                 return i
             }
         }
-    return null}
+        return null}
 }
 
 data class Programme (
