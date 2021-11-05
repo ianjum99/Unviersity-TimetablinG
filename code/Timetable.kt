@@ -12,4 +12,10 @@ class Timetable {
         }
         return timetable
     }
+
+    fun fillTimetable(timetable: HashMap<String, HashMap<String, Activity?>?>, listOfActivities: ArrayList<Activity>): HashMap<String, HashMap<String, Activity?>?> {
+        for (activity in listOfActivities) {
+            timetable[activity.day.toString()]!![activity.time.toString()] = activity
+        }
+    return timetable}
 }

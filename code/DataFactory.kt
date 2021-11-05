@@ -1,13 +1,15 @@
 import com.beust.klaxon.*
 import com.google.gson.Gson
+import kotlin.reflect.full.memberProperties
+import kotlin.reflect.full.primaryConstructor
 
 private val klaxon = Klaxon()
 
 class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elements) {
-    public fun toJson() = Gson().toJson(this)
+    fun toJson() = Gson().toJson(this)!!
 
     companion object {
-        public fun fromJson(json: String) = DataFactory(klaxon.parseArray<Programme>(json)!!)
+        fun fromJson(json: String) = DataFactory(klaxon.parseArray<Programme>(json)!!)
     }
 
     fun createProgramme(programme: Programme) {
@@ -34,33 +36,53 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         module.activities?.remove(activity)
     }
 
-    fun getProgrammeInstance(programmeName: String): Programme? {
-        for (i in this) {
-            if (i.name == programmeName) {
-                return i
+    fun getProgrammeFromActivity(activity: Activity): Programme {
+        return(filter { it -> (it.modules!!.filter { it.activities!!.contains(activity)}).isNotEmpty()}).first()
+    }
+
+    fun getModuleFromActivity(activity: Activity): Module {
+        val programme = this.getProgrammeFromActivity(activity)
+        return programme.modules!!.filter { it.activities!!.contains(activity)}.first()
+    }
+
+    fun getAllActivities(): ArrayList<Activity> {
+        var listOfActivities = ArrayList<Activity>()
+        for (programme in this) {
+            for (module in programme.modules!!) {
+                for (activity in module.activities!!) {
+                    listOfActivities.add(activity)
+                }
             }
         }
-        return null}
+    return listOfActivities}
+
 }
 
+
+
 data class Programme (
-        val name: String,
-        val type: String,
-        val modules: ArrayList<Module>?
+    val name: String,
+    val type: String,
+    val modules: ArrayList<Module>?
 )
 
 data class Module (
-        val id: Long,
-        val name: String,
-        val compulsory: Boolean,
-        val moduleLeader: String,
-        val term: Long,
-        val activities: ArrayList<Activity>?
+    val id: Long,
+    val name: String,
+    val compulsory: Boolean,
+    val moduleLeader: String,
+    val term: Long,
+    val activities: ArrayList<Activity>?,
 )
 
 data class Activity(
-        val typeOfActivity: String?,
-        val day: Int?,
-        val time: Int?,
-        val duration: Int?
+    val typeOfActivity: String?,
+    val day: Int?,
+    val time: Int?,
+    val duration: Int?,
 )
+
+
+
+
+

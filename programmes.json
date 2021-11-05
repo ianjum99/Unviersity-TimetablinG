@@ -12,8 +12,8 @@
         "activities":[
           {
             "typeOfActivity":"L",
-            "day":2,
-            "time":16,
+            "day":1,
+            "time":12,
             "duration":1
           },
           {
@@ -33,7 +33,7 @@
         "activities":[
           {
             "typeOfActivity":"L",
-            "day":1,
+            "day":3,
             "time":12,
             "duration":1
           },
@@ -60,14 +60,14 @@
         "activities":[
           {
             "typeOfActivity":"L",
-            "day":2,
+            "day":4,
             "time":16,
             "duration":1
           },
           {
             "typeOfActivity":"T",
             "day":4,
-            "time":12,
+            "time":9,
             "duration":1
           }
         ]
@@ -81,14 +81,14 @@
         "activities":[
           {
             "typeOfActivity":"L",
-            "day":1,
-            "time":12,
+            "day":3,
+            "time":17,
             "duration":1
           },
           {
             "typeOfActivity":"S",
-            "day":2,
-            "time":13,
+            "day":4,
+            "time":19,
             "duration":1
           }
         ]
