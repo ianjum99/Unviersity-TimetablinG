@@ -5,20 +5,20 @@
     "modules":[
       {
         "id":2,
-        "name":"Geoffry",
+        "name":"JVM",
         "compulsory":false,
         "moduleLeader":"Herby",
         "term":1,
         "activities":[
           {
-            "typeOfActivity":"L",
+            "typeOfActivity":"Lecture",
             "day":1,
             "time":12,
             "duration":1
           },
           {
-            "typeOfActivity":"T",
-            "day":4,
+            "typeOfActivity":"Tutorial",
+            "day":1,
             "time":12,
             "duration":1
           }

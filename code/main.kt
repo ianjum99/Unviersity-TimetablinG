@@ -9,5 +9,12 @@ fun main() {
 
     val test =(programmes.getAllActivities())
 
+    var timetable = Timetable(programmes)
+    (timetable.fillTimetable())
+    println(timetable.timetable)
+
+    val mockActivity = Activity("Lecture", 1,12,1)
+
+    timetable.checkForClashes(mockActivity)
 
 }
