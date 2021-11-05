@@ -9,8 +9,5 @@ fun main() {
 
     val test =(programmes.getAllActivities())
 
-    var timetable = Timetable().createTimetable()
-    var filled = Timetable().fillTimetable(timetable,test)
 
-    println(filled)
 }
