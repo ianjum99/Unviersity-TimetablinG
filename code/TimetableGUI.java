@@ -4,39 +4,26 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
-public class GUI {
+public class TimetableGUI {
 
     private JLabel timetableLabel;
     private JButton menuButton;
     private JPanel mainPanel;
-    private JLabel mondayLabel;
-    private JLabel tuesdayLabel;
-    private JLabel wednesdayLabel;
-    private JLabel thursdayLabel;
-    private JLabel fridayLabel;
+    private JLabel mondayLabel, tuesdayLabel, wednesdayLabel, thursdayLabel, fridayLabel;
     private JLabel closeButton;
     private JFrame frame;
     private JPanel topBar;
-    private JLabel nineLabel;
-    private JLabel tenLabel;
-    private JLabel elevenLabel;
-    private JLabel twelveLabel;
-    private JLabel oneLabel;
-    private JLabel twoLabel;
-    private JLabel threeLabel;
-    private JLabel fourLabel;
-    private JLabel fiveLabel;
-    private JLabel sixLabel;
-    private JLabel sevenLabel;
-    private JLabel eightLabel;
+    private JLabel nineLabel, tenLabel, elevenLabel, twelveLabel, thirteenLabel, fourteenLabel, fifteenLabel;
+    private JLabel sixteenLabel, seventeenLabel, eighteenLabel, nineteenLabel, twentyLabel;
 
-    private int mouseX, mouseY;
+
+    private int posX, posY;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    GUI window = new GUI();
+                    TimetableGUI window = new TimetableGUI();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -45,7 +32,7 @@ public class GUI {
     }
 
 
-    public GUI() {
+    public TimetableGUI() {
         init();
     }
 
@@ -68,14 +55,22 @@ public class GUI {
         topBar.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseDragged(MouseEvent e) {
-                frame.setLocation(frame.getX() + e.getX() - mouseX, frame.getY() + e.getY() - mouseY);
+                frame.setLocation(frame.getX() + e.getX() - posX, frame.getY() + e.getY() - posY);
             }
         });
         topBar.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                mouseX = e.getX();
-                mouseY = e.getY();
+                posX = e.getX();
+                posY = e.getY();
+            }
+        });
+
+        // starts a new instance of MenuGUI and calls the getInstance() method to check if one already exists
+        menuButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                MenuGUI menuWindow  = MenuGUI.getInstance();
             }
         });
 

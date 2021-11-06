@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TimetableGUI">
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="28" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
@@ -8,9 +8,9 @@
     <properties>
       <background color="-14808803"/>
       <foreground color="-15136488"/>
-      <minimumSize width="500" height="500"/>
+      <minimumSize width="1000" height="650"/>
       <opaque value="true"/>
-      <preferredSize width="1000" height="1000"/>
+      <preferredSize width="1000" height="650"/>
     </properties>
     <border type="none"/>
     <children>
@@ -163,7 +163,7 @@
           <text value="12:00"/>
         </properties>
       </component>
-      <component id="c6f10" class="javax.swing.JLabel" binding="oneLabel">
+      <component id="c6f10" class="javax.swing.JLabel" binding="thirteenLabel">
         <constraints>
           <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -173,7 +173,7 @@
           <text value="13:00"/>
         </properties>
       </component>
-      <component id="d49bf" class="javax.swing.JLabel" binding="twoLabel">
+      <component id="d49bf" class="javax.swing.JLabel" binding="fourteenLabel">
         <constraints>
           <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -183,7 +183,7 @@
           <text value="14:00"/>
         </properties>
       </component>
-      <component id="1a0d8" class="javax.swing.JLabel" binding="threeLabel">
+      <component id="1a0d8" class="javax.swing.JLabel" binding="fifteenLabel">
         <constraints>
           <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -193,7 +193,7 @@
           <text value="15:00"/>
         </properties>
       </component>
-      <component id="f17aa" class="javax.swing.JLabel" binding="fourLabel">
+      <component id="f17aa" class="javax.swing.JLabel" binding="sixteenLabel">
         <constraints>
           <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -203,7 +203,7 @@
           <text value="16:00"/>
         </properties>
       </component>
-      <component id="98598" class="javax.swing.JLabel" binding="fiveLabel">
+      <component id="98598" class="javax.swing.JLabel" binding="seventeenLabel">
         <constraints>
           <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -213,7 +213,7 @@
           <text value="17:00"/>
         </properties>
       </component>
-      <component id="293d6" class="javax.swing.JLabel" binding="sixLabel">
+      <component id="293d6" class="javax.swing.JLabel" binding="eighteenLabel">
         <constraints>
           <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -223,7 +223,7 @@
           <text value="18:00"/>
         </properties>
       </component>
-      <component id="e3ad0" class="javax.swing.JLabel" binding="sevenLabel">
+      <component id="e3ad0" class="javax.swing.JLabel" binding="nineteenLabel">
         <constraints>
           <grid row="24" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -233,7 +233,7 @@
           <text value="19:00"/>
         </properties>
       </component>
-      <component id="2aceb" class="javax.swing.JLabel" binding="eightLabel">
+      <component id="2aceb" class="javax.swing.JLabel" binding="twentyLabel">
         <constraints>
           <grid row="26" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
