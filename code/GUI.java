@@ -7,7 +7,6 @@ import java.awt.event.MouseMotionAdapter;
 public class GUI {
 
     private JLabel timetableLabel;
-    private JLabel dateLabel;
     private JButton menuButton;
     private JPanel mainPanel;
     private JLabel mondayLabel;
