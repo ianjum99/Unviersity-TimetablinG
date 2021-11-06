@@ -25,16 +25,4 @@ class Timetable (var listOfProgrammes: DataFactory, var timetable: HashMap<Strin
             }
         }
     }
-
-    fun checkForClashes(newActivity: Activity) {
-        var numberOfClashes = 0
-        val listOfActivities = listOfProgrammes.getAllActivities()
-
-        for (activity in listOfActivities) {
-            if (activity.time == newActivity.time && activity.day == newActivity.day) {
-                numberOfClashes += 1
-            }
-        }
-        println("Number of clashes: ${numberOfClashes}")
-    }
 }

@@ -29,6 +29,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun createActivity(module: Module, activity: Activity) {
+
         module.activities?.add(activity)
     }
 
@@ -55,6 +56,21 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
             }
         }
     return listOfActivities}
+
+    fun checkForClashes(newActivity: Activity, newActivityModule: Module): Pair<Int, ArrayList<Activity>> {
+        var numberOfClashes = 0
+        val listOfActivities = this.getAllActivities()
+        var clashesWith: ArrayList<Activity> = arrayListOf()
+
+        for (activity in listOfActivities) {
+            if (this.getModuleFromActivity(activity).term == newActivityModule.term) {
+                if (activity.time == newActivity.time && activity.day == newActivity.day) {
+                    numberOfClashes += 1
+                    clashesWith.add(activity)
+                }
+            }
+        }
+        return Pair(numberOfClashes,clashesWith)}
 
 }
 
