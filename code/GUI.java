@@ -17,6 +17,18 @@ public class GUI {
     private JLabel closeButton;
     private JFrame frame;
     private JPanel topBar;
+    private JLabel nineLabel;
+    private JLabel tenLabel;
+    private JLabel elevenLabel;
+    private JLabel twelveLabel;
+    private JLabel oneLabel;
+    private JLabel twoLabel;
+    private JLabel threeLabel;
+    private JLabel fourLabel;
+    private JLabel fiveLabel;
+    private JLabel sixLabel;
+    private JLabel sevenLabel;
+    private JLabel eightLabel;
 
     private int mouseX, mouseY;
 
