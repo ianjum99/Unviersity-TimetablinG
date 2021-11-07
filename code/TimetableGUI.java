@@ -44,6 +44,7 @@ public class TimetableGUI {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -66,7 +67,6 @@ public class TimetableGUI {
             }
         });
 
-        // starts a new instance of MenuGUI and calls the getInstance() method to check if one already exists
         menuButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
