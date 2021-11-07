@@ -8,13 +8,13 @@
  - Ibrahim Anjum
  
  ## Tasks to do
- - [ ] Java GUI (Preferably using Swing/other prebuilt GUI libs)
- - [ ] Implement OOP design- Kotlin/Java
+ - [ ] Java GUI (Swing UI Designer)
+ - [ ] Implement OOP design - Kotlin/Java
    - [ ] Inheritance, Polymorphism, and abstraction are implemented
- - [ ] Persistence and Lambda (Save state functionality)- Kotlin/Java
- - [ ] Clash Detection- Kotlin
- - [ ] Clash Detection- Scala
- - [ ] Integration of all languages- Scala/Kotlin/Java
+ - [X] Persistence and Lambda (Save state functionality) - Kotlin
+ - [ ] Clash Detection - Kotlin
+ - [ ] Clash Detection - Scala
+ - [ ] Integration of all languages - Scala/Kotlin/Java
  
  ## Report
  
