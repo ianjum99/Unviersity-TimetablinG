@@ -50,7 +50,7 @@
       <vspacer id="95612">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="50"/>
+            <preferred-size width="0" height="30"/>
             <maximum-size width="0" height="50"/>
           </grid>
         </constraints>
@@ -94,70 +94,62 @@
           <text value="View"/>
         </properties>
       </component>
-      <grid id="58962" binding="addPanel" layout-manager="GridLayoutManager" row-count="6" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="58962" binding="addPanel" layout-manager="GridLayoutManager" row-count="22" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-13822932"/>
+          <foreground color="-11466190"/>
         </properties>
         <border type="none"/>
         <children>
           <component id="c7c1a" class="javax.swing.JLabel" binding="programmeName">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="16" style="0"/>
               <foreground color="-1"/>
               <text value="Progamme Name:"/>
             </properties>
           </component>
           <vspacer id="6adcb">
             <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="21" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
-          <component id="a10d" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font name="Arial" size="16"/>
-              <foreground color="-1"/>
-              <text value="Undergraduate or Postgraduate:"/>
-            </properties>
-          </component>
-          <component id="5152a" class="javax.swing.JLabel">
+          <component id="a10d" class="javax.swing.JLabel" binding="underOrPostLabel">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="16" style="0"/>
               <foreground color="-1"/>
-              <text value="Year of Study:"/>
+              <text value="Undergraduate or Postgraduate:"/>
             </properties>
           </component>
-          <component id="64fff" class="javax.swing.JLabel">
+          <component id="5152a" class="javax.swing.JLabel" binding="yearOfStudyLabel">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="16" style="0"/>
               <foreground color="-1"/>
-              <text value="Modules:"/>
+              <text value="Year of Study:"/>
             </properties>
           </component>
-          <component id="da96f" class="javax.swing.JTextField" binding="programmeField" custom-create="true">
+          <component id="da96f" class="javax.swing.JTextField" binding="programmeNameField" custom-create="true">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="20"/>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="25"/>
               </grid>
             </constraints>
             <properties>
               <background color="-1"/>
               <caretColor color="-16777216"/>
+              <font name="Arial" size="14"/>
               <foreground color="-16777216"/>
               <text value=""/>
             </properties>
@@ -170,6 +162,383 @@
               </grid>
             </constraints>
           </vspacer>
+          <component id="668ca" class="javax.swing.JComboBox" binding="underOrPostDropdown">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="Undergraduate"/>
+                <item value="Postgraduate"/>
+              </model>
+            </properties>
+          </component>
+          <component id="83f74" class="javax.swing.JComboBox">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="Year 1"/>
+                <item value="Year 2"/>
+                <item value="Year 3"/>
+              </model>
+            </properties>
+          </component>
+          <component id="64fff" class="javax.swing.JLabel" binding="moduleSectionLabel">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-1"/>
+              <text value="Add a Module"/>
+            </properties>
+          </component>
+          <vspacer id="d0d8">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="0" height="30"/>
+                <maximum-size width="0" height="50"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="930cd" class="javax.swing.JLabel" binding="moduleNameLabel">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Module Name:"/>
+            </properties>
+          </component>
+          <component id="94c57" class="javax.swing.JTextField" binding="moduleNameField" custom-create="true">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="25"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-16777216"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-16777216"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="3f1dd" class="javax.swing.JLabel" binding="moduleTermLabel">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Term:"/>
+            </properties>
+          </component>
+          <component id="a035c" class="javax.swing.JComboBox" binding="moduleTermDropdown">
+            <constraints>
+              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="Term 1"/>
+                <item value="Term 2"/>
+              </model>
+            </properties>
+          </component>
+          <component id="561b1" class="javax.swing.JLabel" binding="moduleOptionalLabel">
+            <constraints>
+              <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Optional or Compulsory:"/>
+            </properties>
+          </component>
+          <component id="f766a" class="javax.swing.JComboBox" binding="moduleOptionalDropdown">
+            <constraints>
+              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="Optional"/>
+                <item value="Compulsory"/>
+              </model>
+            </properties>
+          </component>
+          <component id="c8a38" class="javax.swing.JLabel" binding="activitySectionLabel">
+            <constraints>
+              <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-1"/>
+              <text value="Add an Activity"/>
+            </properties>
+          </component>
+          <component id="211ee" class="javax.swing.JLabel" binding="moduleSelectionLabel">
+            <constraints>
+              <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Module Selection:"/>
+            </properties>
+          </component>
+          <component id="9d7e6" class="javax.swing.JLabel" binding="activityNameLabel">
+            <constraints>
+              <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Activity Name:"/>
+            </properties>
+          </component>
+          <component id="4d173" class="javax.swing.JComboBox" binding="moduleSelectionDropdown">
+            <constraints>
+              <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model/>
+            </properties>
+          </component>
+          <component id="1fb1d" class="javax.swing.JTextField" binding="activityNameField" custom-create="true">
+            <constraints>
+              <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="25"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-16777216"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-16777216"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="e1958" class="javax.swing.JLabel" binding="activityTypeLabel">
+            <constraints>
+              <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Activity Type:"/>
+            </properties>
+          </component>
+          <component id="3fd21" class="javax.swing.JComboBox" binding="activityTypeDropdown">
+            <constraints>
+              <grid row="17" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="Lecture"/>
+                <item value="Tutorial"/>
+                <item value="Lab"/>
+                <item value="Seminar"/>
+                <item value="Workshop"/>
+              </model>
+              <selectedIndex value="0"/>
+            </properties>
+          </component>
+          <component id="532cc" class="javax.swing.JButton" binding="addModuleButton">
+            <constraints>
+              <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <actionCommand value=""/>
+              <background color="-8383690"/>
+              <borderPainted value="true"/>
+              <contentAreaFilled value="true"/>
+              <focusPainted value="false"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-1"/>
+              <hideActionText value="false"/>
+              <text value="Add Module"/>
+            </properties>
+          </component>
+          <vspacer id="7c118">
+            <constraints>
+              <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="0" height="30"/>
+                <maximum-size width="0" height="50"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="666ec" class="javax.swing.JLabel" binding="startTimeLabel">
+            <constraints>
+              <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Start Time:"/>
+            </properties>
+          </component>
+          <component id="723f0" class="javax.swing.JComboBox">
+            <constraints>
+              <grid row="18" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="9:00"/>
+                <item value="10:00"/>
+                <item value="11:00"/>
+                <item value="12:00"/>
+                <item value="13:00"/>
+                <item value="14:00"/>
+                <item value="15:00"/>
+                <item value="16:00"/>
+                <item value="17:00"/>
+                <item value="18:00"/>
+                <item value="19:00"/>
+                <item value="20:00"/>
+              </model>
+              <selectedIndex value="0"/>
+            </properties>
+          </component>
+          <component id="8fbd7" class="javax.swing.JComboBox">
+            <constraints>
+              <grid row="19" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="10:00"/>
+                <item value="11:00"/>
+                <item value="12:00"/>
+                <item value="13:00"/>
+                <item value="14:00"/>
+                <item value="15:00"/>
+                <item value="16:00"/>
+                <item value="17:00"/>
+                <item value="18:00"/>
+                <item value="19:00"/>
+                <item value="20:00"/>
+                <item value="21:00"/>
+              </model>
+              <selectedIndex value="0"/>
+            </properties>
+          </component>
+          <component id="ba781" class="javax.swing.JLabel" binding="endTimeLabel">
+            <constraints>
+              <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="End Time:"/>
+            </properties>
+          </component>
+          <component id="b65b0" class="javax.swing.JButton" binding="addActivityButton">
+            <constraints>
+              <grid row="20" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <actionCommand value=""/>
+              <background color="-8383690"/>
+              <borderPainted value="true"/>
+              <contentAreaFilled value="true"/>
+              <focusPainted value="false"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-1"/>
+              <hideActionText value="false"/>
+              <text value="Add Activity"/>
+            </properties>
+          </component>
+          <component id="4e82d" class="javax.swing.JLabel" binding="programmeSectionLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16"/>
+              <foreground color="-1"/>
+              <text value="Add a Programme"/>
+            </properties>
+          </component>
+          <component id="1a0a2" class="javax.swing.JButton" binding="addProgrammeButton">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <actionCommand value=""/>
+              <background color="-8383690"/>
+              <borderPainted value="true"/>
+              <contentAreaFilled value="true"/>
+              <focusPainted value="false"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-1"/>
+              <hideActionText value="false"/>
+              <text value="Add Programme"/>
+            </properties>
+          </component>
+          <component id="c81b3" class="javax.swing.JLabel" binding="programmeSelectionLabel">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="16" style="0"/>
+              <foreground color="-1"/>
+              <text value="Programme Selection:"/>
+            </properties>
+          </component>
+          <component id="2cf6d" class="javax.swing.JComboBox" binding="programmeSelectionDropdown">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="20"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Arial" size="14" style="0"/>
+              <foreground color="-16777216"/>
+              <model/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="c7e3e" binding="removePanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">

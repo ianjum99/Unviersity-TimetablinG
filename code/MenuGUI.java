@@ -3,25 +3,32 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.awt.event.WindowEvent;
 
 public class MenuGUI {
-    private JPanel mainPanel;
-    private JPanel topBar;
+    private JPanel mainPanel, topBar;
     private JLabel adminMenuLabel;
     private JLabel closeButton;
-    private JLabel addLabel;
-    private JLabel removeLabel;
-    private JTextField programmeField;
-    private JLabel viewLabel;
-    private JPanel addPanel;
-    private JPanel removePanel;
-    private JPanel viewPanel;
-    private JLabel programmeName;
+    private JLabel addLabel, removeLabel, viewLabel;
+    private JTextField programmeNameField;
+    private JPanel addPanel, removePanel, viewPanel;
+    private JLabel programmeName, underOrPostLabel, yearOfStudyLabel;
+    private JLabel programmeSectionLabel;
+    private JButton addProgrammeButton;
+    private JLabel programmeSelectionLabel;
+    private JComboBox programmeSelectionDropdown;
+    private JComboBox underOrPostDropdown;
+    private JLabel moduleSectionLabel;
+    private JTextField moduleNameField;
+    private JLabel moduleTermLabel, moduleNameLabel, moduleOptionalLabel, moduleSelectionLabel;
+    private JComboBox moduleTermDropdown, moduleOptionalDropdown, moduleSelectionDropdown;
+    private JButton addModuleButton;
+    private JLabel activitySectionLabel, activityNameLabel, activityTypeLabel, startTimeLabel, endTimeLabel;
+    private JTextField activityNameField;
+    private JComboBox activityTypeDropdown;
+    private JButton addActivityButton;
     private JFrame frame;
 
     private static MenuGUI instance=null;
-
     private int posX, posY;
 
     public MenuGUI() {
@@ -71,7 +78,14 @@ public class MenuGUI {
 
     private void createUIComponents() {
         closeButton = new JLabel((new ImageIcon("images/close.png")));
-        programmeField = new JTextField();
-        programmeField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
+        programmeNameField = new JTextField();
+        moduleNameField = new JTextField();
+        activityNameField = new JTextField();
+        addModuleButton = new JButton();
+
+        programmeNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
+        moduleNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
+        activityNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
+
     }
 }
