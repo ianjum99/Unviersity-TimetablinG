@@ -13,7 +13,7 @@ public class MenuGUI {
     private JLabel addLabel, removeLabel, viewLabel;
     private JTextField programmeNameField;
     private JPanel addPanel, removePanel, viewPanel;
-    private JLabel programmeName, underOrPostLabel, yearOfStudyLabel;
+    private JLabel programmeName, underOrPostLabel;
     private JLabel programmeSectionLabel;
     private JButton addProgrammeButton;
     private JLabel programmeSelectionLabel;
@@ -28,7 +28,12 @@ public class MenuGUI {
     private JTextField activityNameField;
     private JComboBox activityTypeDropdown;
     private JButton addActivityButton;
+    private JLabel yearOfStudyLabel;
+    private JComboBox yearOfStudyDropdown;
     private JFrame frame;
+    private DataFactory dataFactory;
+
+
 
     private static MenuGUI instance=null;
     private int posX, posY;
@@ -86,6 +91,13 @@ public class MenuGUI {
                 posY = e.getY();
             }
         });
+
+        addProgrammeButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            }
+        });
+
     }
 
     private void createUIComponents() {
