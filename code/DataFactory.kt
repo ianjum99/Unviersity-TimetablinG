@@ -36,7 +36,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getProgrammeFromActivity(activity: Activity): Programme {
-        return(filter { it -> (it.modules!!.filter { it.activities!!.contains(activity)}).isNotEmpty()}).first()
+        return(filter { it -> (it.modules!!.filter { it!!.activities!!.contains(activity)}).isNotEmpty()}).first()
     }
 
     fun getModuleFromActivity(activity: Activity): Module {
@@ -68,11 +68,16 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
                 }
             }
         }
-        return Pair(activity,clashesWith)}
+        return Pair(activity,clashesWith)
+    }
 
     fun getProgrammeInstanceFromString(programmeName: String): Programme {
-        return this.first { it.name == programmeName }
-    }
+        for (programme in this) {
+            if (programmeName == programme.name) {
+                return programme
+            }
+        }
+    return null}
 }
 
 
