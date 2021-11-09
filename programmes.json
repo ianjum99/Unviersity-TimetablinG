@@ -1,95 +1,4349 @@
 [
   {
-    "name":"Software Engineering",
-    "type":"U",
-    "modules":[
+    "name": "Tres-Zap",
+    "type": "U",
+    "modules": [
       {
-        "id":2,
-        "name":"JVM",
-        "compulsory":false,
-        "moduleLeader":"Herby",
-        "term":1,
-        "activities":[
+        "id": "COMP1134",
+        "year": 3,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
           {
-            "typeOfActivity":"Lecture",
-            "day":1,
-            "time":12,
-            "duration":1
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 11,
+            "duration": 1
           },
           {
-            "typeOfActivity":"Tutorial",
-            "day":1,
-            "time":12,
-            "duration":1
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 15,
+            "duration": 1
           }
         ]
       },
       {
-        "id":3,
-        "name":"Jack",
-        "compulsory":false,
-        "moduleLeader":"Herby",
-        "term":1,
-        "activities":[
+        "id": "COMP1977",
+        "year": 1,
+        "name": "Introduction to Services",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
           {
-            "typeOfActivity":"L",
-            "day":3,
-            "time":12,
-            "duration":1
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 11,
+            "duration": 1
           },
           {
-            "typeOfActivity":"S",
-            "day":2,
-            "time":13,
-            "duration":1
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1492",
+        "year": 2,
+        "name": "Introduction to Sales",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1397",
+        "year": 2,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1194",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1543",
+        "year": 1,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1366",
+        "year": 1,
+        "name": "Introduction to Legal",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1015",
+        "year": 2,
+        "name": "Introduction to Services",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 17,
+            "duration": 2
           }
         ]
       }
     ]
   },
   {
-    "name":"Computer Science",
-    "type":"U",
-    "modules":[
+    "name": "Tres-Zap",
+    "type": "U",
+    "modules": [
       {
-        "id":2,
-        "name":"FRA",
-        "compulsory":false,
-        "moduleLeader":"Herby",
-        "term":1,
-        "activities":[
+        "id": "COMP1263",
+        "year": 1,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
           {
-            "typeOfActivity":"L",
-            "day":4,
-            "time":16,
-            "duration":1
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 12,
+            "duration": 1
           },
           {
-            "typeOfActivity":"T",
-            "day":4,
-            "time":9,
-            "duration":1
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 20,
+            "duration": 1
           }
         ]
       },
       {
-        "id":3,
-        "name":"Jack",
-        "compulsory":false,
-        "moduleLeader":"Herby",
-        "term":1,
-        "activities":[
+        "id": "COMP1177",
+        "year": 1,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
           {
-            "typeOfActivity":"L",
-            "day":3,
-            "time":17,
-            "duration":1
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 9,
+            "duration": 1
           },
           {
-            "typeOfActivity":"S",
-            "day":4,
-            "time":19,
-            "duration":1
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1109",
+        "year": 3,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1794",
+        "year": 1,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 18,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1747",
+        "year": 1,
+        "name": "Introduction to Legal",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1403",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1569",
+        "year": 1,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 15,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1604",
+        "year": 2,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Namfix",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1440",
+        "year": 3,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1481",
+        "year": 2,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1586",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1255",
+        "year": 3,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1623",
+        "year": 2,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1767",
+        "year": 2,
+        "name": "Introduction to Support",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1080",
+        "year": 1,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1425",
+        "year": 2,
+        "name": "Introduction to Services",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ventosanzap",
+    "type": "U",
+    "modules": [
+      {
+        "id": "COMP1268",
+        "year": 2,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1257",
+        "year": 2,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1201",
+        "year": 1,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1648",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1876",
+        "year": 2,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1002",
+        "year": 3,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1430",
+        "year": 3,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1246",
+        "year": 1,
+        "name": "Introduction to Support",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rank",
+    "type": "U",
+    "modules": [
+      {
+        "id": "COMP1297",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 18,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1845",
+        "year": 2,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1488",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1820",
+        "year": 2,
+        "name": "Introduction to Legal",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1598",
+        "year": 2,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 18,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1177",
+        "year": 3,
+        "name": "Introduction to Engineering",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1860",
+        "year": 2,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1726",
+        "year": 2,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Biodex",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1957",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1671",
+        "year": 2,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1424",
+        "year": 2,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1380",
+        "year": 3,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1107",
+        "year": 2,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1685",
+        "year": 2,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 9,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1709",
+        "year": 3,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 12,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1235",
+        "year": 2,
+        "name": "Introduction to Sales",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zamit",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1398",
+        "year": 2,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 12,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1087",
+        "year": 3,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1899",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 9,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1037",
+        "year": 2,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 18,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1000",
+        "year": 2,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1548",
+        "year": 3,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1365",
+        "year": 1,
+        "name": "Introduction to Support",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 11,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1213",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Voyatouch",
+    "type": "U",
+    "modules": [
+      {
+        "id": "COMP1470",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 14,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 11,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1862",
+        "year": 3,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1026",
+        "year": 2,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1236",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 9,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 13,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1687",
+        "year": 2,
+        "name": "Introduction to Support",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1627",
+        "year": 1,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1464",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 18,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1402",
+        "year": 1,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redhold",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1920",
+        "year": 1,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1676",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1530",
+        "year": 2,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1397",
+        "year": 3,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 12,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1777",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1986",
+        "year": 3,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1063",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1401",
+        "year": 2,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redhold",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1427",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1277",
+        "year": 1,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1205",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1565",
+        "year": 1,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 12,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1645",
+        "year": 1,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1313",
+        "year": 2,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1012",
+        "year": 2,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 13,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1774",
+        "year": 3,
+        "name": "Introduction to Engineering",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 18,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Keylex",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1826",
+        "year": 1,
+        "name": "Introduction to Engineering",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1429",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1877",
+        "year": 2,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 9,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1837",
+        "year": 3,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1713",
+        "year": 2,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1372",
+        "year": 2,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1625",
+        "year": 2,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1107",
+        "year": 3,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bamity",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1294",
+        "year": 1,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1598",
+        "year": 3,
+        "name": "Introduction to Sales",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1135",
+        "year": 2,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1709",
+        "year": 2,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 13,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1638",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1999",
+        "year": 2,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1009",
+        "year": 2,
+        "name": "Introduction to Engineering",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1210",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Duobam",
+    "type": "U",
+    "modules": [
+      {
+        "id": "COMP1127",
+        "year": 1,
+        "name": "Introduction to Sales",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 9,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1095",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1059",
+        "year": 3,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1881",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 18,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1199",
+        "year": 3,
+        "name": "Introduction to Support",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1849",
+        "year": 2,
+        "name": "Introduction to Marketing",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1105",
+        "year": 3,
+        "name": "Introduction to Marketing",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1755",
+        "year": 3,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vagram",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1046",
+        "year": 2,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1817",
+        "year": 2,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1007",
+        "year": 3,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1622",
+        "year": 2,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1671",
+        "year": 2,
+        "name": "Introduction to Sales",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1993",
+        "year": 2,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1870",
+        "year": 2,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1411",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tres-Zap",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1426",
+        "year": 3,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1860",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1468",
+        "year": 2,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1293",
+        "year": 3,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 12,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1907",
+        "year": 3,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1946",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1098",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1257",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 18,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Aerified",
+    "type": "U",
+    "modules": [
+      {
+        "id": "COMP1876",
+        "year": 1,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1346",
+        "year": 2,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1443",
+        "year": 3,
+        "name": "Introduction to Support",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1043",
+        "year": 2,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1148",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1023",
+        "year": 1,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1824",
+        "year": 1,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1344",
+        "year": 1,
+        "name": "Introduction to Marketing",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zoolab",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1706",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1781",
+        "year": 1,
+        "name": "Introduction to Marketing",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1610",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1358",
+        "year": 1,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1523",
+        "year": 1,
+        "name": "Introduction to Sales",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1383",
+        "year": 1,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 11,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1357",
+        "year": 1,
+        "name": "Introduction to Marketing",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 15,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1209",
+        "year": 2,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Daltfresh",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1926",
+        "year": 3,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1365",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1109",
+        "year": 1,
+        "name": "Introduction to Services",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 14,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1039",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 12,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1267",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 14,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1403",
+        "year": 1,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1757",
+        "year": 1,
+        "name": "Introduction to Services",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1528",
+        "year": 2,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cookley",
+    "type": "U",
+    "modules": [
+      {
+        "id": "COMP1415",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1479",
+        "year": 3,
+        "name": "Introduction to Accounting",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1275",
+        "year": 1,
+        "name": "Introduction to Engineering",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1106",
+        "year": 2,
+        "name": "Introduction to Marketing",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1643",
+        "year": 3,
+        "name": "Introduction to Accounting",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 20,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1739",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1402",
+        "year": 1,
+        "name": "Introduction to Accounting",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1192",
+        "year": 2,
+        "name": "Introduction to Sales",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Viva",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1807",
+        "year": 3,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1651",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 9,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 13,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1256",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1949",
+        "year": 1,
+        "name": "Introduction to Sales",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 14,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1269",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1207",
+        "year": 1,
+        "name": "Introduction to Sales",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1192",
+        "year": 1,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1593",
+        "year": 1,
+        "name": "Introduction to Training",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cookley",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1344",
+        "year": 1,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1944",
+        "year": 2,
+        "name": "Introduction to Sales",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1389",
+        "year": 1,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1109",
+        "year": 2,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1482",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 20,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1511",
+        "year": 2,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 11,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1214",
+        "year": 3,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1064",
+        "year": 2,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Regrant",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1830",
+        "year": 2,
+        "name": "Introduction to Training",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1038",
+        "year": 2,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1632",
+        "year": 3,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 11,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1449",
+        "year": 3,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1748",
+        "year": 1,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 13,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1887",
+        "year": 1,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1292",
+        "year": 2,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 12,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1787",
+        "year": 3,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redhold",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1613",
+        "year": 2,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1650",
+        "year": 2,
+        "name": "Introduction to Product Management",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1875",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 12,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1799",
+        "year": 2,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1154",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1577",
+        "year": 1,
+        "name": "Introduction to Product Management",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1309",
+        "year": 3,
+        "name": "Introduction to Legal",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 0,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1108",
+        "year": 1,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Keylex",
+    "type": "U",
+    "modules": [
+      {
+        "id": "COMP1500",
+        "year": 3,
+        "name": "Introduction to Services",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1958",
+        "year": 1,
+        "name": "Introduction to Human Resources",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1608",
+        "year": 2,
+        "name": "Introduction to Engineering",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 3,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1486",
+        "year": 3,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1789",
+        "year": 3,
+        "name": "Introduction to Support",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1451",
+        "year": 2,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1523",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 0,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 15,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1723",
+        "year": 2,
+        "name": "Introduction to Marketing",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 2,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lotlux",
+    "type": "P",
+    "modules": [
+      {
+        "id": "COMP1464",
+        "year": 1,
+        "name": "Introduction to Support",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 4,
+            "time": 12,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1480",
+        "year": 3,
+        "name": "Introduction to Research and Development",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 1,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 15,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1963",
+        "year": 1,
+        "name": "Introduction to Legal",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1028",
+        "year": 1,
+        "name": "Introduction to Marketing",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1239",
+        "year": 3,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 3,
+            "time": 10,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1432",
+        "year": 1,
+        "name": "Introduction to Research and Development",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Lecture",
+            "day": 2,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Lecture",
+            "day": 4,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1014",
+        "year": 3,
+        "name": "Introduction to Legal",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Tutorial",
+            "day": 4,
+            "time": 12,
+            "duration": 2
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 1,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1430",
+        "year": 3,
+        "name": "Introduction to Engineering",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "typeOfActivity": "Seminar",
+            "day": 0,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "typeOfActivity": "Seminar",
+            "day": 2,
+            "time": 9,
+            "duration": 1
           }
         ]
       }

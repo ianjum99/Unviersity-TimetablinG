@@ -1,7 +1,5 @@
 import com.beust.klaxon.*
 import com.google.gson.Gson
-import kotlin.reflect.full.memberProperties
-import kotlin.reflect.full.primaryConstructor
 
 private val klaxon = Klaxon()
 
@@ -16,7 +14,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         this.add(programme)
     }
 
-    fun deleteProramme(programme: Programme) {
+    fun deleteProgramme(programme: Programme) {
         this.remove(programme)
     }
 
@@ -57,21 +55,20 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         }
     return listOfActivities}
 
-    fun checkForClashes(newActivity: Activity, newActivityModule: Module): Pair<Int, ArrayList<Activity>> {
-        var numberOfClashes = 0
+    fun checkForClashes(activity: Activity): Pair<Activity, ArrayList<Activity>> {
         val listOfActivities = this.getAllActivities()
         var clashesWith: ArrayList<Activity> = arrayListOf()
 
-        for (activity in listOfActivities) {
-            if (this.getModuleFromActivity(activity).term == newActivityModule.term) {
-                if (activity.time == newActivity.time && activity.day == newActivity.day) {
-                    numberOfClashes += 1
-                    clashesWith.add(activity)
+        for (activityTwo in listOfActivities) {
+            if (this.getModuleFromActivity(activityTwo).year == this.getModuleFromActivity(activity).year) {
+                if (this.getModuleFromActivity(activityTwo).term == this.getModuleFromActivity(activity).term) {
+                    if (activityTwo.time == activity.time && activityTwo.day == activity.day) {
+                        clashesWith.add(activityTwo)
+                    }
                 }
             }
         }
-        return Pair(numberOfClashes,clashesWith)}
-
+        return Pair(activity,clashesWith)}
 }
 
 
@@ -83,10 +80,10 @@ data class Programme (
 )
 
 data class Module (
-    val id: Long,
+    val id: String,
+    val year: Int,
     val name: String,
     val compulsory: Boolean,
-    val moduleLeader: String,
     val term: Long,
     val activities: ArrayList<Activity>?,
 )
