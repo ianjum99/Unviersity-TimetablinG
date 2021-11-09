@@ -28,11 +28,11 @@ public class TimetableGUI {
 
     private int posX, posY;
 
-    public static void main(String[] args) {
+    public static void main(DataFactory df) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    TimetableGUI window = new TimetableGUI();
+                    TimetableGUI window = new TimetableGUI(df);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -41,11 +41,12 @@ public class TimetableGUI {
     }
 
 
-    public TimetableGUI() {
-        init();
+    public TimetableGUI(DataFactory dataFactory) {
+        init(dataFactory);
     }
 
-    private void init() {
+    private void init(DataFactory dataFactory) {
+        DataFactory df = dataFactory;
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
@@ -83,7 +84,7 @@ public class TimetableGUI {
         menuButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                MenuGUI menuWindow  = MenuGUI.getInstance();
+                MenuGUI menuWindow  = MenuGUI.getInstance(df);
             }
         });
 

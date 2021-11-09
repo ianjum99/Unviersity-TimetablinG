@@ -1,3 +1,5 @@
+import com.beust.klaxon.Json;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -31,13 +33,23 @@ public class MenuGUI {
     private static MenuGUI instance=null;
     private int posX, posY;
 
-    public MenuGUI() {
+    public MenuGUI(DataFactory df) {
         init();
+
+        addProgrammeButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                df.add(new Programme(programmeNameField.getText(), (String) underOrPostDropdown.getSelectedItem(), null));
+                System.out.println(df);
+                JsonHandler test = new JsonHandler("programmes.json");
+                test.saveJsonFile(df);
+            }
+        });
     }
 
-    public static MenuGUI getInstance(){
+    public static MenuGUI getInstance(DataFactory df){
         if (instance == null) {
-            instance = new MenuGUI();
+            instance = new MenuGUI(df);
         }
         return instance;
     }
