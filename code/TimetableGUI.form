@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TimetableGUI">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="28" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="1259" height="852"/>
@@ -16,7 +16,7 @@
     <children>
       <component id="a61cc" class="javax.swing.JLabel" binding="timetableLabel">
         <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1"/>
@@ -27,7 +27,7 @@
       </component>
       <component id="e2ca4" class="javax.swing.JButton" binding="menuButton">
         <constraints>
-          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-8383690"/>
@@ -40,65 +40,10 @@
           <text value="Menu"/>
         </properties>
       </component>
-      <component id="86ff8" class="javax.swing.JLabel" binding="mondayLabel">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="Monday"/>
-        </properties>
-      </component>
-      <component id="15a3e" class="javax.swing.JLabel" binding="tuesdayLabel">
-        <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="Tuesday"/>
-        </properties>
-      </component>
-      <component id="1afb9" class="javax.swing.JLabel" binding="thursdayLabel">
-        <constraints>
-          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="Thursday"/>
-        </properties>
-      </component>
-      <component id="8bce" class="javax.swing.JLabel" binding="wednesdayLabel">
-        <constraints>
-          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="Wednesday"/>
-        </properties>
-      </component>
-      <component id="70f23" class="javax.swing.JLabel" binding="fridayLabel">
-        <constraints>
-          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="Friday"/>
-        </properties>
-      </component>
-      <vspacer id="1354f">
-        <constraints>
-          <grid row="27" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
       <grid id="c3603" binding="topBar" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-11466190"/>
@@ -115,223 +60,7 @@
           </component>
         </children>
       </grid>
-      <vspacer id="d8239">
-        <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="50"/>
-            <maximum-size width="0" height="50"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <component id="8a9a7" class="javax.swing.JLabel" binding="nineLabel">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="9:00"/>
-        </properties>
-      </component>
-      <component id="a1973" class="javax.swing.JLabel" binding="tenLabel">
-        <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="10:00"/>
-        </properties>
-      </component>
-      <component id="8b9a2" class="javax.swing.JLabel" binding="elevenLabel">
-        <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="11:00"/>
-        </properties>
-      </component>
-      <component id="ebdc7" class="javax.swing.JLabel" binding="twelveLabel">
-        <constraints>
-          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="12:00"/>
-        </properties>
-      </component>
-      <component id="c6f10" class="javax.swing.JLabel" binding="thirteenLabel">
-        <constraints>
-          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="13:00"/>
-        </properties>
-      </component>
-      <component id="d49bf" class="javax.swing.JLabel" binding="fourteenLabel">
-        <constraints>
-          <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="14:00"/>
-        </properties>
-      </component>
-      <component id="1a0d8" class="javax.swing.JLabel" binding="fifteenLabel">
-        <constraints>
-          <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="15:00"/>
-        </properties>
-      </component>
-      <component id="f17aa" class="javax.swing.JLabel" binding="sixteenLabel">
-        <constraints>
-          <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="16:00"/>
-        </properties>
-      </component>
-      <component id="98598" class="javax.swing.JLabel" binding="seventeenLabel">
-        <constraints>
-          <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="17:00"/>
-        </properties>
-      </component>
-      <component id="293d6" class="javax.swing.JLabel" binding="eighteenLabel">
-        <constraints>
-          <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="18:00"/>
-        </properties>
-      </component>
-      <component id="e3ad0" class="javax.swing.JLabel" binding="nineteenLabel">
-        <constraints>
-          <grid row="24" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="19:00"/>
-        </properties>
-      </component>
-      <component id="2aceb" class="javax.swing.JLabel" binding="twentyLabel">
-        <constraints>
-          <grid row="26" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Arial" size="16"/>
-          <foreground color="-1"/>
-          <text value="20:00"/>
-        </properties>
-      </component>
-      <vspacer id="9b26e">
-        <constraints>
-          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="bfcde">
-        <constraints>
-          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="ada35">
-        <constraints>
-          <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="7a55d">
-        <constraints>
-          <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="b6aff">
-        <constraints>
-          <grid row="13" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="73c32">
-        <constraints>
-          <grid row="15" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="7e73d">
-        <constraints>
-          <grid row="17" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="801d6">
-        <constraints>
-          <grid row="19" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="ca92">
-        <constraints>
-          <grid row="21" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="29f03">
-        <constraints>
-          <grid row="23" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <vspacer id="320fe">
-        <constraints>
-          <grid row="25" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="0" height="10"/>
-            <maximum-size width="0" height="10"/>
-          </grid>
-        </constraints>
-      </vspacer>
-      <component id="2f3e2" class="javax.swing.JLabel">
+      <component id="2f3e2" class="javax.swing.JLabel" binding="dateLabel">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="6" height="16"/>
@@ -344,6 +73,17 @@
           <text value="Date"/>
         </properties>
       </component>
+      <grid id="ae351" binding="timetablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
     </children>
   </grid>
 </form>
