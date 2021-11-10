@@ -1,5 +1,6 @@
 import com.beust.klaxon.*
 import com.google.gson.Gson
+import kotlin.random.Random
 
 private val klaxon = Klaxon()
 
@@ -19,8 +20,25 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun createModule(programme: Programme, module: Module) {
+        module.id = generateModuleId(programme)
         programme.modules?.add(module)
     }
+
+    fun generateModuleId(programme: Programme): String {
+        var moduleId = programme.name.slice(0..3).uppercase()
+        val arrayOfIds = ArrayList<String>()
+        for (module in programme.modules!!) {
+            arrayOfIds.add(module.id.slice(4..7))
+        }
+        var suffix = 0
+        while (true) {
+            suffix = Random.nextInt(1000,1999)
+            if (!(arrayOfIds.contains(suffix.toString()))) {
+                moduleId += suffix
+                break
+            }
+        }
+    return moduleId}
 
     fun deleteModule(programme: Programme, module: Module) {
         programme.modules?.remove(module)
@@ -84,7 +102,7 @@ data class Programme (
 )
 
 data class Module (
-    val id: String,
+    var id: String,
     val year: Int,
     val name: String,
     val compulsory: Boolean,

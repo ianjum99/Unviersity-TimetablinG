@@ -28,8 +28,8 @@ fun main() {
         gui.getLabelFromCoordinates(activity.day!!+1,activity.time!!-8).text =
             "${dataFactory.getModuleFromActivity(activity).id}"
     }
-    gui.run {  }
-
+//    gui.run {  }
+    dataFactory.createModule(dataFactory[2], Module("Z",1,"test",true,2, ArrayList<Activity>()) )
 
 
 

@@ -1024,7 +1024,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "FIN1066",
+        "id": "FINA1066",
         "year": 1,
         "name": "Financial Analysis and Valuation",
         "compulsory": true,
@@ -1045,7 +1045,7 @@
         ]
       },
       {
-        "id": "FIN1754",
+        "id": "FINA1754",
         "year": 1,
         "name": "Academic English for Postgraduates (Business)",
         "compulsory": false,
@@ -1066,7 +1066,7 @@
         ]
       },
       {
-        "id": "FIN1456",
+        "id": "FINA1456",
         "year": 1,
         "name": "Research Methods",
         "compulsory": false,
@@ -1087,7 +1087,7 @@
         ]
       },
       {
-        "id": "FIN1383",
+        "id": "FINA1383",
         "year": 1,
         "name": "Foundations of Scholarship (Dept ACC)",
         "compulsory": true,
@@ -1108,7 +1108,7 @@
         ]
       },
       {
-        "id": "FIN1653",
+        "id": "FINA1653",
         "year": 1,
         "name": "Principles of Finance",
         "compulsory": true,
@@ -1129,7 +1129,7 @@
         ]
       },
       {
-        "id": "FIN1621",
+        "id": "FINA1621",
         "year": 1,
         "name": "Investment Management",
         "compulsory": false,
@@ -1150,7 +1150,7 @@
         ]
       },
       {
-        "id": "FIN1529",
+        "id": "FINA1529",
         "year": 1,
         "name": "Financial Markets & Products",
         "compulsory": false,
@@ -1171,7 +1171,7 @@
         ]
       },
       {
-        "id": "FIN1889",
+        "id": "FINA1889",
         "year": 1,
         "name": "Research Project",
         "compulsory": true,
@@ -1198,7 +1198,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "CINE1710",
+        "id": "FILM1710",
         "year": 1,
         "name": "Film Research Workshop",
         "compulsory": false,
@@ -1219,9 +1219,9 @@
         ]
       },
       {
-        "id": "CINE1039",
+        "id": "FILM1039",
         "year": 1,
-        "name": "Cinematography",
+        "name": "FILMmatography",
         "compulsory": true,
         "term": 1,
         "activities": [
@@ -1240,7 +1240,7 @@
         ]
       },
       {
-        "id": "CINE1249",
+        "id": "FILM1249",
         "year": 1,
         "name": "Production Practice",
         "compulsory": false,
@@ -1261,7 +1261,7 @@
         ]
       },
       {
-        "id": "CINE1657",
+        "id": "FILM1657",
         "year": 1,
         "name": "Directing Screen Performance",
         "compulsory": true,
@@ -1282,7 +1282,7 @@
         ]
       },
       {
-        "id": "CINE1113",
+        "id": "FILM1113",
         "year": 1,
         "name": "Film Major Project",
         "compulsory": false,
@@ -1303,7 +1303,7 @@
         ]
       },
       {
-        "id": "CINE1404",
+        "id": "FILM1404",
         "year": 1,
         "name": "Screenwriting for the Short Form",
         "compulsory": true,
@@ -1324,7 +1324,7 @@
         ]
       },
       {
-        "id": "CINE1088",
+        "id": "FILM1088",
         "year": 1,
         "name": "Editing",
         "compulsory": false,
@@ -1345,9 +1345,9 @@
         ]
       },
       {
-        "id": "CINE1300",
+        "id": "FILM1300",
         "year": 1,
-        "name": "Emerging Cinematography Practices",
+        "name": "Emerging FILMmatography Practices",
         "compulsory": true,
         "term": 2,
         "activities": [
