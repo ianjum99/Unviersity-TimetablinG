@@ -36,12 +36,12 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getProgrammeFromActivity(activity: Activity): Programme {
-        return (filter { it -> (it.modules!!.filter { it!!.activities!!.contains(activity) }).isNotEmpty() }).first()
+        return(filter { it -> (it.modules!!.filter { it.activities!!.contains(activity)}).isNotEmpty()}).first()
     }
 
     fun getModuleFromActivity(activity: Activity): Module {
         val programme = this.getProgrammeFromActivity(activity)
-        return programme.modules!!.filter { it.activities!!.contains(activity) }.first()
+        return programme.modules!!.filter { it.activities!!.contains(activity)}.first()
     }
 
     fun getAllActivities(): ArrayList<Activity> {
@@ -53,8 +53,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
                 }
             }
         }
-        return listOfActivities
-    }
+        return listOfActivities}
 
     fun checkForClashes(activity: Activity): Pair<Activity, ArrayList<Activity>> {
         val listOfActivities = this.getAllActivities()
@@ -69,44 +68,33 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
                 }
             }
         }
-        return Pair(activity, clashesWith)
-    }
+        return Pair(activity,clashesWith)}
 
-    fun getProgrammeInstanceFromString(programmeName: String): Programme? {
-        var instance: Programme? = null
-        for (programme in this) {
-            if (programmeName == programme.name) {
-                instance = programme
-            }
-        }
-        return instance
+    fun getProgrammeInstanceFromString(programmeName: String): Programme {
+        return this.first { it.name == programmeName }
     }
-
 }
 
-    data class Programme(
-        val name: String,
-        val type: String,
-        val modules: ArrayList<Module>?
-    )
-
-    data class Module(
-        val id: String,
-        val year: Int,
-        val name: String,
-        val compulsory: Boolean,
-        val term: Long,
-        val activities: ArrayList<Activity>?,
-    )
-
-    data class Activity(
-        val typeOfActivity: String?,
-        val day: Int?,
-        val time: Int?,
-        val duration: Int?,
-    )
 
 
+data class Programme (
+    val name: String,
+    val type: String,
+    val modules: ArrayList<Module>?
+)
 
+data class Module (
+    val id: String,
+    val year: Int,
+    val name: String,
+    val compulsory: Boolean,
+    val term: Long,
+    val activities: ArrayList<Activity>?,
+)
 
-
+data class Activity(
+    val typeOfActivity: String?,
+    val day: Int?,
+    val time: Int?,
+    val duration: Int?,
+)

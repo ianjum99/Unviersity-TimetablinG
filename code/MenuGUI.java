@@ -1,5 +1,3 @@
-import com.beust.klaxon.Json;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -18,8 +16,8 @@ public class MenuGUI {
     private JLabel programmeName, underOrPostLabel;
     private JLabel programmeSectionLabel;
     private JButton addProgrammeButton;
-    private JLabel programmeSelectionLabel;
-    private JComboBox programmeSelectionDropdown;
+    private JLabel moduleProgrammeSelectionLabel;
+    private JComboBox moduleProgrammeSelectionDropdown;
     private JComboBox underOrPostDropdown;
     private JLabel moduleSectionLabel;
     private JTextField moduleNameField;
@@ -32,6 +30,8 @@ public class MenuGUI {
     private JButton addActivityButton;
     private JLabel yearOfStudyLabel;
     private JComboBox yearOfStudyDropdown;
+    private JLabel activityProgrammeSelectionLabel;
+    private JComboBox activityProgrammeSelectionDropdown;
     private JFrame frame;
     private DataFactory dataFactory;
 
@@ -42,36 +42,7 @@ public class MenuGUI {
 
     public MenuGUI(DataFactory df) {
         init(df);
-
-        addProgrammeButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (programmeNameField.getText().length() > 0) {
-                Programme programme = new Programme(programmeNameField.getText(), (String) (Objects.requireNonNull(underOrPostDropdown.getSelectedItem())), null);
-                df.add(programme);
-                programmeSelectionDropdown.addItem(programme.getName());
-
-            }
-        }
-    });
-
-        addModuleButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                Programme programme = (df.getProgrammeInstanceFromString((String) programmeSelectionDropdown.getSelectedItem()));
-                ArrayList<Module> modules = programme.getModules();
-                Module module = new Module("1",
-                        yearOfStudyDropdown.getSelectedItem(),
-                        moduleNameField.getText(),
-                        moduleOptionalDropdown.getSelectedItem(),
-                        moduleTermDropdown.getSelectedItem(),
-                        new ArrayList<Activity>());
-
-
-
-            }
-        });
-}
+    }
 
     public static MenuGUI getInstance(DataFactory df){
         if (instance == null) {
@@ -81,9 +52,6 @@ public class MenuGUI {
     }
 
     private void init(DataFactory df) {
-        for (Programme programme : df) {
-            programmeSelectionDropdown.addItem(programme.getName());
-        }
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
@@ -93,6 +61,16 @@ public class MenuGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
 
+        for (Programme programme : df) {
+            moduleProgrammeSelectionDropdown.addItem(programme.getName());
+            activityProgrammeSelectionDropdown.addItem(programme.getName());
+        }
+
+        Programme selectedProgramme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
+
+        for (Module module : selectedProgramme.getModules()) {
+            moduleSelectionDropdown.addItem(module.getName());
+        }
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -120,6 +98,44 @@ public class MenuGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
             }
+        });
+
+        addProgrammeButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (programmeNameField.getText().length() > 0) {
+                    Programme programme = new Programme(programmeNameField.getText(), (String) (Objects.requireNonNull(underOrPostDropdown.getSelectedItem())), null);
+                    df.add(programme);
+                    moduleProgrammeSelectionDropdown.addItem(programme.getName());
+                    activityProgrammeSelectionDropdown.addItem(programme.getName());
+                }
+            }
+        });
+
+        addModuleButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Programme programme = (df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem()));
+                ArrayList<Module> modules = programme.getModules();
+                String compulsory = moduleOptionalDropdown.getSelectedItem().toString();
+                switch (compulsory) {
+                    case "Compulsory":
+                        compulsory = "true";
+                    case "Optional":
+                        compulsory = "false";
+
+                }
+
+                Module module = new Module("COMP-2823",
+                        Integer.parseInt(yearOfStudyDropdown.getSelectedItem().toString()),
+                        moduleNameField.getText(),
+                        Boolean.parseBoolean(compulsory),
+                        Long.parseLong(moduleTermDropdown.getSelectedItem().toString()),
+                        new ArrayList<Activity>());
+                df.createModule(programme, module);
+                System.out.println(df);
+            }
+
         });
 
     }
