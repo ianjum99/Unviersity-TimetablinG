@@ -22,16 +22,9 @@ fun main() {
 //      println(dataFactory)
     val gui = TimetableGUI(dataFactory)
 
+
     val df = dataFactory.getAllActivities()
-
-    for (activity in df) {
-        gui.getLabelFromCoordinates(activity.day!!+1,activity.time!!-8).text =
-            "${dataFactory.getModuleFromActivity(activity).id}"
-    }
-//    gui.run {  }
-    dataFactory.createModule(dataFactory[2], Module("Z",1,"test",true,2, ArrayList<Activity>()) )
-
-
-
+    val commands = GUICommands.GUICommands(gui,df)
+    commands.populateGUI()
 
 }

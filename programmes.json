@@ -188,7 +188,7 @@
             "type": "Lecture",
             "day": 1,
             "time": 20,
-            "duration": 2
+            "duration": 1
           }
         ]
       },
@@ -335,7 +335,7 @@
             "type": "Lab",
             "day": 2,
             "time": 20,
-            "duration": 2
+            "duration": 1
           }
         ]
       },
@@ -377,7 +377,7 @@
             "type": "Lecture",
             "day": 0,
             "time": 20,
-            "duration": 2
+            "duration": 1
           }
         ]
       },
@@ -497,7 +497,7 @@
             "type": "Workshop",
             "day": 4,
             "time": 20,
-            "duration": 2
+            "duration": 1
           },
           {
             "type": "Lecture",
@@ -866,7 +866,7 @@
             "type": "Workshop",
             "day": 1,
             "time": 20,
-            "duration": 2
+            "duration": 1
           }
         ]
       },
@@ -902,7 +902,7 @@
             "type": "Lecture",
             "day": 0,
             "time": 20,
-            "duration": 2
+            "duration": 1
           },
           {
             "type": "Seminar",
@@ -1007,7 +1007,7 @@
             "type": "Lab",
             "day": 0,
             "time": 20,
-            "duration": 2
+            "duration": 1
           },
           {
             "type": "Lecture",
@@ -1298,7 +1298,7 @@
             "type": "Lab",
             "day": 0,
             "time": 20,
-            "duration": 2
+            "duration": 1
           }
         ]
       },

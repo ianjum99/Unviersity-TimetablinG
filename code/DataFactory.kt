@@ -111,8 +111,8 @@ data class Module (
 )
 
 data class Activity(
-    val type: String?,
-    val day: Int?,
-    val time: Int?,
-    val duration: Int?,
+    val type: String,
+    val day: Int,
+    val time: Int,
+    val duration: Int,
 )
