@@ -69,6 +69,10 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
             }
         }
         return Pair(activity,clashesWith)}
+
+    fun getProgrammeInstanceFromString(programmeName: String): Programme {
+        return this.first { it.name == programmeName }
+    }
 }
 
 

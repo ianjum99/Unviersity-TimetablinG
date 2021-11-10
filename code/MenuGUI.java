@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class MenuGUI {
     private JPanel mainPanel, topBar;
@@ -39,18 +41,36 @@ public class MenuGUI {
     private int posX, posY;
 
     public MenuGUI(DataFactory df) {
-        init();
+        init(df);
 
         addProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                df.add(new Programme(programmeNameField.getText(), (String) underOrPostDropdown.getSelectedItem(), null));
-                System.out.println(df);
-                JsonHandler test = new JsonHandler("programmes.json");
-                test.saveJsonFile(df);
+                if (programmeNameField.getText().length() > 0) {
+                Programme programme = new Programme(programmeNameField.getText(), (String) (Objects.requireNonNull(underOrPostDropdown.getSelectedItem())), null);
+                df.add(programme);
+                programmeSelectionDropdown.addItem(programme.getName());
+
+            }
+        }
+    });
+        addModuleButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Programme programme = (df.getProgrammeInstanceFromString((String) programmeSelectionDropdown.getSelectedItem()));
+                ArrayList<Module> modules = programme.getModules();
+                Module module = new Module(1,
+                        yearOfStudyDropdown.getSelectedItem(),
+                        moduleNameField.getText(),
+                        moduleOptionalDropdown.getSelectedItem(),
+                        moduleTermDropdown.getSelectedItem(),
+                        new ArrayList<Activity>());
+
+
+
             }
         });
-    }
+}
 
     public static MenuGUI getInstance(DataFactory df){
         if (instance == null) {
@@ -59,7 +79,10 @@ public class MenuGUI {
         return instance;
     }
 
-    private void init() {
+    private void init(DataFactory df) {
+        for (Programme programme : df) {
+            programmeSelectionDropdown.addItem(programme.getName());
+        }
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);

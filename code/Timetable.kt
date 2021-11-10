@@ -1,4 +1,6 @@
-class Timetable (var listOfProgrammes: DataFactory, var timetable: HashMap<String, HashMap<String, Activity?>?> = HashMap<String, HashMap<String, Activity?>?>()) {
+class Timetable (var listOfProgrammes: DataFactory,
+                 var timetable: HashMap<String, HashMap<String, Activity?>?> = HashMap(),
+                 var clashes: ArrayList<Pair<Activity,Activity>> = arrayListOf()) {
 
     init {
         for (day in 0..4) {
@@ -18,7 +20,7 @@ class Timetable (var listOfProgrammes: DataFactory, var timetable: HashMap<Strin
                 timetable[activity.day.toString()]!![activity.time.toString()] = activity
             } else {
                 val clash1 = timetable[activity.day.toString()]!![activity.time.toString()]!!
-                val clash2 = activity!!
+                val clash2 = activity
                 println("Clash between ${listOfProgrammes.getModuleFromActivity(clash1).name} " +
                         "(${clash1.typeOfActivity}) and ${listOfProgrammes.getModuleFromActivity(clash2).name}" +
                         " (${clash2.typeOfActivity})")

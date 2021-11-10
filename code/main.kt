@@ -19,8 +19,8 @@ fun main() {
 
 //    println(dataFactory.checkForClashes(mockActivity))
 //    print(Programme("test","U", null))
-      println(dataFactory)
-//    val GUI = TimetableGUI(dataFactory).run {  }
+//      println(dataFactory)
+    val GUI = TimetableGUI(dataFactory).run {  }
 
 
 
