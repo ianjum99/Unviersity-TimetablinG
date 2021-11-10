@@ -22,8 +22,8 @@ class Timetable (var listOfProgrammes: DataFactory,
                 val clash1 = timetable[activity.day.toString()]!![activity.time.toString()]!!
                 val clash2 = activity
                 println("Clash between ${listOfProgrammes.getModuleFromActivity(clash1).name} " +
-                        "(${clash1.typeOfActivity}) and ${listOfProgrammes.getModuleFromActivity(clash2).name}" +
-                        " (${clash2.typeOfActivity})")
+                        "(${clash1.type}) and ${listOfProgrammes.getModuleFromActivity(clash2).name}" +
+                        " (${clash2.type})")
             }
         }
     }

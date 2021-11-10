@@ -1,1649 +1,338 @@
 [
   {
-    "name": "Business",
-    "type": "U",
-    "modules": [
-      {
-        "id": "MOD1491",
-        "year": 3,
-        "name": "Introduction to Support",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 11,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 15,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1332",
-        "year": 1,
-        "name": "Introduction to Services",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 11,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 2,
-            "time": 9,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1550",
-        "year": 2,
-        "name": "Introduction to Sales",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 19,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1751",
-        "year": 2,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 13,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1258",
-        "year": 3,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 10,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 19,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1955",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 14,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 12,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1698",
-        "year": 1,
-        "name": "Introduction to Legal",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 15,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 16,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1500",
-        "year": 2,
-        "name": "Introduction to Services",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Psychology",
-    "type": "U",
-    "modules": [
-      {
-        "id": "MOD1668",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 12,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1014",
-        "year": 1,
-        "name": "Introduction to Legal",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 9,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1731",
-        "year": 3,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 20,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 13,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1799",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 10,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 18,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1818",
-        "year": 1,
-        "name": "Introduction to Legal",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 12,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 2,
-            "time": 16,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1502",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 20,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 10,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1854",
-        "year": 1,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 15,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1843",
-        "year": 2,
-        "name": "Introduction to Accounting",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 19,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 15,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Architecture",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1045",
-        "year": 1,
-        "name": "Introduction to Legal",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 12,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1657",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 20,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 17,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1589",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
-            "time": 13,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 2,
-            "time": 16,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1460",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 15,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 15,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Chemistry",
-    "type": "U",
-    "modules": [
-      {
-        "id": "MOD1272",
-        "year": 2,
-        "name": "Introduction to Accounting",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 15,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 9,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1772",
-        "year": 2,
-        "name": "Introduction to Training",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 17,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 11,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1070",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 12,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 9,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1026",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 14,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 10,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1490",
-        "year": 2,
-        "name": "Introduction to Research and Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 20,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 17,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1781",
-        "year": 3,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 9,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1286",
-        "year": 3,
-        "name": "Introduction to Accounting",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 20,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1133",
-        "year": 1,
-        "name": "Introduction to Support",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 19,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 16,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Physics",
-    "type": "U",
-    "modules": [
-      {
-        "id": "MOD1751",
-        "year": 3,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 18,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 18,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1914",
-        "year": 2,
-        "name": "Introduction to Services",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 14,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 20,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1328",
-        "year": 3,
-        "name": "Introduction to Human Resources",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 19,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 9,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1927",
-        "year": 2,
-        "name": "Introduction to Legal",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 11,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 17,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1521",
-        "year": 2,
-        "name": "Introduction to Research and Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 18,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1304",
-        "year": 3,
-        "name": "Introduction to Engineering",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 16,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
-            "time": 15,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1043",
-        "year": 2,
-        "name": "Introduction to Product Management",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 19,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1690",
-        "year": 2,
-        "name": "Introduction to Legal",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 11,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 10,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-   {
     "name": "Computer Science",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1622",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 13,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 9,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1774",
-        "year": 1,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 15,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1167",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 19,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 13,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1695",
-        "year": 1,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 19,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Software Engineering",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1150",
-        "year": 1,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 12,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 19,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1707",
-        "year": 1,
-        "name": "Introduction to Engineering",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 19,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 15,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1105",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 9,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 16,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1526",
-        "year": 1,
-        "name": "Introduction to Services",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
-            "time": 11,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 18,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Computing",
     "type": "U",
     "modules": [
       {
-        "id": "MOD1578",
-        "year": 3,
-        "name": "Introduction to Human Resources",
+        "id": "COMP1346",
+        "year": 1,
+        "name": "Computer and Communication Systems",
         "compulsory": true,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
+            "type": "Lecture",
+            "day": 3,
             "time": 14,
-            "duration": 1
+            "duration": 2
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 11,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1444",
-        "year": 3,
-        "name": "Introduction to Training",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
+            "type": "Seminar",
             "day": 4,
-            "time": 18,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 19,
+            "time": 10,
             "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1838",
+        "id": "COMP1002",
+        "year": 1,
+        "name": "Introduction to Computer Science and its Applications",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "type": "Workshop",
+            "day": 4,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1163",
+        "year": 1,
+        "name": "Paradigms of programming",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "type": "Workshop",
+            "day": 4,
+            "time": 15,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1017",
+        "year": 1,
+        "name": "Algorithms and Data Structures",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Seminar",
+            "day": 4,
+            "time": 20,
+            "duration": 1
+          },
+          {
+            "type": "Lecture",
+            "day": 4,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1571",
+        "year": 1,
+        "name": "Introduction to Compilers",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "type": "Tutorial",
+            "day": 0,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1406",
+        "year": 1,
+        "name": "Principles of Software Engineering",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 1,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1493",
+        "year": 1,
+        "name": "Mathematics for Computer Science",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "type": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1716",
+        "year": 1,
+        "name": "Advanced Programming",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Seminar",
+            "day": 2,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 2,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1350",
         "year": 2,
-        "name": "Introduction to Support",
+        "name": "Operating Systems",
         "compulsory": false,
-        "term": 2,
+        "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
+            "type": "Seminar",
             "day": 4,
-            "time": 11,
+            "time": 16,
             "duration": 2
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 3,
+            "type": "Lecture",
+            "day": 1,
             "time": 20,
             "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1004",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 9,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 13,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1155",
+        "id": "COMP1204",
         "year": 2,
-        "name": "Introduction to Support",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 16,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 13,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1960",
-        "year": 1,
-        "name": "Introduction to Support",
+        "name": "Information Security",
         "compulsory": false,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 13,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 14,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1254",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 2,
-            "time": 15,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 18,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1592",
-        "year": 1,
-        "name": "Introduction to Legal",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
+            "type": "Lecture",
+            "day": 4,
             "time": 15,
             "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Civil Engineering",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1764",
-        "year": 1,
-        "name": "Introduction to Engineering",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 12,
-            "duration": 2
           },
           {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 12,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1355",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 13,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1082",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
+            "type": "Seminar",
             "day": 4,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 14,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1551",
-        "year": 1,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 14,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 12,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Dentistry",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1307",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 13,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 10,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1344",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
             "time": 11,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 11,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1972",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 17,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 14,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1063",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 15,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 12,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Economics",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1112",
-        "year": 1,
-        "name": "Introduction to Engineering",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 19,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1653",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 13,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1793",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 9,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 9,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1441",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 10,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 15,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "English",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1545",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 18,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 20,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1581",
-        "year": 1,
-        "name": "Introduction to Sales",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 11,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 10,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1138",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 12,
             "duration": 1
           }
         ]
       },
       {
-        "id": "MOD1714",
-        "year": 1,
-        "name": "Introduction to Support",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 9,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 13,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Film Making",
-    "type": "U",
-    "modules": [
-      {
-        "id": "MOD1853",
-        "year": 1,
-        "name": "Introduction to Sales",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 9,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 9,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1813",
-        "year": 3,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1510",
-        "year": 3,
-        "name": "Introduction to Research and Development",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 19,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 9,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1718",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 19,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 18,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1098",
-        "year": 3,
-        "name": "Introduction to Support",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 18,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 10,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1802",
+        "id": "COMP1707",
         "year": 2,
-        "name": "Introduction to Marketing",
+        "name": "Introduction to Artificial Intelligence",
         "compulsory": false,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 11,
-            "duration": 2
+            "type": "Tutorial",
+            "day": 2,
+            "time": 13,
+            "duration": 1
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 13,
+            "type": "Lecture",
+            "day": 2,
+            "time": 14,
             "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1879",
-        "year": 3,
-        "name": "Introduction to Marketing",
-        "compulsory": false,
+        "id": "COMP1785",
+        "year": 2,
+        "name": "Advanced Algorithms and Data Structures",
+        "compulsory": true,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 15,
+            "type": "Lecture",
+            "day": 2,
+            "time": 13,
             "duration": 2
           },
           {
-            "typeOfActivity": "Seminar",
+            "type": "Seminar",
+            "day": 3,
+            "time": 12,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1264",
+        "year": 2,
+        "name": "Computational Methods and Numerical Techniques",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "type": "Seminar",
+            "day": 2,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1559",
+        "year": 2,
+        "name": "Statistical Techniques with R",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "type": "Lab",
+            "day": 0,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1657",
+        "year": 2,
+        "name": "Operational Research: Linear Programming",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 2,
+            "time": 19,
+            "duration": 1
+          },
+          {
+            "type": "Tutorial",
+            "day": 4,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1280",
+        "year": 2,
+        "name": "Introduction to Computer Forensics",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "type": "Lab",
             "day": 2,
             "time": 20,
             "duration": 2
@@ -1651,911 +340,170 @@
         ]
       },
       {
-        "id": "MOD1878",
+        "id": "COMP1956",
         "year": 3,
-        "name": "Introduction to Services",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 13,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 19,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Photography",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1700",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 2,
-            "time": 19,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 17,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1231",
-        "year": 1,
-        "name": "Introduction to Accounting",
+        "name": "Human Computer Interaction and Design",
         "compulsory": true,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 15,
+            "type": "Lecture",
+            "day": 4,
+            "time": 13,
             "duration": 1
           },
           {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 9,
+            "type": "Workshop",
+            "day": 4,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "COMP1851",
+        "year": 3,
+        "name": "Final Year Projects",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 2,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 20,
             "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1778",
-        "year": 1,
-        "name": "Introduction to Training",
+        "id": "COMP1454",
+        "year": 3,
+        "name": "JVM Programming Languages",
         "compulsory": false,
-        "term": 2,
+        "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Tutorial",
+            "type": "Lecture",
+            "day": 3,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "type": "Workshop",
+            "day": 4,
+            "time": 15,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "COMP1282",
+        "year": 3,
+        "name": "Penetration Testing and Ethical Vulnerability Scanning",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
             "day": 2,
             "time": 12,
             "duration": 2
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 11,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1529",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 10,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Geology",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1093",
-        "year": 1,
-        "name": "Introduction to Engineering",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
+            "type": "Tutorial",
             "day": 0,
-            "time": 17,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 13,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1718",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 15,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 14,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1207",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 16,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1875",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 18,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 12,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "History",
-    "type": "U",
-    "modules": [
-      {
-        "id": "MOD1017",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 15,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 11,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1422",
-        "year": 2,
-        "name": "Introduction to Research and Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 13,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1808",
-        "year": 3,
-        "name": "Introduction to Support",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1706",
-        "year": 2,
-        "name": "Introduction to Product Management",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 14,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 11,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1548",
-        "year": 3,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 0,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
-            "time": 14,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1062",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 17,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 9,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1947",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 9,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1833",
-        "year": 1,
-        "name": "Introduction to Marketing",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
-            "time": 13,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 20,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Music",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1406",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 13,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 13,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1091",
-        "year": 1,
-        "name": "Introduction to Marketing",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 19,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 20,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1966",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
-            "time": 11,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 1,
-            "time": 11,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1616",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 2,
-            "time": 9,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 10,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Medicine",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1747",
-        "year": 1,
-        "name": "Introduction to Accounting",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 18,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
             "time": 15,
             "duration": 1
           }
         ]
       },
       {
-        "id": "MOD1882",
-        "year": 1,
-        "name": "Introduction to Research and Development",
+        "id": "COMP1495",
+        "year": 3,
+        "name": "Natural Computing",
         "compulsory": false,
         "term": 2,
         "activities": [
           {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
+            "type": "Lecture",
+            "day": 4,
+            "time": 10,
+            "duration": 1
+          },
+          {
+            "type": "Tutorial",
+            "day": 0,
             "time": 18,
             "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 16,
-            "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1850",
-        "year": 1,
-        "name": "Introduction to Services",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 14,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 14,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1396",
-        "year": 1,
-        "name": "Introduction to Research and Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 12,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 16,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sociology",
-    "type": "U",
-    "modules": [
-      {
-        "id": "MOD1645",
+        "id": "COMP1819",
         "year": 3,
-        "name": "Introduction to Human Resources",
-        "compulsory": false,
+        "name": "Software Engineering Management",
+        "compulsory": true,
         "term": 2,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
-            "day": 1,
+            "type": "Lecture",
+            "day": 4,
             "time": 11,
             "duration": 1
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 19,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1601",
-        "year": 3,
-        "name": "Introduction to Accounting",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 10,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 14,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1807",
-        "year": 1,
-        "name": "Introduction to Engineering",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 11,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 16,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1320",
-        "year": 2,
-        "name": "Introduction to Marketing",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 16,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 20,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1087",
-        "year": 3,
-        "name": "Introduction to Accounting",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 20,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
+            "type": "Workshop",
             "day": 4,
-            "time": 10,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1565",
-        "year": 3,
-        "name": "Introduction to Human Resources",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 16,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1520",
-        "year": 1,
-        "name": "Introduction to Accounting",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 18,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 14,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1929",
-        "year": 2,
-        "name": "Introduction to Sales",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 9,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 9,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Philosophy",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1989",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 9,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 10,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1757",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 9,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 13,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1677",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 20,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 10,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1643",
-        "year": 1,
-        "name": "Introduction to Sales",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 14,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 16,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Nursing",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1337",
-        "year": 1,
-        "name": "Introduction to Engineering",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 18,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 14,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1389",
-        "year": 1,
-        "name": "Introduction to Sales",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
             "time": 17,
             "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 19,
-            "duration": 1
           }
         ]
       },
       {
-        "id": "MOD1613",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": true,
+        "id": "COMP1678",
+        "year": 3,
+        "name": "Computer Forensics 3",
+        "compulsory": false,
         "term": 2,
         "activities": [
           {
-            "typeOfActivity": "Seminar",
+            "type": "Lecture",
             "day": 0,
-            "time": 17,
+            "time": 16,
             "duration": 2
           },
           {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 15,
+            "type": "Seminar",
+            "day": 1,
+            "time": 14,
             "duration": 1
           }
         ]
       },
       {
-        "id": "MOD1509",
-        "year": 1,
-        "name": "Introduction to Research and Development",
+        "id": "COMP1191",
+        "year": 3,
+        "name": "Information Visualisation and Big Data",
         "compulsory": true,
         "term": 2,
         "activities": [
           {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 16,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
+            "type": "Workshop",
+            "day": 4,
             "time": 20,
             "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 4,
+            "time": 14,
+            "duration": 1
           }
         ]
       }
@@ -2563,442 +511,508 @@
   },
   {
     "name": "Mathematics",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1354",
-        "year": 1,
-        "name": "Introduction to Training",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 18,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 2,
-            "time": 15,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1582",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 9,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 12,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1339",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
-            "time": 17,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 11,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1195",
-        "year": 1,
-        "name": "Introduction to Services",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 0,
-            "time": 17,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 2,
-            "time": 14,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Linguistics",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1481",
-        "year": 1,
-        "name": "Introduction to Engineering",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 17,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 17,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1231",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 14,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 19,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1702",
-        "year": 1,
-        "name": "Introduction to Business Development",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 12,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 19,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1651",
-        "year": 1,
-        "name": "Introduction to Product Management",
-        "compulsory": true,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 11,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 19,
-            "duration": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Engineering",
     "type": "U",
     "modules": [
       {
-        "id": "MOD1914",
-        "year": 3,
-        "name": "Introduction to Services",
-        "compulsory": false,
+        "id": "MATH1620",
+        "year": 1,
+        "name": "Mathematical Algorithms and Methods",
+        "compulsory": true,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
+            "type": "Lecture",
             "day": 1,
-            "time": 14,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1116",
-        "year": 1,
-        "name": "Introduction to Human Resources",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 16,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 2,
-            "time": 17,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1460",
-        "year": 2,
-        "name": "Introduction to Engineering",
-        "compulsory": false,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Tutorial",
-            "day": 3,
             "time": 19,
             "duration": 2
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 10,
-            "duration": 1
+            "type": "Seminar",
+            "day": 1,
+            "time": 15,
+            "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1723",
-        "year": 3,
-        "name": "Introduction to Legal",
-        "compulsory": true,
-        "term": 2,
+        "id": "MATH1002",
+        "year": 1,
+        "name": "Vectors and Matrices",
+        "compulsory": false,
+        "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Tutorial",
-            "day": 4,
-            "time": 17,
-            "duration": 2
+            "type": "Tutorial",
+            "day": 3,
+            "time": 18,
+            "duration": 1
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 17,
-            "duration": 2
-          }
-        ]
-      },
-      {
-        "id": "MOD1311",
-        "year": 3,
-        "name": "Introduction to Support",
-        "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
+            "type": "Lecture",
+            "day": 3,
             "time": 18,
             "duration": 2
-          },
-          {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 15,
-            "duration": 1
           }
         ]
       },
       {
-        "id": "MOD1144",
-        "year": 2,
-        "name": "Introduction to Legal",
+        "id": "MATH1885",
+        "year": 1,
+        "name": "Mathematical Coding",
         "compulsory": true,
-        "term": 2,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 10,
-            "duration": 1
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 1,
-            "time": 20,
-            "duration": 1
-          }
-        ]
-      },
-      {
-        "id": "MOD1127",
-        "year": 3,
-        "name": "Introduction to Business Development",
-        "compulsory": false,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
-            "day": 0,
-            "time": 10,
+            "type": "Lecture",
+            "day": 4,
+            "time": 12,
             "duration": 2
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 1,
-            "time": 15,
+            "type": "Seminar",
+            "day": 0,
+            "time": 9,
             "duration": 1
           }
         ]
       },
       {
-        "id": "MOD1754",
-        "year": 2,
-        "name": "Introduction to Marketing",
+        "id": "MATH1540",
+        "year": 1,
+        "name": "Calculus and Mathematical Analysis",
         "compulsory": false,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Tutorial",
+            "type": "Lecture",
+            "day": 1,
+            "time": 14,
+            "duration": 2
+          },
+          {
+            "type": "Lab",
             "day": 2,
-            "time": 12,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 10,
-            "duration": 2
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Art",
-    "type": "P",
-    "modules": [
-      {
-        "id": "MOD1754",
-        "year": 1,
-        "name": "Introduction to Support",
-        "compulsory": false,
-        "term": 1,
-        "activities": [
-          {
-            "typeOfActivity": "Seminar",
-            "day": 3,
-            "time": 18,
-            "duration": 2
-          },
-          {
-            "typeOfActivity": "Seminar",
-            "day": 4,
-            "time": 12,
+            "time": 13,
             "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1425",
+        "id": "MATH1785",
         "year": 1,
-        "name": "Introduction to Research and Development",
+        "name": "Analysis of Data",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "type": "Tutorial",
+            "day": 3,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1543",
+        "year": 1,
+        "name": "Probability and Randomness",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 2,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1862",
+        "year": 1,
+        "name": "Functions and Derivatives",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "type": "Lab",
+            "day": 4,
+            "time": 11,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1832",
+        "year": 1,
+        "name": "Geometry",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 13,
+            "duration": 2
+          },
+          {
+            "type": "Seminar",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1433",
+        "year": 2,
+        "name": "Linear Algebra",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lab",
+            "day": 2,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "type": "Lecture",
+            "day": 2,
+            "time": 18,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1154",
+        "year": 2,
+        "name": "Differential Equations",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 14,
+            "duration": 1
+          },
+          {
+            "type": "Workshop",
+            "day": 0,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1014",
+        "year": 2,
+        "name": "Operational Research",
         "compulsory": true,
         "term": 1,
         "activities": [
           {
-            "typeOfActivity": "Tutorial",
+            "type": "Lecture",
             "day": 1,
-            "time": 20,
-            "duration": 2
+            "time": 13,
+            "duration": 1
           },
           {
-            "typeOfActivity": "Seminar",
-            "day": 0,
+            "type": "Lab",
+            "day": 1,
             "time": 15,
             "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1231",
-        "year": 1,
-        "name": "Introduction to Legal",
+        "id": "MATH1074",
+        "year": 2,
+        "name": "Linear Programming",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 3,
+            "time": 11,
+            "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 2,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1912",
+        "year": 2,
+        "name": "Simulation and Modelling",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "type": "Tutorial",
+            "day": 3,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1958",
+        "year": 2,
+        "name": "Vector Calculusg",
         "compulsory": true,
         "term": 2,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 12,
+            "type": "Lecture",
+            "day": 3,
+            "time": 17,
+            "duration": 1
+          },
+          {
+            "type": "Seminar",
+            "day": 0,
+            "time": 18,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1103",
+        "year": 2,
+        "name": "Statistical Data Analysis and Time Series",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 17,
             "duration": 2
           },
           {
-            "typeOfActivity": "Lecture",
+            "type": "Seminar",
             "day": 1,
+            "time": 12,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1848",
+        "year": 2,
+        "name": "Advanced Trigonometry",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "type": "Workshop",
+            "day": 4,
+            "time": 18,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1997",
+        "year": 3,
+        "name": "Optimisation Techniques",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 4,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "type": "Workshop",
+            "day": 1,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1556",
+        "year": 3,
+        "name": "Actuarial Mathematics and Risk Modelling",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 9,
+            "duration": 2
+          },
+          {
+            "type": "Lab",
+            "day": 2,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "MATH1035",
+        "year": 3,
+        "name": "Mathematics for the Life Sciences",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "type": "Seminar",
+            "day": 0,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1929",
+        "year": 3,
+        "name": "Graph Theory and Applications",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 4,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "type": "Seminar",
+            "day": 1,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1802",
+        "year": 3,
+        "name": "Coding and Cryptography",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 15,
+            "duration": 2
+          },
+          {
+            "type": "Seminar",
+            "day": 2,
             "time": 14,
             "duration": 2
           }
         ]
       },
       {
-        "id": "MOD1066",
-        "year": 1,
-        "name": "Introduction to Marketing",
+        "id": "MATH1672",
+        "year": 3,
+        "name": "Partial Differential Equations",
         "compulsory": false,
-        "term": 1,
+        "term": 2,
         "activities": [
           {
-            "typeOfActivity": "Lecture",
-            "day": 4,
-            "time": 17,
+            "type": "Workshop",
+            "day": 1,
+            "time": 14,
             "duration": 1
           },
           {
-            "typeOfActivity": "Lecture",
-            "day": 3,
-            "time": 16,
+            "type": "Lecture",
+            "day": 0,
+            "time": 17,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1833",
+        "year": 3,
+        "name": "Introduction to Business Development",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "type": "Seminar",
+            "day": 2,
+            "time": 10,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "MATH1675",
+        "year": 3,
+        "name": "Coding and Cryptography",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lab",
+            "day": 0,
+            "time": 20,
+            "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 12,
             "duration": 1
           }
         ]
