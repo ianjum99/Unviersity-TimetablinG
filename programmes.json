@@ -1018,5 +1018,353 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Finance",
+    "type": "P",
+    "modules": [
+      {
+        "id": "FIN1066",
+        "year": 1,
+        "name": "Financial Analysis and Valuation",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lab",
+            "day": 0,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "type": "Workshop",
+            "day": 0,
+            "time": 9,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "FIN1754",
+        "year": 1,
+        "name": "Academic English for Postgraduates (Business)",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Tutorial",
+            "day": 4,
+            "time": 18,
+            "duration": 2
+          },
+          {
+            "type": "Seminar",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "FIN1456",
+        "year": 1,
+        "name": "Research Methods",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lab",
+            "day": 4,
+            "time": 9,
+            "duration": 1
+          },
+          {
+            "type": "Lab",
+            "day": 0,
+            "time": 16,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "FIN1383",
+        "year": 1,
+        "name": "Foundations of Scholarship (Dept ACC)",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 3,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 18,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "FIN1653",
+        "year": 1,
+        "name": "Principles of Finance",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 1,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "type": "Lab",
+            "day": 1,
+            "time": 18,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "FIN1621",
+        "year": 1,
+        "name": "Investment Management",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 2,
+            "time": 10,
+            "duration": 2
+          },
+          {
+            "type": "Lab",
+            "day": 2,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "FIN1529",
+        "year": 1,
+        "name": "Financial Markets & Products",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Lab",
+            "day": 1,
+            "time": 16,
+            "duration": 1
+          },
+          {
+            "type": "Tutorial",
+            "day": 3,
+            "time": 16,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "FIN1889",
+        "year": 1,
+        "name": "Research Project",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Tutorial",
+            "day": 4,
+            "time": 20,
+            "duration": 1
+          },
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 9,
+            "duration": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Film Production",
+    "type": "P",
+    "modules": [
+      {
+        "id": "CINE1710",
+        "year": 1,
+        "name": "Film Research Workshop",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Seminar",
+            "day": 2,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 1,
+            "time": 19,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "CINE1039",
+        "year": 1,
+        "name": "Cinematography",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 17,
+            "duration": 2
+          },
+          {
+            "type": "Lecture",
+            "day": 4,
+            "time": 19,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "CINE1249",
+        "year": 1,
+        "name": "Production Practice",
+        "compulsory": false,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 2,
+            "time": 18,
+            "duration": 1
+          },
+          {
+            "type": "Seminar",
+            "day": 3,
+            "time": 14,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "CINE1657",
+        "year": 1,
+        "name": "Directing Screen Performance",
+        "compulsory": true,
+        "term": 1,
+        "activities": [
+          {
+            "type": "Tutorial",
+            "day": 3,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "type": "Seminar",
+            "day": 1,
+            "time": 15,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "CINE1113",
+        "year": 1,
+        "name": "Film Major Project",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 2,
+            "time": 19,
+            "duration": 2
+          },
+          {
+            "type": "Lab",
+            "day": 0,
+            "time": 20,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "CINE1404",
+        "year": 1,
+        "name": "Screenwriting for the Short Form",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Seminar",
+            "day": 2,
+            "time": 13,
+            "duration": 1
+          },
+          {
+            "type": "Lecture",
+            "day": 3,
+            "time": 12,
+            "duration": 1
+          }
+        ]
+      },
+      {
+        "id": "CINE1088",
+        "year": 1,
+        "name": "Editing",
+        "compulsory": false,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 4,
+            "time": 15,
+            "duration": 1
+          },
+          {
+            "type": "Lecture",
+            "day": 0,
+            "time": 13,
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "id": "CINE1300",
+        "year": 1,
+        "name": "Emerging Cinematography Practices",
+        "compulsory": true,
+        "term": 2,
+        "activities": [
+          {
+            "type": "Workshop",
+            "day": 2,
+            "time": 11,
+            "duration": 1
+          },
+          {
+            "type": "Seminar",
+            "day": 4,
+            "time": 20,
+            "duration": 1
+          }
+        ]
+      }
+    ]
   }
 ]
