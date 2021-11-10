@@ -4,7 +4,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1901",
+        "id": "MOD1491",
         "year": 3,
         "name": "Introduction to Support",
         "compulsory": false,
@@ -25,7 +25,7 @@
         ]
       },
       {
-        "id": "1322",
+        "id": "MOD1332",
         "year": 1,
         "name": "Introduction to Services",
         "compulsory": true,
@@ -46,7 +46,7 @@
         ]
       },
       {
-        "id": "1760",
+        "id": "MOD1550",
         "year": 2,
         "name": "Introduction to Sales",
         "compulsory": true,
@@ -67,7 +67,7 @@
         ]
       },
       {
-        "id": "1722",
+        "id": "MOD1751",
         "year": 2,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -88,7 +88,7 @@
         ]
       },
       {
-        "id": "1223",
+        "id": "MOD1258",
         "year": 3,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -109,7 +109,7 @@
         ]
       },
       {
-        "id": "1506",
+        "id": "MOD1955",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -130,7 +130,7 @@
         ]
       },
       {
-        "id": "1726",
+        "id": "MOD1698",
         "year": 1,
         "name": "Introduction to Legal",
         "compulsory": false,
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "1933",
+        "id": "MOD1500",
         "year": 2,
         "name": "Introduction to Services",
         "compulsory": true,
@@ -178,7 +178,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1515",
+        "id": "MOD1668",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -199,7 +199,7 @@
         ]
       },
       {
-        "id": "1463",
+        "id": "MOD1014",
         "year": 1,
         "name": "Introduction to Legal",
         "compulsory": true,
@@ -220,7 +220,7 @@
         ]
       },
       {
-        "id": "1367",
+        "id": "MOD1731",
         "year": 3,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -241,7 +241,7 @@
         ]
       },
       {
-        "id": "1744",
+        "id": "MOD1799",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": true,
@@ -262,7 +262,7 @@
         ]
       },
       {
-        "id": "1286",
+        "id": "MOD1818",
         "year": 1,
         "name": "Introduction to Legal",
         "compulsory": false,
@@ -283,7 +283,7 @@
         ]
       },
       {
-        "id": "1154",
+        "id": "MOD1502",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -304,7 +304,7 @@
         ]
       },
       {
-        "id": "1682",
+        "id": "MOD1854",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -325,7 +325,7 @@
         ]
       },
       {
-        "id": "1855",
+        "id": "MOD1843",
         "year": 2,
         "name": "Introduction to Accounting",
         "compulsory": true,
@@ -352,7 +352,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1404",
+        "id": "MOD1045",
         "year": 1,
         "name": "Introduction to Legal",
         "compulsory": true,
@@ -373,7 +373,7 @@
         ]
       },
       {
-        "id": "1023",
+        "id": "MOD1657",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -394,7 +394,7 @@
         ]
       },
       {
-        "id": "1261",
+        "id": "MOD1589",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": false,
@@ -415,7 +415,7 @@
         ]
       },
       {
-        "id": "1952",
+        "id": "MOD1460",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -442,7 +442,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1359",
+        "id": "MOD1272",
         "year": 2,
         "name": "Introduction to Accounting",
         "compulsory": true,
@@ -463,7 +463,7 @@
         ]
       },
       {
-        "id": "1886",
+        "id": "MOD1772",
         "year": 2,
         "name": "Introduction to Training",
         "compulsory": true,
@@ -484,7 +484,7 @@
         ]
       },
       {
-        "id": "1017",
+        "id": "MOD1070",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -505,7 +505,7 @@
         ]
       },
       {
-        "id": "1911",
+        "id": "MOD1026",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": false,
@@ -526,7 +526,7 @@
         ]
       },
       {
-        "id": "1655",
+        "id": "MOD1490",
         "year": 2,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -547,7 +547,7 @@
         ]
       },
       {
-        "id": "1346",
+        "id": "MOD1781",
         "year": 3,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -568,7 +568,7 @@
         ]
       },
       {
-        "id": "1101",
+        "id": "MOD1286",
         "year": 3,
         "name": "Introduction to Accounting",
         "compulsory": true,
@@ -589,7 +589,7 @@
         ]
       },
       {
-        "id": "1727",
+        "id": "MOD1133",
         "year": 1,
         "name": "Introduction to Support",
         "compulsory": true,
@@ -616,7 +616,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1050",
+        "id": "MOD1751",
         "year": 3,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -637,7 +637,7 @@
         ]
       },
       {
-        "id": "1849",
+        "id": "MOD1914",
         "year": 2,
         "name": "Introduction to Services",
         "compulsory": false,
@@ -658,7 +658,7 @@
         ]
       },
       {
-        "id": "1431",
+        "id": "MOD1328",
         "year": 3,
         "name": "Introduction to Human Resources",
         "compulsory": false,
@@ -679,7 +679,7 @@
         ]
       },
       {
-        "id": "1279",
+        "id": "MOD1927",
         "year": 2,
         "name": "Introduction to Legal",
         "compulsory": false,
@@ -700,7 +700,7 @@
         ]
       },
       {
-        "id": "1061",
+        "id": "MOD1521",
         "year": 2,
         "name": "Introduction to Research and Development",
         "compulsory": false,
@@ -721,7 +721,7 @@
         ]
       },
       {
-        "id": "1374",
+        "id": "MOD1304",
         "year": 3,
         "name": "Introduction to Engineering",
         "compulsory": true,
@@ -742,7 +742,7 @@
         ]
       },
       {
-        "id": "1378",
+        "id": "MOD1043",
         "year": 2,
         "name": "Introduction to Product Management",
         "compulsory": false,
@@ -763,7 +763,7 @@
         ]
       },
       {
-        "id": "1582",
+        "id": "MOD1690",
         "year": 2,
         "name": "Introduction to Legal",
         "compulsory": true,
@@ -785,12 +785,12 @@
       }
     ]
   },
-  {
+   {
     "name": "Computer Science",
     "type": "P",
     "modules": [
       {
-        "id": "1539",
+        "id": "MOD1622",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": false,
@@ -811,7 +811,7 @@
         ]
       },
       {
-        "id": "1274",
+        "id": "MOD1774",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -832,7 +832,7 @@
         ]
       },
       {
-        "id": "1740",
+        "id": "MOD1167",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": false,
@@ -853,7 +853,7 @@
         ]
       },
       {
-        "id": "1962",
+        "id": "MOD1695",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -880,7 +880,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1272",
+        "id": "MOD1150",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -901,7 +901,7 @@
         ]
       },
       {
-        "id": "1869",
+        "id": "MOD1707",
         "year": 1,
         "name": "Introduction to Engineering",
         "compulsory": false,
@@ -922,7 +922,7 @@
         ]
       },
       {
-        "id": "1597",
+        "id": "MOD1105",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -943,7 +943,7 @@
         ]
       },
       {
-        "id": "1622",
+        "id": "MOD1526",
         "year": 1,
         "name": "Introduction to Services",
         "compulsory": false,
@@ -970,7 +970,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1490",
+        "id": "MOD1578",
         "year": 3,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -991,7 +991,7 @@
         ]
       },
       {
-        "id": "1342",
+        "id": "MOD1444",
         "year": 3,
         "name": "Introduction to Training",
         "compulsory": true,
@@ -1012,7 +1012,7 @@
         ]
       },
       {
-        "id": "1674",
+        "id": "MOD1838",
         "year": 2,
         "name": "Introduction to Support",
         "compulsory": false,
@@ -1033,7 +1033,7 @@
         ]
       },
       {
-        "id": "1839",
+        "id": "MOD1004",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -1054,7 +1054,7 @@
         ]
       },
       {
-        "id": "1430",
+        "id": "MOD1155",
         "year": 2,
         "name": "Introduction to Support",
         "compulsory": true,
@@ -1075,7 +1075,7 @@
         ]
       },
       {
-        "id": "1327",
+        "id": "MOD1960",
         "year": 1,
         "name": "Introduction to Support",
         "compulsory": false,
@@ -1096,7 +1096,7 @@
         ]
       },
       {
-        "id": "1381",
+        "id": "MOD1254",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -1117,7 +1117,7 @@
         ]
       },
       {
-        "id": "1590",
+        "id": "MOD1592",
         "year": 1,
         "name": "Introduction to Legal",
         "compulsory": true,
@@ -1144,7 +1144,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1748",
+        "id": "MOD1764",
         "year": 1,
         "name": "Introduction to Engineering",
         "compulsory": false,
@@ -1165,7 +1165,7 @@
         ]
       },
       {
-        "id": "1773",
+        "id": "MOD1355",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": false,
@@ -1186,7 +1186,7 @@
         ]
       },
       {
-        "id": "1323",
+        "id": "MOD1082",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": false,
@@ -1207,7 +1207,7 @@
         ]
       },
       {
-        "id": "1857",
+        "id": "MOD1551",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -1234,7 +1234,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1239",
+        "id": "MOD1307",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": false,
@@ -1255,7 +1255,7 @@
         ]
       },
       {
-        "id": "1694",
+        "id": "MOD1344",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -1276,7 +1276,7 @@
         ]
       },
       {
-        "id": "1321",
+        "id": "MOD1972",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": false,
@@ -1297,7 +1297,7 @@
         ]
       },
       {
-        "id": "1527",
+        "id": "MOD1063",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -1324,7 +1324,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1047",
+        "id": "MOD1112",
         "year": 1,
         "name": "Introduction to Engineering",
         "compulsory": true,
@@ -1345,7 +1345,7 @@
         ]
       },
       {
-        "id": "1420",
+        "id": "MOD1653",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": true,
@@ -1366,7 +1366,7 @@
         ]
       },
       {
-        "id": "1839",
+        "id": "MOD1793",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -1387,7 +1387,7 @@
         ]
       },
       {
-        "id": "1259",
+        "id": "MOD1441",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -1414,7 +1414,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1184",
+        "id": "MOD1545",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": false,
@@ -1435,7 +1435,7 @@
         ]
       },
       {
-        "id": "1846",
+        "id": "MOD1581",
         "year": 1,
         "name": "Introduction to Sales",
         "compulsory": false,
@@ -1456,7 +1456,7 @@
         ]
       },
       {
-        "id": "1493",
+        "id": "MOD1138",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": false,
@@ -1477,7 +1477,7 @@
         ]
       },
       {
-        "id": "1437",
+        "id": "MOD1714",
         "year": 1,
         "name": "Introduction to Support",
         "compulsory": false,
@@ -1504,7 +1504,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1440",
+        "id": "MOD1853",
         "year": 1,
         "name": "Introduction to Sales",
         "compulsory": true,
@@ -1525,7 +1525,7 @@
         ]
       },
       {
-        "id": "1590",
+        "id": "MOD1813",
         "year": 3,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -1546,7 +1546,7 @@
         ]
       },
       {
-        "id": "1577",
+        "id": "MOD1510",
         "year": 3,
         "name": "Introduction to Research and Development",
         "compulsory": false,
@@ -1567,7 +1567,7 @@
         ]
       },
       {
-        "id": "1275",
+        "id": "MOD1718",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": true,
@@ -1588,7 +1588,7 @@
         ]
       },
       {
-        "id": "1198",
+        "id": "MOD1098",
         "year": 3,
         "name": "Introduction to Support",
         "compulsory": true,
@@ -1609,7 +1609,7 @@
         ]
       },
       {
-        "id": "1271",
+        "id": "MOD1802",
         "year": 2,
         "name": "Introduction to Marketing",
         "compulsory": false,
@@ -1630,7 +1630,7 @@
         ]
       },
       {
-        "id": "1689",
+        "id": "MOD1879",
         "year": 3,
         "name": "Introduction to Marketing",
         "compulsory": false,
@@ -1651,7 +1651,7 @@
         ]
       },
       {
-        "id": "1341",
+        "id": "MOD1878",
         "year": 3,
         "name": "Introduction to Services",
         "compulsory": false,
@@ -1678,7 +1678,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1142",
+        "id": "MOD1700",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": false,
@@ -1699,7 +1699,7 @@
         ]
       },
       {
-        "id": "1115",
+        "id": "MOD1231",
         "year": 1,
         "name": "Introduction to Accounting",
         "compulsory": true,
@@ -1720,7 +1720,7 @@
         ]
       },
       {
-        "id": "1234",
+        "id": "MOD1778",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -1741,7 +1741,7 @@
         ]
       },
       {
-        "id": "1846",
+        "id": "MOD1529",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": true,
@@ -1768,7 +1768,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1443",
+        "id": "MOD1093",
         "year": 1,
         "name": "Introduction to Engineering",
         "compulsory": false,
@@ -1789,7 +1789,7 @@
         ]
       },
       {
-        "id": "1789",
+        "id": "MOD1718",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -1810,7 +1810,7 @@
         ]
       },
       {
-        "id": "1682",
+        "id": "MOD1207",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": false,
@@ -1831,7 +1831,7 @@
         ]
       },
       {
-        "id": "1577",
+        "id": "MOD1875",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": false,
@@ -1858,7 +1858,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1236",
+        "id": "MOD1017",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -1879,7 +1879,7 @@
         ]
       },
       {
-        "id": "1472",
+        "id": "MOD1422",
         "year": 2,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -1900,7 +1900,7 @@
         ]
       },
       {
-        "id": "1502",
+        "id": "MOD1808",
         "year": 3,
         "name": "Introduction to Support",
         "compulsory": true,
@@ -1921,7 +1921,7 @@
         ]
       },
       {
-        "id": "1581",
+        "id": "MOD1706",
         "year": 2,
         "name": "Introduction to Product Management",
         "compulsory": false,
@@ -1942,7 +1942,7 @@
         ]
       },
       {
-        "id": "1438",
+        "id": "MOD1548",
         "year": 3,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -1963,7 +1963,7 @@
         ]
       },
       {
-        "id": "1110",
+        "id": "MOD1062",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -1984,7 +1984,7 @@
         ]
       },
       {
-        "id": "1576",
+        "id": "MOD1947",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -2005,7 +2005,7 @@
         ]
       },
       {
-        "id": "1610",
+        "id": "MOD1833",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": true,
@@ -2032,7 +2032,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1641",
+        "id": "MOD1406",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": false,
@@ -2053,7 +2053,7 @@
         ]
       },
       {
-        "id": "1370",
+        "id": "MOD1091",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": false,
@@ -2074,7 +2074,7 @@
         ]
       },
       {
-        "id": "1571",
+        "id": "MOD1966",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -2095,7 +2095,7 @@
         ]
       },
       {
-        "id": "1899",
+        "id": "MOD1616",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -2122,7 +2122,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1753",
+        "id": "MOD1747",
         "year": 1,
         "name": "Introduction to Accounting",
         "compulsory": true,
@@ -2143,7 +2143,7 @@
         ]
       },
       {
-        "id": "1602",
+        "id": "MOD1882",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": false,
@@ -2164,7 +2164,7 @@
         ]
       },
       {
-        "id": "1925",
+        "id": "MOD1850",
         "year": 1,
         "name": "Introduction to Services",
         "compulsory": true,
@@ -2185,7 +2185,7 @@
         ]
       },
       {
-        "id": "1926",
+        "id": "MOD1396",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -2212,7 +2212,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1654",
+        "id": "MOD1645",
         "year": 3,
         "name": "Introduction to Human Resources",
         "compulsory": false,
@@ -2233,7 +2233,7 @@
         ]
       },
       {
-        "id": "1694",
+        "id": "MOD1601",
         "year": 3,
         "name": "Introduction to Accounting",
         "compulsory": true,
@@ -2254,7 +2254,7 @@
         ]
       },
       {
-        "id": "1391",
+        "id": "MOD1807",
         "year": 1,
         "name": "Introduction to Engineering",
         "compulsory": true,
@@ -2275,7 +2275,7 @@
         ]
       },
       {
-        "id": "1521",
+        "id": "MOD1320",
         "year": 2,
         "name": "Introduction to Marketing",
         "compulsory": false,
@@ -2296,7 +2296,7 @@
         ]
       },
       {
-        "id": "1745",
+        "id": "MOD1087",
         "year": 3,
         "name": "Introduction to Accounting",
         "compulsory": false,
@@ -2317,7 +2317,7 @@
         ]
       },
       {
-        "id": "1761",
+        "id": "MOD1565",
         "year": 3,
         "name": "Introduction to Human Resources",
         "compulsory": false,
@@ -2338,7 +2338,7 @@
         ]
       },
       {
-        "id": "1104",
+        "id": "MOD1520",
         "year": 1,
         "name": "Introduction to Accounting",
         "compulsory": false,
@@ -2359,7 +2359,7 @@
         ]
       },
       {
-        "id": "1287",
+        "id": "MOD1929",
         "year": 2,
         "name": "Introduction to Sales",
         "compulsory": false,
@@ -2386,7 +2386,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1921",
+        "id": "MOD1989",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": true,
@@ -2407,7 +2407,7 @@
         ]
       },
       {
-        "id": "1450",
+        "id": "MOD1757",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": true,
@@ -2428,7 +2428,7 @@
         ]
       },
       {
-        "id": "1678",
+        "id": "MOD1677",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": true,
@@ -2449,7 +2449,7 @@
         ]
       },
       {
-        "id": "1464",
+        "id": "MOD1643",
         "year": 1,
         "name": "Introduction to Sales",
         "compulsory": true,
@@ -2476,7 +2476,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1549",
+        "id": "MOD1337",
         "year": 1,
         "name": "Introduction to Engineering",
         "compulsory": false,
@@ -2497,7 +2497,7 @@
         ]
       },
       {
-        "id": "1951",
+        "id": "MOD1389",
         "year": 1,
         "name": "Introduction to Sales",
         "compulsory": true,
@@ -2518,7 +2518,7 @@
         ]
       },
       {
-        "id": "1428",
+        "id": "MOD1613",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": true,
@@ -2539,7 +2539,7 @@
         ]
       },
       {
-        "id": "1041",
+        "id": "MOD1509",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -2566,7 +2566,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1716",
+        "id": "MOD1354",
         "year": 1,
         "name": "Introduction to Training",
         "compulsory": false,
@@ -2587,7 +2587,7 @@
         ]
       },
       {
-        "id": "1414",
+        "id": "MOD1582",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -2608,7 +2608,7 @@
         ]
       },
       {
-        "id": "1043",
+        "id": "MOD1339",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -2629,7 +2629,7 @@
         ]
       },
       {
-        "id": "1759",
+        "id": "MOD1195",
         "year": 1,
         "name": "Introduction to Services",
         "compulsory": false,
@@ -2656,7 +2656,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1166",
+        "id": "MOD1481",
         "year": 1,
         "name": "Introduction to Engineering",
         "compulsory": false,
@@ -2677,7 +2677,7 @@
         ]
       },
       {
-        "id": "1322",
+        "id": "MOD1231",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": false,
@@ -2698,7 +2698,7 @@
         ]
       },
       {
-        "id": "1268",
+        "id": "MOD1702",
         "year": 1,
         "name": "Introduction to Business Development",
         "compulsory": true,
@@ -2719,7 +2719,7 @@
         ]
       },
       {
-        "id": "1664",
+        "id": "MOD1651",
         "year": 1,
         "name": "Introduction to Product Management",
         "compulsory": true,
@@ -2746,7 +2746,7 @@
     "type": "U",
     "modules": [
       {
-        "id": "1433",
+        "id": "MOD1914",
         "year": 3,
         "name": "Introduction to Services",
         "compulsory": false,
@@ -2767,7 +2767,7 @@
         ]
       },
       {
-        "id": "1830",
+        "id": "MOD1116",
         "year": 1,
         "name": "Introduction to Human Resources",
         "compulsory": true,
@@ -2788,7 +2788,7 @@
         ]
       },
       {
-        "id": "1534",
+        "id": "MOD1460",
         "year": 2,
         "name": "Introduction to Engineering",
         "compulsory": false,
@@ -2809,7 +2809,7 @@
         ]
       },
       {
-        "id": "1621",
+        "id": "MOD1723",
         "year": 3,
         "name": "Introduction to Legal",
         "compulsory": true,
@@ -2830,7 +2830,7 @@
         ]
       },
       {
-        "id": "1365",
+        "id": "MOD1311",
         "year": 3,
         "name": "Introduction to Support",
         "compulsory": true,
@@ -2851,7 +2851,7 @@
         ]
       },
       {
-        "id": "1702",
+        "id": "MOD1144",
         "year": 2,
         "name": "Introduction to Legal",
         "compulsory": true,
@@ -2872,7 +2872,7 @@
         ]
       },
       {
-        "id": "1711",
+        "id": "MOD1127",
         "year": 3,
         "name": "Introduction to Business Development",
         "compulsory": false,
@@ -2893,7 +2893,7 @@
         ]
       },
       {
-        "id": "1633",
+        "id": "MOD1754",
         "year": 2,
         "name": "Introduction to Marketing",
         "compulsory": false,
@@ -2920,7 +2920,7 @@
     "type": "P",
     "modules": [
       {
-        "id": "1792",
+        "id": "MOD1754",
         "year": 1,
         "name": "Introduction to Support",
         "compulsory": false,
@@ -2941,7 +2941,7 @@
         ]
       },
       {
-        "id": "1048",
+        "id": "MOD1425",
         "year": 1,
         "name": "Introduction to Research and Development",
         "compulsory": true,
@@ -2962,7 +2962,7 @@
         ]
       },
       {
-        "id": "1472",
+        "id": "MOD1231",
         "year": 1,
         "name": "Introduction to Legal",
         "compulsory": true,
@@ -2983,7 +2983,7 @@
         ]
       },
       {
-        "id": "1335",
+        "id": "MOD1066",
         "year": 1,
         "name": "Introduction to Marketing",
         "compulsory": false,
