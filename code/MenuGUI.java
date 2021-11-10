@@ -54,12 +54,13 @@ public class MenuGUI {
             }
         }
     });
+
         addModuleButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Programme programme = (df.getProgrammeInstanceFromString((String) programmeSelectionDropdown.getSelectedItem()));
                 ArrayList<Module> modules = programme.getModules();
-                Module module = new Module(1,
+                Module module = new Module("1",
                         yearOfStudyDropdown.getSelectedItem(),
                         moduleNameField.getText(),
                         moduleOptionalDropdown.getSelectedItem(),
