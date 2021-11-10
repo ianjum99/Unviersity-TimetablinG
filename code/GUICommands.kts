@@ -1,10 +1,10 @@
-class GUICommands (gui: TimetableGUI, df: ArrayList<Activity>) {
+class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun populateGUI() {
-        for (activity in df) {
+        for (activity in dataFactory.getAllActivities()) {
             for (i in 1..activity.duration) {
                 gui.getLabelFromCoordinates(activity.day + 1, (activity.time - 8 + i - 1)).text =
-                    "${df.getModuleFromActivity(activity).id}"
+                    "${dataFactory.getModuleFromActivity(activity).id}"
             }
         }
     }
