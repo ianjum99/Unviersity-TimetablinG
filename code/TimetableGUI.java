@@ -7,6 +7,8 @@ import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static java.awt.Component.CENTER_ALIGNMENT;
+
 public class TimetableGUI {
 
     private JLabel timetableLabel;
@@ -147,9 +149,23 @@ public class TimetableGUI {
         timetablePanel.setBorder(BorderFactory.createMatteBorder(0, 4, 0, 4, Color.black));
 
 
+//        for (int row = 0; row < numberOfRows; row++) {
+//            for( int column = 0; column < numberOfColumns; column++) {
+//                componentHolder[row][column] = new JPanel(new FlowLayout(FlowLayout.LEFT));
+//                componentHolder[row][column].setBackground(Color.decode("#2D142C"));
+//                timetablePanel.add(componentHolder[row][column]);
+//            }
+//        }
+
         for (int row = 0; row < numberOfRows; row++) {
             for( int column = 0; column < numberOfColumns; column++) {
-                componentHolder[row][column] = new JPanel();
+                if (row <= 12 && column == 0 || row == 0 && column <= 5) {
+                    componentHolder[row][column] = new JPanel(new FlowLayout(FlowLayout.CENTER));
+                }
+                else {
+                    componentHolder[row][column] = new JPanel(new FlowLayout(FlowLayout.LEFT));
+
+                }
                 componentHolder[row][column].setBackground(Color.decode("#2D142C"));
                 timetablePanel.add(componentHolder[row][column]);
             }
@@ -159,7 +175,8 @@ public class TimetableGUI {
             for (int column = 1; column < numberOfColumns; column++) {
                 componentHolder[row][column].add(new JLabel(""));
                 getLabelFromCoordinates(column, row).setForeground(Color.white);
-                getLabelFromCoordinates(column, row).setFont(new Font("Arial", Font.PLAIN, 12));
+                getLabelFromCoordinates(column, row).setFont(new Font("Arial", Font.PLAIN, 10));
+                getLabelFromCoordinates(column, row).setHorizontalAlignment(SwingConstants.LEFT);
 
             }
         }

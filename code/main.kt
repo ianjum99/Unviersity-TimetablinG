@@ -26,7 +26,7 @@ fun main() {
 
     for (activity in df) {
         gui.getLabelFromCoordinates(activity.day!!+1,activity.time!!-8).text =
-            "${dataFactory.getModuleFromActivity(activity).id}"
+            "<html>${dataFactory.getModuleFromActivity(activity).id} <br/> ${dataFactory.getModuleFromActivity(activity).name} <br/> ${activity.type} </html>"
     }
     gui.run {  }
 

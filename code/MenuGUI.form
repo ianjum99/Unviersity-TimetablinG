@@ -383,7 +383,7 @@
               <text value="Start Time:"/>
             </properties>
           </component>
-          <component id="723f0" class="javax.swing.JComboBox">
+          <component id="723f0" class="javax.swing.JComboBox" binding="startTimeDropdown">
             <constraints>
               <grid row="19" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="20"/>
@@ -410,7 +410,7 @@
               <selectedIndex value="0"/>
             </properties>
           </component>
-          <component id="8fbd7" class="javax.swing.JComboBox">
+          <component id="8fbd7" class="javax.swing.JComboBox" binding="timeDurationDropdown">
             <constraints>
               <grid row="20" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="20"/>
@@ -421,30 +421,20 @@
               <font name="Arial" size="14" style="0"/>
               <foreground color="-16777216"/>
               <model>
-                <item value="10:00"/>
-                <item value="11:00"/>
-                <item value="12:00"/>
-                <item value="13:00"/>
-                <item value="14:00"/>
-                <item value="15:00"/>
-                <item value="16:00"/>
-                <item value="17:00"/>
-                <item value="18:00"/>
-                <item value="19:00"/>
-                <item value="20:00"/>
-                <item value="21:00"/>
+                <item value="1"/>
+                <item value="2"/>
               </model>
               <selectedIndex value="0"/>
             </properties>
           </component>
-          <component id="ba781" class="javax.swing.JLabel" binding="endTimeLabel">
+          <component id="ba781" class="javax.swing.JLabel" binding="timeDurationLabel">
             <constraints>
               <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Arial" size="16" style="0"/>
               <foreground color="-1"/>
-              <text value="End Time:"/>
+              <text value="Duration (Hours):"/>
             </properties>
           </component>
           <component id="b65b0" class="javax.swing.JButton" binding="addActivityButton">

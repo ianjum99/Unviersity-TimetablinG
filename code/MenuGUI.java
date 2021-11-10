@@ -24,7 +24,7 @@ public class MenuGUI {
     private JLabel moduleTermLabel, moduleNameLabel, moduleOptionalLabel, moduleSelectionLabel;
     private JComboBox moduleTermDropdown, moduleOptionalDropdown, moduleSelectionDropdown;
     private JButton addModuleButton;
-    private JLabel activitySectionLabel, activityNameLabel, activityTypeLabel, startTimeLabel, endTimeLabel;
+    private JLabel activitySectionLabel, activityNameLabel, activityTypeLabel, startTimeLabel, timeDurationLabel;
     private JTextField activityNameField;
     private JComboBox activityTypeDropdown;
     private JButton addActivityButton;
@@ -32,6 +32,8 @@ public class MenuGUI {
     private JComboBox yearOfStudyDropdown;
     private JLabel activityProgrammeSelectionLabel;
     private JComboBox activityProgrammeSelectionDropdown;
+    private JComboBox startTimeDropdown;
+    private JComboBox timeDurationDropdown;
     private JFrame frame;
     private DataFactory dataFactory;
 
