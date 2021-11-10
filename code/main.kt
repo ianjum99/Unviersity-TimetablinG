@@ -9,6 +9,8 @@ fun main() {
     var commands = GUICommands.GUICommands(gui, dataFactory)
 
 
-    commands.populateGUI()
+//    commands.populateGUI()
 
+    commands.populateGUIbyProgramme(dataFactory[0])
+//    commands.populateGUIbyYear(2)
 }
