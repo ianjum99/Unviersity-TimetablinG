@@ -36,8 +36,8 @@ public class TimetableGUI {
         return componentHolder;
     }
 
-    public JLabel getLabelFromCoordinates(int column,int row) {
-        return (JLabel) componentHolder[row][column].getComponent(0);
+    public JTextArea getLabelFromCoordinates(int column,int row) {
+        return (JTextArea) componentHolder[row][column].getComponent(0);
     }
 
     private int posX, posY;
@@ -173,11 +173,11 @@ public class TimetableGUI {
 
         for (int row = 1; row < numberOfRows; row++){
             for (int column = 1; column < numberOfColumns; column++) {
-                componentHolder[row][column].add(new JLabel(""));
+                componentHolder[row][column].add(new JTextArea(""));
+                getLabelFromCoordinates(column, row).setBackground(Color.decode("#2D142C"));
                 getLabelFromCoordinates(column, row).setForeground(Color.white);
                 getLabelFromCoordinates(column, row).setFont(new Font("Arial", Font.PLAIN, 10));
-                getLabelFromCoordinates(column, row).setHorizontalAlignment(SwingConstants.LEFT);
-
+                getLabelFromCoordinates(column, row).setEditable(false);
             }
         }
 
