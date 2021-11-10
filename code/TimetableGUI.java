@@ -24,7 +24,19 @@ public class TimetableGUI {
     private ArrayList<JLabel> timeLabels;
     private JLabel mondayLabel, tuesdayLabel, wednesdayLabel, thursdayLabel, fridayLabel;
     private ArrayList<JLabel> dayLabels;
+    int numberOfRows = 13;
+    int numberOfColumns = 6;
+    private JPanel[][] componentHolder = new JPanel[numberOfRows][numberOfColumns];
 
+
+
+    public JPanel[][] getComponentHolder() {
+        return componentHolder;
+    }
+
+    public JLabel getLabelFromCoordinates(int column,int row) {
+        return (JLabel) componentHolder[row][column].getComponent(0);
+    }
 
     private int posX, posY;
 
@@ -127,20 +139,25 @@ public class TimetableGUI {
             dayLabel.setForeground(Color.white);
         }
 
-        int y = 13;
-        int x = 6;
-        JPanel[][] componentHolder = new JPanel[y][x];
-        timetablePanel.setLayout(new GridLayout(y, x, 1, 1));
+
+        timetablePanel.setLayout(new GridLayout(numberOfRows, numberOfColumns, 1, 1));
 
 
-        for (int i = 0; i < y; i++) {
-            for( int j = 0; j < x; j++) {
-                componentHolder[i][j] = new JPanel();
-                componentHolder[i][j].setBackground(Color.decode("#2D142C"));
-                timetablePanel.add(componentHolder[i][j]);
+        for (int row = 0; row < numberOfRows; row++) {
+            for( int column = 0; column < numberOfColumns; column++) {
+                componentHolder[row][column] = new JPanel();
+                componentHolder[row][column].setBackground(Color.decode("#2D142C"));
+                timetablePanel.add(componentHolder[row][column]);
             }
         }
 
+        for (int row = 1; row < numberOfRows; row++){
+            for (int column = 1; column < numberOfColumns; column++) {
+                componentHolder[row][column].add(new JLabel("Empty"));
+            }
+        }
+
+        //Hours
         componentHolder[1][0].add(nineLabel);
         componentHolder[2][0].add(tenLabel);
         componentHolder[3][0].add(elevenLabel);
@@ -154,11 +171,16 @@ public class TimetableGUI {
         componentHolder[11][0].add(nineteenLabel);
         componentHolder[12][0].add(twentyLabel);
 
+
+        //Days
         componentHolder[0][1].add(mondayLabel);
         componentHolder[0][2].add(tuesdayLabel);
         componentHolder[0][3].add(wednesdayLabel);
         componentHolder[0][4].add(thursdayLabel);
         componentHolder[0][5].add(fridayLabel);
+
+
+
 
 
     }

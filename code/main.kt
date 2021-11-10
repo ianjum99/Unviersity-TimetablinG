@@ -20,8 +20,15 @@ fun main() {
 //    println(dataFactory.checkForClashes(mockActivity))
 //    print(Programme("test","U", null))
 //      println(dataFactory)
-    val GUI = TimetableGUI(dataFactory).run {  }
+    val gui = TimetableGUI(dataFactory)
 
+    val df = dataFactory.getAllActivities()
+
+    for (activity in df) {
+        gui.getLabelFromCoordinates(activity.day!!+1,activity.time!!-8).text =
+            "${dataFactory.getProgrammeFromActivity(activity).name}: ${dataFactory.getModuleFromActivity(activity).name} "
+    }
+    gui.run {  }
 
 
 
