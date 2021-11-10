@@ -146,7 +146,6 @@ public class TimetableGUI {
 
         timetablePanel.setLayout(new GridLayout(numberOfRows, numberOfColumns, 1, 1));
 
-        timetablePanel.setBorder(BorderFactory.createMatteBorder(0, 4, 0, 4, Color.black));
 
 
 //        for (int row = 0; row < numberOfRows; row++) {
