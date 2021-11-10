@@ -133,14 +133,18 @@ public class TimetableGUI {
 
         for (JLabel timeLabel: timeLabels) {
             timeLabel.setForeground(Color.white);
+            timeLabel.setFont(new Font("Arial", Font.BOLD, 16));
         }
 
         for (JLabel dayLabel: dayLabels) {
             dayLabel.setForeground(Color.white);
+            dayLabel.setFont(new Font("Arial", Font.BOLD, 16));
         }
 
 
         timetablePanel.setLayout(new GridLayout(numberOfRows, numberOfColumns, 1, 1));
+
+        timetablePanel.setBorder(BorderFactory.createMatteBorder(0, 4, 0, 4, Color.black));
 
 
         for (int row = 0; row < numberOfRows; row++) {
@@ -153,7 +157,10 @@ public class TimetableGUI {
 
         for (int row = 1; row < numberOfRows; row++){
             for (int column = 1; column < numberOfColumns; column++) {
-                componentHolder[row][column].add(new JLabel("Empty"));
+                componentHolder[row][column].add(new JLabel(""));
+                getLabelFromCoordinates(column, row).setForeground(Color.white);
+                getLabelFromCoordinates(column, row).setFont(new Font("Arial", Font.PLAIN, 12));
+
             }
         }
 
@@ -178,10 +185,6 @@ public class TimetableGUI {
         componentHolder[0][3].add(wednesdayLabel);
         componentHolder[0][4].add(thursdayLabel);
         componentHolder[0][5].add(fridayLabel);
-
-
-
-
 
     }
 }
