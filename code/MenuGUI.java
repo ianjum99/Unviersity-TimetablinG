@@ -34,6 +34,8 @@ public class MenuGUI {
     private JComboBox activityProgrammeSelectionDropdown;
     private JComboBox startTimeDropdown;
     private JComboBox timeDurationDropdown;
+    private JLabel activityDayLabel;
+    private JComboBox dayDropdown;
     private JFrame frame;
     private DataFactory dataFactory;
 
@@ -118,16 +120,13 @@ public class MenuGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Programme programme = (df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem()));
-                ArrayList<Module> modules = programme.getModules();
                 String compulsory = moduleOptionalDropdown.getSelectedItem().toString();
                 switch (compulsory) {
                     case "Compulsory":
                         compulsory = "true";
                     case "Optional":
                         compulsory = "false";
-
                 }
-
                 Module module = new Module("COMP-2823",
                         Integer.parseInt(yearOfStudyDropdown.getSelectedItem().toString()),
                         moduleNameField.getText(),
@@ -135,9 +134,42 @@ public class MenuGUI {
                         Long.parseLong(moduleTermDropdown.getSelectedItem().toString()),
                         new ArrayList<Activity>());
                 df.createModule(programme, module);
+                moduleSelectionDropdown.addItem(module.getName());
                 System.out.println(df);
             }
 
+        });
+
+        addActivityButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Programme programme = (df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem()));
+                //Module module = (df.getModuleInstanceFromString((String) moduleSelectionDropdown.getSelectedItem()));
+                String day = dayDropdown.getSelectedItem().toString();
+                String time = startTimeDropdown.getSelectedItem().toString();
+                switch (day) {
+                    case "Monday":
+                        day = "1";
+                    case "Tuesday":
+                        day = "2";
+                    case "Wednesday":
+                        day = "3";
+                    case "Thursday":
+                        day = "4";
+                    case "Friday":
+                        day = "5";
+
+                }
+
+                Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
+                        Integer.parseInt(day),
+                        Integer.parseInt(time.substring(0, 1)),
+                        Integer.parseInt(timeDurationDropdown.getSelectedItem().toString())
+                        );
+
+                //df.createActivity(module, activity);
+                System.out.println(df);
+            }
         });
 
     }

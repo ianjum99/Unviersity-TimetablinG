@@ -73,6 +73,10 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     fun getProgrammeInstanceFromString(programmeName: String): Programme {
         return this.first { it.name == programmeName }
     }
+
+//    fun getModuleInstanceFromString(moduleName: String): Module {
+//        return this.first { it.name == moduleName }
+//    }
 }
 
 
