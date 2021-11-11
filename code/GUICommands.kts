@@ -1,9 +1,7 @@
 class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun populateGUI() {
-        for (activity in dataFactory.getAllActivities()) {
-                addActivityToGUI(activity)
-        }
+        dataFactory.getAllActivities().forEach { activity -> addActivityToGUI(activity) }
     }
 
     fun addActivityToGUI(activity: Activity) {
@@ -21,17 +19,9 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         }
     }
 
-    fun populateGUIbyProgramme(programme: Programme) {
-        val activities = programme.modules!!.flatMap { module -> module.activities!! }
-        for (activity in activities) {
-            addActivityToGUI(activity)
-        }
+    fun populateGUIbyProgramme(programme: Programme, year: Long, term: Long) {
+        val activities =
+            (programme.modules!!.filter { module -> module.year == year && module.term == term }).flatMap { it.activities!! }
+        activities.forEach { activity -> addActivityToGUI(activity) }
     }
-
-//    fun populateGUIbyYear(year: Int) {
-//        val modules = (dataFactory.flatMap { it.modules!!.filter { module -> module.year == year }.flatMap { module -> module.activities!! }})
-//    }
-
-
-    //combine programme year and term
 }

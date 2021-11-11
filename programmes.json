@@ -1,6 +1,6 @@
 [
   {
-    "name": "Computer Science",
+    "name": "BSc Computer Science",
     "type": "U",
     "modules": [
       {
@@ -510,7 +510,7 @@
     ]
   },
   {
-    "name": "Mathematics",
+    "name": "BSc Mathematics",
     "type": "U",
     "modules": [
       {
@@ -1020,7 +1020,7 @@
     ]
   },
   {
-    "name": "Finance",
+    "name": "MSc Finance",
     "type": "P",
     "modules": [
       {
@@ -1194,7 +1194,7 @@
     ]
   },
   {
-    "name": "Film Production",
+    "name": "MSc Film Production",
     "type": "P",
     "modules": [
       {

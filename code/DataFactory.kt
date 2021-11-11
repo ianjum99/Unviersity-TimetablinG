@@ -65,20 +65,18 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return ArrayList(this.flatMap { it.modules!!}.flatMap { it.activities!! })
     }
 
-    fun checkForClashes(activity: Activity): Pair<Activity, ArrayList<Activity>> {
-        val listOfActivities = this.getAllActivities()
-        var clashesWith: ArrayList<Activity> = arrayListOf()
-
-        for (activityTwo in listOfActivities) {
-            if (this.getModuleFromActivity(activityTwo).year == this.getModuleFromActivity(activity).year) {
-                if (this.getModuleFromActivity(activityTwo).term == this.getModuleFromActivity(activity).term) {
-                    if (activityTwo.time == activity.time && activityTwo.day == activity.day) {
-                        clashesWith.add(activityTwo)
-                    }
-                }
-            }
+    fun checkForClashes(activity: Activity, clashesWith:ArrayList<Activity> = ArrayList()): ArrayList<Activity> {
+        var moduleOfActivity = getModuleFromActivity(activity)
+        (ArrayList(this.getAllActivities().filter {getModuleFromActivity(it).year == moduleOfActivity.year &&
+                                                        getModuleFromActivity(it).term == moduleOfActivity.term &&
+                                                        it.time == activity.time &&
+                                                        it.day == activity.day})).forEach { clash -> clashesWith.add(clash) }
+        if (activity.duration > 1) {
+            println(activity)
+            checkForClashes(Activity(activity.type,activity.day,activity.time+1,activity.duration-1),clashesWith)
         }
-        return Pair(activity,clashesWith)}
+        return clashesWith
+    }
 
     fun getProgrammeInstanceFromString(programmeName: String): Programme {
         return this.first { it.name == programmeName }
@@ -99,7 +97,7 @@ data class Programme (
 
 data class Module (
     var id: String,
-    val year: Int,
+    val year: Long,
     val name: String,
     val compulsory: Boolean,
     val term: Long,
