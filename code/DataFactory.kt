@@ -92,9 +92,9 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return this.first { it.name == programmeName }
     }
 
-//    fun getModuleInstanceFromString(moduleName: String): Module {
-//        return this.first { it.name == moduleName }
-//    }
+    fun getModuleInstanceFromString(moduleName: String): Module {
+        return (this.flatMap { it.modules!! }.filter { it.name == moduleName }).first()
+    }
 }
 
 
