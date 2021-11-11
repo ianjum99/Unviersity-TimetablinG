@@ -27,9 +27,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     fun generateModuleId(programme: Programme): String {
         var moduleId = programme.name.slice(0..3).uppercase()
         val arrayOfIds = ArrayList<String>()
-        for (module in programme.modules!!) {
-            arrayOfIds.add(module.id.slice(4..7))
-        }
+        programme.modules!!.forEach { module -> arrayOfIds.add(module.id.slice(4..7)) }
         var suffix = 0
         while (true) {
             suffix = Random.nextInt(1000,1999)
@@ -65,15 +63,15 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return ArrayList(this.flatMap { it.modules!!}.flatMap { it.activities!! })
     }
 
-    fun checkForClashes(activity: Activity, clashesWith:ArrayList<Activity> = ArrayList()): ArrayList<Activity> {
-        var moduleOfActivity = getModuleFromActivity(activity)
-        (ArrayList(this.getAllActivities().filter {getModuleFromActivity(it).year == moduleOfActivity.year &&
+    fun checkForClashes(activity: Activity,
+                        moduleOfActivity: Module = getModuleFromActivity(activity),
+                        clashesWith:ArrayList<Activity> = ArrayList()): ArrayList<Activity> {
+        ArrayList(this.getAllActivities().filter {getModuleFromActivity(it).year == moduleOfActivity.year &&
                                                         getModuleFromActivity(it).term == moduleOfActivity.term &&
                                                         it.time == activity.time &&
-                                                        it.day == activity.day})).forEach { clash -> clashesWith.add(clash) }
+                                                        it.day == activity.day}).forEach { clash -> clashesWith.add(clash) }
         if (activity.duration > 1) {
-            println(activity)
-            checkForClashes(Activity(activity.type,activity.day,activity.time+1,activity.duration-1),clashesWith)
+            checkForClashes(Activity(activity.type,activity.day,activity.time+1,activity.duration-1), moduleOfActivity,clashesWith)
         }
         return clashesWith
     }

@@ -10,7 +10,6 @@ fun main() {
 
 
     commands.populateGUI()
-
-//    commands.populateGUIbyProgramme(dataFactory[0])
-//    commands.populateGUIbyYear(2)
+//    commands.populateGUIbyProgramme(dataFactory[0],1,1)
+//    println(dataFactory.checkForClashes(dataFactory[0].modules!![0].activities!![0]))
 }
