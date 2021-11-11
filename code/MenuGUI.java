@@ -64,6 +64,7 @@ public class MenuGUI {
         init(df);
     }
 
+
     public static MenuGUI getInstance(DataFactory df){
         if (instance == null) {
             instance = new MenuGUI(df);
@@ -81,18 +82,12 @@ public class MenuGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
 
-        for (Programme programme : df) {
-            moduleProgrammeSelectionDropdown.addItem(programme.getName());
-            activityProgrammeSelectionDropdown.addItem(programme.getName());
-            viewProgrammeDropdown.addItem(programme.getName());
-            removeProgrammeDropdown.addItem(programme.getName());
-        }
+        comboBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
         Programme programme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
 
         for (Module module : programme.getModules()) {
             moduleSelectionDropdown.addItem(module.getName());
-
         }
 
         closeButton.addMouseListener(new MouseAdapter() {
@@ -121,21 +116,19 @@ public class MenuGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (programmeNameField.getText().length() > 0) {
-                    String programmeType = "";
-                    Integer selectedIndex = Integer.parseInt(underOrPostDropdown.getSelectedIndex().toString());
-                    switch (selectedIndex) {
-                        case 1:
-                            programmeType = "U";
-                        case 2:
-                            programmeType = "P";
+                    String programmeType = underOrPostDropdown.getSelectedItem().toString();
+                    if (programmeType == "Undergraduate") {
+                        programmeType = "U";
+                    } else {
+                        programmeType = "P";
                     }
                     Programme programme = new Programme(programmeNameField.getText(), programmeType, null);
                     df.add(programme);
                     System.out.println(df);
-                    moduleProgrammeSelectionDropdown.addItem(programmeType + " | " + programme.getName());
-                    activityProgrammeSelectionDropdown.addItem(programmeType + " | " + programme.getName());
-                    viewProgrammeDropdown.addItem(programmeType + " | " + programme.getName());
-                    removeProgrammeDropdown.addItem(programmeType + " | " + programme.getName());
+                    moduleProgrammeSelectionDropdown.addItem(programmeNameField.getText());
+                    activityProgrammeSelectionDropdown.addItem(programmeNameField.getText());
+                    viewProgrammeDropdown.addItem(programmeNameField.getText());
+                    removeProgrammeDropdown.addItem(programmeNameField.getText());
                 }
             }
         });
@@ -211,21 +204,6 @@ public class MenuGUI {
             }
         });
 
-//        underOrPostDropdown.addItemListener(new ItemListener() {
-//            @Override
-//            public void itemStateChanged(ItemEvent e) {
-//                if (underOrPostDropdown.getSelectedIndex() == 1) {
-//                    yearOfStudyDropdown.removeAllItems();
-//                    yearOfStudyDropdown.addItem(1);
-//                } else {
-//                    yearOfStudyDropdown.removeAllItems();
-//                    yearOfStudyDropdown.addItem(1);
-//                    yearOfStudyDropdown.addItem(2);
-//                    yearOfStudyDropdown.addItem(3);
-//                }
-//            }
-//        });
-
         moduleProgrammeSelectionDropdown.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -255,5 +233,13 @@ public class MenuGUI {
         moduleNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
         activityNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
 
+    }
+
+    private void comboBoxFiller(DataFactory df, JComboBox... args) {
+        for (JComboBox box: args) {
+            for (Programme item: df) {
+                box.addItem(item.getName());
+            }
+        }
     }
 }
