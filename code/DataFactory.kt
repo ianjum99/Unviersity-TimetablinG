@@ -58,20 +58,12 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getModuleFromActivity(activity: Activity): Module {
-        val programme = this.getProgrammeFromActivity(activity)
-        return programme.modules!!.filter { it.activities!!.contains(activity)}.first()
+        return (this.flatMap { it.modules!! }.filter { module -> module.activities!!.contains(activity) }).first()
     }
 
     fun getAllActivities(): ArrayList<Activity> {
-        var listOfActivities = ArrayList<Activity>()
-        for (programme in this) {
-            for (module in programme.modules!!) {
-                for (activity in module.activities!!) {
-                    listOfActivities.add(activity)
-                }
-            }
-        }
-        return listOfActivities}
+        return ArrayList(this.flatMap { it.modules!!}.flatMap { it.activities!! })
+    }
 
     fun checkForClashes(activity: Activity): Pair<Activity, ArrayList<Activity>> {
         val listOfActivities = this.getAllActivities()
