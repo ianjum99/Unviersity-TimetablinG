@@ -1,8 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -169,6 +167,19 @@ public class MenuGUI {
 
                 //df.createActivity(module, activity);
                 System.out.println(df);
+            }
+        });
+
+        activityProgrammeSelectionDropdown.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    Programme selectedProgramme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
+                    moduleSelectionDropdown.removeAllItems();
+                    for (Module module : selectedProgramme.getModules()) {
+                        moduleSelectionDropdown.addItem(module.getName());
+                    }
+                }
             }
         });
 

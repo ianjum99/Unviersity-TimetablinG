@@ -69,6 +69,7 @@ public class TimetableGUI {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 
         closeButton.addMouseListener(new MouseAdapter() {
@@ -143,18 +144,8 @@ public class TimetableGUI {
             dayLabel.setFont(new Font("Arial", Font.BOLD, 16));
         }
 
-
         timetablePanel.setLayout(new GridLayout(numberOfRows, numberOfColumns, 1, 1));
 
-
-
-//        for (int row = 0; row < numberOfRows; row++) {
-//            for( int column = 0; column < numberOfColumns; column++) {
-//                componentHolder[row][column] = new JPanel(new FlowLayout(FlowLayout.LEFT));
-//                componentHolder[row][column].setBackground(Color.decode("#2D142C"));
-//                timetablePanel.add(componentHolder[row][column]);
-//            }
-//        }
 
         for (int row = 0; row < numberOfRows; row++) {
             for( int column = 0; column < numberOfColumns; column++) {
@@ -179,6 +170,11 @@ public class TimetableGUI {
                 getLabelFromCoordinates(column, row).setEditable(false);
             }
         }
+
+//        componentHolder[5][2].setBackground(Color.decode("#606602"));
+//        getLabelFromCoordinates(2, 5).setBackground(Color.decode("#606602"));
+//        componentHolder[6][2].setBackground(Color.decode("#606602"));
+//        getLabelFromCoordinates(2, 6).setBackground(Color.decode("#606602"));
 
         //Hours
         componentHolder[1][0].add(nineLabel);

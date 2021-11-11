@@ -10,7 +10,6 @@
     <orderEntry type="library" exported="" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="google.code.gson" level="project" />
     <orderEntry type="library" name="klaxon-5.5" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="IntelliJ IDEA GridLayout" level="project" />
   </component>
 </module>
