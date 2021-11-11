@@ -8,21 +8,21 @@ public class MenuGUI {
     private JPanel mainPanel, topBar;
     private JLabel adminMenuLabel;
     private JLabel closeButton;
-    private JLabel addLabel, removeLabel, viewLabel;
+    private JLabel addLabel, removeLabel;
     private JTextField programmeNameField;
-    private JPanel addPanel, removePanel, viewPanel;
+    private JPanel addPanel, viewAndRemovePanel;
     private JLabel programmeName, underOrPostLabel;
-    private JLabel programmeSectionLabel;
+    private JLabel addProgrammeSectionLabel;
     private JButton addProgrammeButton;
     private JLabel moduleProgrammeSelectionLabel;
     private JComboBox moduleProgrammeSelectionDropdown;
     private JComboBox underOrPostDropdown;
-    private JLabel moduleSectionLabel;
+    private JLabel addModuleSectionLabel;
     private JTextField moduleNameField;
     private JLabel moduleTermLabel, moduleNameLabel, moduleOptionalLabel, moduleSelectionLabel;
     private JComboBox moduleTermDropdown, moduleOptionalDropdown, moduleSelectionDropdown;
     private JButton addModuleButton;
-    private JLabel activitySectionLabel, activityNameLabel, activityTypeLabel, startTimeLabel, timeDurationLabel;
+    private JLabel addActivitySectionLabel, activityTypeLabel, startTimeLabel, timeDurationLabel;
     private JTextField activityNameField;
     private JComboBox activityTypeDropdown;
     private JButton addActivityButton;
@@ -34,10 +34,28 @@ public class MenuGUI {
     private JComboBox timeDurationDropdown;
     private JLabel activityDayLabel;
     private JComboBox dayDropdown;
+    private JLabel removeProgrammeSelectionLabel;
+    private JComboBox removeProgrammeDropdown;
+    private JButton removeProgrammeButton;
+    private JLabel removeProgrammeSectionLabel;
+    private JLabel removeModuleSectionLabel;
+    private JLabel removeModuleSelectionLabel;
+    private JComboBox removeModuleDropdown;
+    private JButton removeModuleButton;
+    private JLabel removeActivitySectionLabel;
+    private JLabel removeActivitySelectionLabel;
+    private JComboBox removeActivityDropdown;
+    private JButton removeActivityButton;
+    private JLabel viewProgrammesLabel;
+    private JLabel viewProgrammeSelectionLabel;
+    private JLabel viewYearOfStudyLabel;
+    private JComboBox viewYearOfStudyDropdown;
+    private JComboBox viewProgrammeDropdown;
+    private JLabel viewTermLabel;
+    private JComboBox viewTermDropdown;
+    private JButton viewProgrammeButton;
     private JFrame frame;
     private DataFactory dataFactory;
-
-
 
     private static MenuGUI instance=null;
     private int posX, posY;
@@ -66,12 +84,15 @@ public class MenuGUI {
         for (Programme programme : df) {
             moduleProgrammeSelectionDropdown.addItem(programme.getName());
             activityProgrammeSelectionDropdown.addItem(programme.getName());
+            viewProgrammeDropdown.addItem(programme.getName());
+            removeProgrammeDropdown.addItem(programme.getName());
         }
 
-        Programme selectedProgramme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
+        Programme programme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
 
-        for (Module module : selectedProgramme.getModules()) {
+        for (Module module : programme.getModules()) {
             moduleSelectionDropdown.addItem(module.getName());
+
         }
 
         closeButton.addMouseListener(new MouseAdapter() {
@@ -99,17 +120,22 @@ public class MenuGUI {
         addProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-            }
-        });
-
-        addProgrammeButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
                 if (programmeNameField.getText().length() > 0) {
-                    Programme programme = new Programme(programmeNameField.getText(), (String) (Objects.requireNonNull(underOrPostDropdown.getSelectedItem())), null);
+                    String programmeType = "";
+                    Integer selectedIndex = Integer.parseInt(underOrPostDropdown.getSelectedIndex().toString());
+                    switch (selectedIndex) {
+                        case 1:
+                            programmeType = "U";
+                        case 2:
+                            programmeType = "P";
+                    }
+                    Programme programme = new Programme(programmeNameField.getText(), programmeType, null);
                     df.add(programme);
-                    moduleProgrammeSelectionDropdown.addItem(programme.getName());
-                    activityProgrammeSelectionDropdown.addItem(programme.getName());
+                    System.out.println(df);
+                    moduleProgrammeSelectionDropdown.addItem(programmeType + " | " + programme.getName());
+                    activityProgrammeSelectionDropdown.addItem(programmeType + " | " + programme.getName());
+                    viewProgrammeDropdown.addItem(programmeType + " | " + programme.getName());
+                    removeProgrammeDropdown.addItem(programmeType + " | " + programme.getName());
                 }
             }
         });
@@ -133,6 +159,7 @@ public class MenuGUI {
                         new ArrayList<Activity>());
                 df.createModule(programme, module);
                 moduleSelectionDropdown.addItem(module.getName());
+                removeModuleDropdown.addItem(module.getName());
                 System.out.println(df);
             }
 
@@ -142,9 +169,9 @@ public class MenuGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Programme programme = (df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem()));
-                //Module module = (df.getModuleInstanceFromString((String) moduleSelectionDropdown.getSelectedItem()));
+                Module module = (df.getModuleInstanceFromString((String) moduleSelectionDropdown.getSelectedItem()));
                 String day = dayDropdown.getSelectedItem().toString();
-                String time = startTimeDropdown.getSelectedItem().toString();
+                String time = startTimeDropdown.getSelectedItem().toString().substring(0, 2);
                 switch (day) {
                     case "Monday":
                         day = "1";
@@ -161,11 +188,12 @@ public class MenuGUI {
 
                 Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
                         Integer.parseInt(day),
-                        Integer.parseInt(time.substring(0, 1)),
+                        Integer.parseInt(time),
                         Integer.parseInt(timeDurationDropdown.getSelectedItem().toString())
                         );
 
-                //df.createActivity(module, activity);
+                df.createActivity(module, activity);
+                System.out.println(activity);
                 System.out.println(df);
             }
         });
@@ -174,11 +202,42 @@ public class MenuGUI {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    Programme selectedProgramme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
+                    Programme programme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
                     moduleSelectionDropdown.removeAllItems();
-                    for (Module module : selectedProgramme.getModules()) {
+                    for (Module module : programme.getModules()) {
                         moduleSelectionDropdown.addItem(module.getName());
                     }
+                }
+            }
+        });
+
+//        underOrPostDropdown.addItemListener(new ItemListener() {
+//            @Override
+//            public void itemStateChanged(ItemEvent e) {
+//                if (underOrPostDropdown.getSelectedIndex() == 1) {
+//                    yearOfStudyDropdown.removeAllItems();
+//                    yearOfStudyDropdown.addItem(1);
+//                } else {
+//                    yearOfStudyDropdown.removeAllItems();
+//                    yearOfStudyDropdown.addItem(1);
+//                    yearOfStudyDropdown.addItem(2);
+//                    yearOfStudyDropdown.addItem(3);
+//                }
+//            }
+//        });
+
+        moduleProgrammeSelectionDropdown.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                Programme programme = df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem());
+                if (programme.getType().equals("P")) {
+                    yearOfStudyDropdown.removeAllItems();
+                    yearOfStudyDropdown.addItem(1);
+                } else {
+                    yearOfStudyDropdown.removeAllItems();
+                    yearOfStudyDropdown.addItem(1);
+                    yearOfStudyDropdown.addItem(2);
+                    yearOfStudyDropdown.addItem(3);
                 }
             }
         });
