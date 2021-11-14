@@ -19,7 +19,7 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         }
     }
 
-    fun populateGUIbyProgramme(programme: Programme, year: Long, term: Long) {
+    fun populateGUIbyProgramme(programme: Programme, year: Int, term: Int) {
         val activities =
             (programme.modules!!.filter { module -> module.year == year && module.term == term }).flatMap { it.activities!! }
         activities.forEach { activity -> addActivityToGUI(activity) }

@@ -2,7 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
+import java.util.Set;
 
 public class MenuGUI {
     private JPanel mainPanel, topBar;
@@ -90,6 +92,8 @@ public class MenuGUI {
             moduleSelectionDropdown.addItem(module.getName());
         }
 
+        viewComboBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
+
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -148,7 +152,7 @@ public class MenuGUI {
                         Integer.parseInt(yearOfStudyDropdown.getSelectedItem().toString()),
                         moduleNameField.getText(),
                         Boolean.parseBoolean(compulsory),
-                        Long.parseLong(moduleTermDropdown.getSelectedItem().toString()),
+                        Integer.parseInt(moduleTermDropdown.getSelectedItem().toString()),
                         new ArrayList<Activity>());
                 df.createModule(programme, module);
                 moduleSelectionDropdown.addItem(module.getName());
@@ -178,7 +182,6 @@ public class MenuGUI {
                         day = "5";
 
                 }
-
                 Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
                         Integer.parseInt(day),
                         Integer.parseInt(time),
@@ -220,6 +223,17 @@ public class MenuGUI {
             }
         });
 
+        viewProgrammeDropdown.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    viewYearOfStudyDropdown.removeAllItems();
+                    viewTermDropdown.removeAllItems();
+                    viewComboBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
+                }
+            }
+        });
+
     }
 
     private void createUIComponents() {
@@ -242,4 +256,25 @@ public class MenuGUI {
             }
         }
     }
+
+    private void viewComboBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown, JComboBox yearOfStudy, JComboBox term) {
+        Programme viewProgramme = df.getProgrammeInstanceFromString((String) viewProgrammeDropdown.getSelectedItem());
+        ArrayList<Integer> yearDuplicates = new ArrayList<>();
+        ArrayList<Integer> termDuplicates = new ArrayList<>();
+        Collections.addAll(yearDuplicates, 1, 2, 3);
+        Collections.addAll(termDuplicates, 1, 2);
+
+        for (Module module: viewProgramme.getModules()) {
+            if (yearDuplicates.contains(module.getYear())) {
+                yearDuplicates.remove((Integer) module.getYear());
+                viewYearOfStudyDropdown.addItem(module.getYear());
+            }
+            if (termDuplicates.contains(module.getTerm())) {
+                termDuplicates.remove((Integer) module.getTerm());
+                viewTermDropdown.addItem(module.getTerm());
+            }
+    }
+
+    }
+
 }

@@ -97,10 +97,10 @@ data class Programme (
 
 data class Module (
     var id: String,
-    val year: Long,
+    val year: Int,
     val name: String,
     val compulsory: Boolean,
-    val term: Long,
+    val term: Int,
     val activities: ArrayList<Activity>?,
 )
 
