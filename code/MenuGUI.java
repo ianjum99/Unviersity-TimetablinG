@@ -84,7 +84,7 @@ public class MenuGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
 
-        comboBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
+        programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
         Programme programme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
 
@@ -92,7 +92,7 @@ public class MenuGUI {
             moduleSelectionDropdown.addItem(module.getName());
         }
 
-        viewComboBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
+        viewSectionBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -229,7 +229,7 @@ public class MenuGUI {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
                     viewYearOfStudyDropdown.removeAllItems();
                     viewTermDropdown.removeAllItems();
-                    viewComboBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
+                    viewSectionBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
                 }
             }
         });
@@ -249,7 +249,7 @@ public class MenuGUI {
 
     }
 
-    private void comboBoxFiller(DataFactory df, JComboBox... args) {
+    private void programmeSelectionBoxFiller(DataFactory df, JComboBox... args) {
         for (JComboBox box: args) {
             for (Programme item: df) {
                 box.addItem(item.getName());
@@ -257,7 +257,7 @@ public class MenuGUI {
         }
     }
 
-    private void viewComboBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown, JComboBox yearOfStudy, JComboBox term) {
+    private void viewSectionBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown, JComboBox yearOfStudy, JComboBox term) {
         Programme viewProgramme = df.getProgrammeInstanceFromString((String) viewProgrammeDropdown.getSelectedItem());
         ArrayList<Integer> yearDuplicates = new ArrayList<>();
         ArrayList<Integer> termDuplicates = new ArrayList<>();
