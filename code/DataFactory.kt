@@ -70,7 +70,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return (this.flatMap { it.modules!! }.filter { it.name == moduleName }).first()
     }
 
-    fun getActivitiesInSameYearAndTerm(year: Long,term: Long): List<Activity> {
+    fun getActivitiesInSameYearAndTerm(year: Int,term: Int): List<Activity> {
         return this.flatMap { it.modules!! }.filter { module -> module.year == year && module.term == term  }.flatMap {module-> module.activities!!}
     }
 
