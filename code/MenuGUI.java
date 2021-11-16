@@ -2,7 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
+import java.util.Set;
 
 public class MenuGUI {
     private JPanel mainPanel, topBar;
@@ -82,13 +84,15 @@ public class MenuGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
 
-        comboBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
+        programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
         Programme programme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
 
         for (Module module : programme.getModules()) {
             moduleSelectionDropdown.addItem(module.getName());
         }
+
+        viewSectionBoxFiller(df, viewProgrammeDropdown);
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -148,7 +152,7 @@ public class MenuGUI {
                         Integer.parseInt(yearOfStudyDropdown.getSelectedItem().toString()),
                         moduleNameField.getText(),
                         Boolean.parseBoolean(compulsory),
-                        Long.parseLong(moduleTermDropdown.getSelectedItem().toString()),
+                        Integer.parseInt(moduleTermDropdown.getSelectedItem().toString()),
                         new ArrayList<Activity>());
                 df.createModule(programme, module);
                 moduleSelectionDropdown.addItem(module.getName());
@@ -178,7 +182,6 @@ public class MenuGUI {
                         day = "5";
 
                 }
-
                 Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
                         Integer.parseInt(day),
                         Integer.parseInt(time),
@@ -220,6 +223,24 @@ public class MenuGUI {
             }
         });
 
+        viewProgrammeDropdown.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    viewYearOfStudyDropdown.removeAllItems();
+                    viewTermDropdown.removeAllItems();
+                    viewSectionBoxFiller(df, viewProgrammeDropdown);
+                }
+            }
+        });
+
+        removeProgrammeDropdown.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+
+            }
+        });
+
     }
 
     private void createUIComponents() {
@@ -235,11 +256,32 @@ public class MenuGUI {
 
     }
 
-    private void comboBoxFiller(DataFactory df, JComboBox... args) {
+    private void programmeSelectionBoxFiller(DataFactory df, JComboBox... args) {
         for (JComboBox box: args) {
             for (Programme item: df) {
                 box.addItem(item.getName());
             }
         }
     }
+
+    private void viewSectionBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown) {
+        Programme viewProgramme = df.getProgrammeInstanceFromString((String) viewProgrammeDropdown.getSelectedItem());
+        ArrayList<Integer> yearDuplicates = new ArrayList<>();
+        ArrayList<Integer> termDuplicates = new ArrayList<>();
+        Collections.addAll(yearDuplicates, 1, 2, 3);
+        Collections.addAll(termDuplicates, 1, 2);
+
+        for (Module module: viewProgramme.getModules()) {
+            if (yearDuplicates.contains(module.getYear())) {
+                yearDuplicates.remove((Integer) module.getYear());
+                viewYearOfStudyDropdown.addItem(module.getYear());
+            }
+            if (termDuplicates.contains(module.getTerm())) {
+                termDuplicates.remove((Integer) module.getTerm());
+                viewTermDropdown.addItem(module.getTerm());
+            }
+    }
+
+    }
+
 }

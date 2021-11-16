@@ -11,7 +11,7 @@
  - [X] Java GUI (Swing UI Designer)
  - [X] Implement OOP design - Kotlin/Java
  - [X] Persistence and Lambda (Save state functionality) - Kotlin
- - [ ] Clash Detection - Kotlin
+ - [X] Clash Detection - Kotlin
  - [ ] Clash Detection - Scala
  - [ ] Integration of all languages - Scala/Kotlin/Java
  
