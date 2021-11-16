@@ -92,7 +92,7 @@ public class MenuGUI {
             moduleSelectionDropdown.addItem(module.getName());
         }
 
-        viewSectionBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
+        viewSectionBoxFiller(df, viewProgrammeDropdown);
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -229,8 +229,15 @@ public class MenuGUI {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
                     viewYearOfStudyDropdown.removeAllItems();
                     viewTermDropdown.removeAllItems();
-                    viewSectionBoxFiller(df, viewProgrammeDropdown, viewYearOfStudyDropdown, viewTermDropdown);
+                    viewSectionBoxFiller(df, viewProgrammeDropdown);
                 }
+            }
+        });
+
+        removeProgrammeDropdown.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+
             }
         });
 
@@ -257,7 +264,7 @@ public class MenuGUI {
         }
     }
 
-    private void viewSectionBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown, JComboBox yearOfStudy, JComboBox term) {
+    private void viewSectionBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown) {
         Programme viewProgramme = df.getProgrammeInstanceFromString((String) viewProgrammeDropdown.getSelectedItem());
         ArrayList<Integer> yearDuplicates = new ArrayList<>();
         ArrayList<Integer> termDuplicates = new ArrayList<>();
