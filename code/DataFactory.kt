@@ -70,21 +70,33 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return (this.flatMap { it.modules!! }.filter { it.name == moduleName }).first()
     }
 
+    fun getActivitiesInSameYearAndTerm(year: Long,term: Long): List<Activity> {
+        return this.flatMap { it.modules!! }.filter { module -> module.year == year && module.term == term  }.flatMap {module-> module.activities!!}
+    }
+
     fun checkForClashes(activity: Activity,
                         moduleOfActivity: Module = getModuleFromActivity(activity),
-                        clashesWith:ArrayList<Activity> = ArrayList()): ArrayList<Activity> {
-        ArrayList(this.getAllActivities().filter {getModuleFromActivity(it).year == moduleOfActivity.year &&
-                getModuleFromActivity(it).term == moduleOfActivity.term &&
-                it.time == activity.time &&
-                it.day == activity.day}).forEach { clash -> clashesWith.add(clash) }
+                        clashesWith:ArrayList<Activity> = ArrayList()): Pair<Activity,ArrayList<Activity>>? {
+
+        val listOfActivities = this.getAllActivities()
+        listOfActivities.remove(activity)
+
+        ArrayList(listOfActivities.filter { currentActivity ->
+            getModuleFromActivity(currentActivity).year == moduleOfActivity.year &&
+            getModuleFromActivity(currentActivity).term == moduleOfActivity.term &&
+            currentActivity.time == activity.time &&
+            currentActivity.day == activity.day}).forEach { clash -> clashesWith.add(clash) }
+
         if (activity.duration > 1) {
             checkForClashes(Activity(activity.type,activity.day,activity.time+1,activity.duration-1), moduleOfActivity,clashesWith)
         }
-        return clashesWith
+
+        if (clashesWith.isNotEmpty()) {
+            return Pair(activity,clashesWith)
+        }
+        return null
     }
 }
-
-
 
 class Programme (
     val name: String,
@@ -99,10 +111,9 @@ data class Module(
     val compulsory: Boolean,
     val term: Long,
     val activities: ArrayList<Activity>?,
-
 )
 
-class Activity(
+data class Activity(
     val type: String,
     val day: Int,
     val time: Int,

@@ -10,8 +10,9 @@ fun main() {
     var commands = GUICommands.GUICommands(gui, dataFactory)
 
 
-    commands.populateGUI()
-    JsonHandler(fileName).saveJsonFile(dataFactory.toJson())
+//    commands.populateGUIbyProgramme(dataFactory[0],1,1)
+    val activity = dataFactory[0].modules!![0].activities!![0]
+    println(dataFactory.checkForClashes(activity,dataFactory.getModuleFromActivity(activity)))
 //    commands.populateGUIbyProgramme(dataFactory[0],1,1)
 //    println(dataFactory.checkForClashes(dataFactory[0].modules!![0].activities!![0]))
 }

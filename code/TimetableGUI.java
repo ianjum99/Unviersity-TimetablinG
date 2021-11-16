@@ -6,6 +6,7 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.GridLayout;
 import java.time.DayOfWeek;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 import static java.awt.Component.CENTER_ALIGNMENT;
@@ -122,7 +123,6 @@ public class TimetableGUI {
 
         timetablePanel.setLayout(new GridLayout(numberOfRows, numberOfColumns, 1, 1));
 
-
         for (int row = 0; row < numberOfRows; row++) {
             for( int column = 0; column < numberOfColumns; column++) {
                 if (row <= numberOfRows && column == 0 || row == 0) {
@@ -136,6 +136,8 @@ public class TimetableGUI {
                 timetablePanel.add(componentHolder[row][column]);
             }
         }
+
+
 
         for (int row = 1; row < numberOfRows; row++){
             for (int column = 1; column < numberOfColumns; column++) {
