@@ -8,9 +8,9 @@
     <properties>
       <background color="-14808803"/>
       <foreground color="-15136488"/>
-      <minimumSize width="1300" height="1000"/>
+      <minimumSize width="1300" height="840"/>
       <opaque value="true"/>
-      <preferredSize width="1300" height="1000"/>
+      <preferredSize width="1300" height="840"/>
     </properties>
     <border type="none"/>
     <children>
@@ -152,7 +152,7 @@
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="18"/>
               <foreground color="-1"/>
               <text value="Add a Module"/>
             </properties>
@@ -246,7 +246,7 @@
               <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="18"/>
               <foreground color="-1"/>
               <text value="Add an Activity"/>
             </properties>
@@ -413,7 +413,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="18"/>
               <foreground color="-1"/>
               <text value="Add a Programme"/>
             </properties>
@@ -562,7 +562,7 @@
               <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="18"/>
               <foreground color="-1"/>
               <text value="Remove a Programme"/>
             </properties>
@@ -624,7 +624,7 @@
               <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="18"/>
               <foreground color="-1"/>
               <text value="Remove a Module"/>
             </properties>
@@ -657,7 +657,7 @@
               <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="18"/>
               <foreground color="-1"/>
               <text value="Remove an Activity"/>
             </properties>
@@ -730,7 +730,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Arial" size="16"/>
+              <font name="Arial" size="18"/>
               <foreground color="-1"/>
               <text value="View Programmes"/>
             </properties>
@@ -820,19 +820,19 @@
               <text value="View Programme"/>
             </properties>
           </component>
-          <vspacer id="46c5c">
-            <constraints>
-              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="0" height="50"/>
-                <maximum-size width="0" height="50"/>
-              </grid>
-            </constraints>
-          </vspacer>
           <vspacer id="b9fbf">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="0" height="30"/>
                 <maximum-size width="0" height="50"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="3d37f">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="0" height="75"/>
+                <maximum-size width="0" height="75"/>
               </grid>
             </constraints>
           </vspacer>
