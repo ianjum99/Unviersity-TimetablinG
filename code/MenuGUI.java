@@ -94,6 +94,8 @@ public class MenuGUI {
 
         viewSectionBoxFiller(df, viewProgrammeDropdown);
 
+        removeSectionBoxFiller(df, removeProgrammeDropdown, "programme");
+
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -172,15 +174,18 @@ public class MenuGUI {
                 switch (day) {
                     case "Monday":
                         day = "1";
+                        break;
                     case "Tuesday":
                         day = "2";
+                        break;
                     case "Wednesday":
                         day = "3";
+                        break;
                     case "Thursday":
                         day = "4";
+                        break;
                     case "Friday":
                         day = "5";
-
                 }
                 Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
                         Integer.parseInt(day),
@@ -210,15 +215,17 @@ public class MenuGUI {
         moduleProgrammeSelectionDropdown.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                Programme programme = df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem());
-                if (programme.getType().equals("P")) {
-                    yearOfStudyDropdown.removeAllItems();
-                    yearOfStudyDropdown.addItem(1);
-                } else {
-                    yearOfStudyDropdown.removeAllItems();
-                    yearOfStudyDropdown.addItem(1);
-                    yearOfStudyDropdown.addItem(2);
-                    yearOfStudyDropdown.addItem(3);
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    Programme programme = df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem());
+                    if (programme.getType().equals("P")) {
+                        yearOfStudyDropdown.removeAllItems();
+                        yearOfStudyDropdown.addItem(1);
+                    } else {
+                        yearOfStudyDropdown.removeAllItems();
+                        yearOfStudyDropdown.addItem(1);
+                        yearOfStudyDropdown.addItem(2);
+                        yearOfStudyDropdown.addItem(3);
+                    }
                 }
             }
         });
@@ -237,7 +244,18 @@ public class MenuGUI {
         removeProgrammeDropdown.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    removeSectionBoxFiller(df, removeProgrammeDropdown, "programme");
+                }
+            }
+        });
 
+        removeModuleDropdown.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
+                }
             }
         });
 
@@ -280,8 +298,52 @@ public class MenuGUI {
                 termDuplicates.remove((Integer) module.getTerm());
                 viewTermDropdown.addItem(module.getTerm());
             }
+        }
+
     }
 
+
+    private void removeSectionBoxFiller(DataFactory df, JComboBox removeProgrammeDropdown, String programmeOrActivity) {
+        switch (programmeOrActivity) {
+            case "programme":
+                removeModuleDropdown.removeAllItems();
+                Programme programmeInstance = df.getProgrammeInstanceFromString((String) removeProgrammeDropdown.getSelectedItem());
+                for (Module module: programmeInstance.getModules()) {
+                    removeModuleDropdown.addItem(module.getName());
+                }
+                removeActivityBoxFiller(df, removeModuleDropdown);
+                break;
+            case "module":
+                removeActivityBoxFiller(df, removeModuleDropdown);
+        }
+    }
+
+
+    private void removeActivityBoxFiller(DataFactory df, JComboBox removeModuleDropdown) {
+        Module moduleInstance = (df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem()));
+        removeActivityDropdown.removeAllItems();
+        for (Activity activity: moduleInstance.getActivities()) {
+            Integer dayInt = activity.getDay();
+            String stringInt = null;
+            switch (dayInt) {
+                case 0:
+                    stringInt = "Monday";
+                    break;
+                case 1:
+                    stringInt = "Tuesday";
+                    break;
+                case 2:
+                    stringInt = "Wednesday";
+                    break;
+                case 3:
+                    stringInt = "Thursday";
+                    break;
+                case 4:
+                    stringInt = "Friday";
+            }
+            String classActivity = String.format("%s - %s - %d:00", activity.getType(), stringInt, activity.getTime());
+            removeActivityDropdown.addItem(classActivity);
+        }
     }
 
 }
