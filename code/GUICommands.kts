@@ -21,14 +21,15 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
     }
 
     fun populateGUIbyProgramme(programme: Programme, year: Int, term: Int) {
+        clearGUI()
         val activities = (programme.modules!!.filter { module -> module.year == year && module.term == term }).flatMap { it.activities!! }
         val clashesWithSameProgrammeActivities = activities.map { activity -> dataFactory.checkForClashes(activity) }
 
-        clashesWithSameProgrammeActivities.forEach { clash ->
-            if (clash != null) {
-                println("${dataFactory.getModuleFromActivity(clash.first)} and ${clash.second.forEach { dataFactory.getModuleFromActivity(it) }}")
-            }
-        }
+//        clashesWithSameProgrammeActivities.forEach { clash ->
+//            if (clash != null) {
+//                println("${dataFactory.getModuleFromActivity(clash.first)} and ${clash.second.forEach { dataFactory.getModuleFromActivity(it) }}")
+//            }
+//        }
 
         activities.forEach { activity -> addActivityToGUI(activity) }
     }

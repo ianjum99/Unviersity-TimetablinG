@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -5,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
 import java.util.Set;
+
+
 
 public class MenuGUI {
     private JPanel mainPanel, topBar;
@@ -62,19 +65,19 @@ public class MenuGUI {
     private static MenuGUI instance=null;
     private int posX, posY;
 
-    public MenuGUI(DataFactory df) {
-        init(df);
+    public MenuGUI(TimetableGUI gui, DataFactory df) {
+        init(gui, df);
     }
 
 
-    public static MenuGUI getInstance(DataFactory df){
+    public static MenuGUI getInstance(TimetableGUI gui, DataFactory df){
         if (instance == null) {
-            instance = new MenuGUI(df);
+            instance = new MenuGUI(gui, df);
         }
         return instance;
     }
 
-    private void init(DataFactory df) {
+    private void init(TimetableGUI gui, DataFactory df) {
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
@@ -83,6 +86,7 @@ public class MenuGUI {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+        GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
 
         programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
@@ -128,7 +132,7 @@ public class MenuGUI {
                     } else {
                         programmeType = "P";
                     }
-                    Programme programme = new Programme(programmeNameField.getText(), programmeType, null);
+                    Programme programme = new Programme(programmeNameField.getText(), programmeType, new ArrayList<Module>());
                     df.add(programme);
                     System.out.println(df);
                     moduleProgrammeSelectionDropdown.addItem(programmeNameField.getText());
@@ -143,6 +147,7 @@ public class MenuGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Programme programme = (df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem()));
+                System.out.println(programme.getModules());
                 String compulsory = moduleOptionalDropdown.getSelectedItem().toString();
                 switch (compulsory) {
                     case "Compulsory":
@@ -150,12 +155,13 @@ public class MenuGUI {
                     case "Optional":
                         compulsory = "false";
                 }
-                Module module = new Module("COMP-2823",
+                Module module = new Module(df.generateModuleId(programme),
                         Integer.parseInt(yearOfStudyDropdown.getSelectedItem().toString()),
                         moduleNameField.getText(),
                         Boolean.parseBoolean(compulsory),
                         Integer.parseInt(moduleTermDropdown.getSelectedItem().toString()),
-                        new ArrayList<Activity>());
+                        new ArrayList<Activity>()
+                        );
                 df.createModule(programme, module);
                 moduleSelectionDropdown.addItem(module.getName());
                 removeModuleDropdown.addItem(module.getName());
@@ -198,6 +204,7 @@ public class MenuGUI {
                 System.out.println(df);
             }
         });
+
 
         activityProgrammeSelectionDropdown.addItemListener(new ItemListener() {
             @Override

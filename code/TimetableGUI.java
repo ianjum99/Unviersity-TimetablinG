@@ -33,6 +33,10 @@ public class TimetableGUI {
         return componentHolder;
     }
 
+    public TimetableGUI getCurrentInstance() {
+        return this;
+    }
+
     public JTextArea getLabelFromCoordinates(int column,int row) {
         return (JTextArea) componentHolder[row][column].getComponent(0);
     }
@@ -93,7 +97,7 @@ public class TimetableGUI {
         menuButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                MenuGUI menuWindow  = MenuGUI.getInstance(df);
+                MenuGUI menuWindow  = MenuGUI.getInstance(getCurrentInstance(), df);
             }
         });
 
@@ -114,7 +118,7 @@ public class TimetableGUI {
             timeLabels.get(hour).setForeground(Color.white);
         }
 
-        for (int day=0; day<=4; day++) {
+        for (int day=0; day<=numberOfColumns-2; day++) {
             dayLabels.add(new JLabel(String.valueOf(DayOfWeek.of(day + 1))));
             dayLabels.get(day).setFont(outerLabelsFont);
             dayLabels.get(day).setForeground(Color.white);
