@@ -22,14 +22,14 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
 
     fun createModule(programme: Programme, module: Module) {
         module.id = generateModuleId(programme)
-        programme.modules?.add(module)
+        programme.modules.add(module)
     }
 
     fun generateModuleId(programme: Programme): String {
         var prefix = programme.name.slice(0..3).uppercase()
         val arrayOfIds = ArrayList<String>()
         var suffix = 0
-        programme.modules!!.forEach { module -> arrayOfIds.add(module.id.slice(4..7)) }
+        programme.modules.forEach { module -> arrayOfIds.add(module.id.slice(4..7)) }
         while (true) {
             suffix = Random.nextInt(1000,1999)
             if (!(arrayOfIds.contains(suffix.toString()))) {
@@ -39,27 +39,27 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     return prefix+suffix}
 
     fun deleteModule(programme: Programme, module: Module) {
-        programme.modules!!.remove(module)
+        programme.modules.remove(module)
     }
 
     fun createActivity(module: Module, activity: Activity) {
-        module.activities?.add(activity)
+        module.activities.add(activity)
     }
 
     fun deleteActivity(module: Module, activity: Activity) {
-        module.activities!!.remove(activity)
+        module.activities.remove(activity)
     }
 
     fun getProgrammeFromActivity(activity: Activity): Programme {
-        return this.first{programme -> programme.modules!!.any { module -> module.activities!!.contains(activity) } }
+        return this.first{programme -> programme.modules.any { module -> module.activities.contains(activity) } }
     }
 
     fun getModuleFromActivity(activity: Activity): Module {
-        return (this.flatMap { it.modules!! }.filter { it.activities!!.contains(activity) }).first()
+        return (this.flatMap { it.modules }.filter { it.activities.contains(activity) }).first()
     }
 
     fun getAllActivities(): ArrayList<Activity> {
-        return ArrayList(this.flatMap { it.modules!!}.flatMap { it.activities!! })
+        return ArrayList(this.flatMap { it.modules}.flatMap { it.activities })
     }
 
     fun getProgrammeInstanceFromString(programmeName: String): Programme {
@@ -67,11 +67,11 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getModuleInstanceFromString(moduleName: String): Module {
-        return (this.flatMap { it.modules!! }.filter { it.name == moduleName }).first()
+        return (this.flatMap { it.modules}.filter { it.name == moduleName }).first()
     }
 
     fun getActivitiesInSameYearAndTerm(year: Int,term: Int): List<Activity> {
-        return this.flatMap { it.modules!! }.filter { module -> module.year == year && module.term == term  }.flatMap {module-> module.activities!!}
+        return this.flatMap { it.modules }.filter { module -> module.year == year && module.term == term  }.flatMap {module-> module.activities}
     }
 
     fun checkForClashes(activity: Activity,
