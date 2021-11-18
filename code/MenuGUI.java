@@ -178,20 +178,11 @@ public class MenuGUI {
                 String day = dayDropdown.getSelectedItem().toString();
                 String time = startTimeDropdown.getSelectedItem().toString().substring(0, 2);
                 switch (day) {
-                    case "Monday":
-                        day = "1";
-                        break;
-                    case "Tuesday":
-                        day = "2";
-                        break;
-                    case "Wednesday":
-                        day = "3";
-                        break;
-                    case "Thursday":
-                        day = "4";
-                        break;
-                    case "Friday":
-                        day = "5";
+                    case "Monday" -> day = "0";
+                    case "Tuesday" -> day = "1";
+                    case "Wednesday" -> day = "2";
+                    case "Thursday" -> day = "3";
+                    case "Friday" -> day = "4";
                 }
                 Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
                         Integer.parseInt(day),
@@ -247,6 +238,7 @@ public class MenuGUI {
                 }
             }
         });
+
 
         removeProgrammeDropdown.addItemListener(new ItemListener() {
             @Override
