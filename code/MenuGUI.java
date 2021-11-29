@@ -86,7 +86,6 @@ public class MenuGUI {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
-        GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
 
         programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
@@ -134,11 +133,7 @@ public class MenuGUI {
                     }
                     Programme programme = new Programme(programmeNameField.getText(), programmeType, new ArrayList<Module>());
                     df.add(programme);
-                    System.out.println(df);
-                    moduleProgrammeSelectionDropdown.addItem(programmeNameField.getText());
-                    activityProgrammeSelectionDropdown.addItem(programmeNameField.getText());
-                    viewProgrammeDropdown.addItem(programmeNameField.getText());
-                    removeProgrammeDropdown.addItem(programmeNameField.getText());
+                    programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
                 }
             }
         });
@@ -165,7 +160,6 @@ public class MenuGUI {
                 df.createModule(programme, module);
                 moduleSelectionDropdown.addItem(module.getName());
                 removeModuleDropdown.addItem(module.getName());
-                System.out.println(df);
             }
 
         });
@@ -173,7 +167,6 @@ public class MenuGUI {
         addActivityButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Programme programme = (df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem()));
                 Module module = (df.getModuleInstanceFromString((String) moduleSelectionDropdown.getSelectedItem()));
                 String day = dayDropdown.getSelectedItem().toString();
                 String time = startTimeDropdown.getSelectedItem().toString().substring(0, 2);
@@ -189,10 +182,11 @@ public class MenuGUI {
                         Integer.parseInt(time),
                         Integer.parseInt(timeDurationDropdown.getSelectedItem().toString())
                         );
-
                 df.createActivity(module, activity);
-                System.out.println(activity);
-                System.out.println(df);
+
+                if (moduleSelectionDropdown.getSelectedItem() == removeModuleDropdown.getSelectedItem()) {
+                    removeActivityBoxFiller(df, moduleSelectionDropdown);
+                }
             }
         });
 
@@ -275,6 +269,7 @@ public class MenuGUI {
 
     private void programmeSelectionBoxFiller(DataFactory df, JComboBox... args) {
         for (JComboBox box: args) {
+            box.removeAllItems();
             for (Programme item: df) {
                 box.addItem(item.getName());
             }
@@ -319,29 +314,32 @@ public class MenuGUI {
 
 
     private void removeActivityBoxFiller(DataFactory df, JComboBox removeModuleDropdown) {
-        Module moduleInstance = (df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem()));
         removeActivityDropdown.removeAllItems();
-        for (Activity activity: moduleInstance.getActivities()) {
-            Integer dayInt = activity.getDay();
-            String stringInt = null;
-            switch (dayInt) {
-                case 0:
-                    stringInt = "Monday";
-                    break;
-                case 1:
-                    stringInt = "Tuesday";
-                    break;
-                case 2:
-                    stringInt = "Wednesday";
-                    break;
-                case 3:
-                    stringInt = "Thursday";
-                    break;
-                case 4:
-                    stringInt = "Friday";
+        if (removeModuleDropdown.getSelectedItem() == null) {
+        } else {
+            Module moduleInstance = (df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem()));
+            for (Activity activity: moduleInstance.getActivities()) {
+                Integer dayInt = activity.getDay();
+                String stringInt = null;
+                switch (dayInt) {
+                    case 0:
+                        stringInt = "Monday";
+                        break;
+                    case 1:
+                        stringInt = "Tuesday";
+                        break;
+                    case 2:
+                        stringInt = "Wednesday";
+                        break;
+                    case 3:
+                        stringInt = "Thursday";
+                        break;
+                    case 4:
+                        stringInt = "Friday";
+                }
+                String classActivity = String.format("%s - %s - %d:00", activity.getType(), stringInt, activity.getTime());
+                removeActivityDropdown.addItem(classActivity);
             }
-            String classActivity = String.format("%s - %s - %d:00", activity.getType(), stringInt, activity.getTime());
-            removeActivityDropdown.addItem(classActivity);
         }
     }
 
