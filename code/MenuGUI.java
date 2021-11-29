@@ -167,25 +167,29 @@ public class MenuGUI {
         addActivityButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Module module = (df.getModuleInstanceFromString((String) moduleSelectionDropdown.getSelectedItem()));
-                String day = dayDropdown.getSelectedItem().toString();
-                String time = startTimeDropdown.getSelectedItem().toString().substring(0, 2);
-                switch (day) {
-                    case "Monday" -> day = "0";
-                    case "Tuesday" -> day = "1";
-                    case "Wednesday" -> day = "2";
-                    case "Thursday" -> day = "3";
-                    case "Friday" -> day = "4";
-                }
-                Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
-                        Integer.parseInt(day),
-                        Integer.parseInt(time),
-                        Integer.parseInt(timeDurationDropdown.getSelectedItem().toString())
-                        );
-                df.createActivity(module, activity);
+                if (startTimeDropdown.getSelectedItem() == "20:00" && timeDurationDropdown.getSelectedItem() == "2") {
+                    JOptionPane.showMessageDialog(frame, "You cannot add a 2 hour activity at 8pm");
+                } else {
+                    Module module = (df.getModuleInstanceFromString((String) moduleSelectionDropdown.getSelectedItem()));
+                    String day = dayDropdown.getSelectedItem().toString();
+                    String time = startTimeDropdown.getSelectedItem().toString().substring(0, 2);
+                    switch (day) {
+                        case "Monday" -> day = "0";
+                        case "Tuesday" -> day = "1";
+                        case "Wednesday" -> day = "2";
+                        case "Thursday" -> day = "3";
+                        case "Friday" -> day = "4";
+                    }
+                    Activity activity = new Activity(activityTypeDropdown.getSelectedItem().toString(),
+                            Integer.parseInt(day),
+                            Integer.parseInt(time),
+                            Integer.parseInt(timeDurationDropdown.getSelectedItem().toString())
+                    );
+                    df.createActivity(module, activity);
 
-                if (moduleSelectionDropdown.getSelectedItem() == removeModuleDropdown.getSelectedItem()) {
-                    removeActivityBoxFiller(df, moduleSelectionDropdown);
+                    if (moduleSelectionDropdown.getSelectedItem() == removeModuleDropdown.getSelectedItem()) {
+                        removeActivityBoxFiller(df, moduleSelectionDropdown);
+                    }
                 }
             }
         });
@@ -203,6 +207,7 @@ public class MenuGUI {
                 }
             }
         });
+
 
         moduleProgrammeSelectionDropdown.addItemListener(new ItemListener() {
             @Override
