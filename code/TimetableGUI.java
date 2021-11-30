@@ -62,16 +62,25 @@ public class TimetableGUI {
 
     private void init(DataFactory dataFactory) {
         DataFactory df = dataFactory;
+        String chosenClashDetection = "";
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
         frame.pack();
         frame.setLocationRelativeTo(null);
+        int dialogResponse = JOptionPane.showConfirmDialog(frame,
+                "If you want to use Kotlin for Clash Detection press Yes, otherwise press No to use Scala",
+                "Clash Detection Selection", JOptionPane.YES_NO_OPTION);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
+        if (dialogResponse == JOptionPane.YES_OPTION) {
+            chosenClashDetection = "Kotlin";
+        } else {
+            chosenClashDetection = "Scala";
+        }
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override

@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -89,9 +88,9 @@ public class MenuGUI {
 
         programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
-        Programme programme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
+        Programme programmeInstance = getProgrammeInstance(df, activityProgrammeSelectionDropdown);
 
-        for (Module module : programme.getModules()) {
+        for (Module module : programmeInstance.getModules()) {
             moduleSelectionDropdown.addItem(module.getName());
         }
 
@@ -141,8 +140,7 @@ public class MenuGUI {
         addModuleButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Programme programme = (df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem()));
-                System.out.println(programme.getModules());
+                Programme programmeInstance = getProgrammeInstance(df, moduleProgrammeSelectionDropdown);
                 String compulsory = moduleOptionalDropdown.getSelectedItem().toString();
                 switch (compulsory) {
                     case "Compulsory":
@@ -150,16 +148,17 @@ public class MenuGUI {
                     case "Optional":
                         compulsory = "false";
                 }
-                Module module = new Module(df.generateModuleId(programme),
+                Module module = new Module(df.generateModuleId(programmeInstance),
                         Integer.parseInt(yearOfStudyDropdown.getSelectedItem().toString()),
                         moduleNameField.getText(),
                         Boolean.parseBoolean(compulsory),
                         Integer.parseInt(moduleTermDropdown.getSelectedItem().toString()),
                         new ArrayList<Activity>()
                         );
-                df.createModule(programme, module);
+                df.createModule(programmeInstance, module);
                 moduleSelectionDropdown.addItem(module.getName());
                 removeModuleDropdown.addItem(module.getName());
+                viewSectionBoxFiller(df, viewProgrammeDropdown);
             }
 
         });
@@ -199,9 +198,9 @@ public class MenuGUI {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    Programme programme = df.getProgrammeInstanceFromString((String) activityProgrammeSelectionDropdown.getSelectedItem());
+                    Programme programmeInstance = getProgrammeInstance(df, activityProgrammeSelectionDropdown);
                     moduleSelectionDropdown.removeAllItems();
-                    for (Module module : programme.getModules()) {
+                    for (Module module : programmeInstance.getModules()) {
                         moduleSelectionDropdown.addItem(module.getName());
                     }
                 }
@@ -213,8 +212,8 @@ public class MenuGUI {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    Programme programme = df.getProgrammeInstanceFromString((String) moduleProgrammeSelectionDropdown.getSelectedItem());
-                    if (programme.getType().equals("P")) {
+                    Programme programmeInstance = getProgrammeInstance(df, moduleProgrammeSelectionDropdown);
+                    if (programmeInstance.getType().equals("P")) {
                         yearOfStudyDropdown.removeAllItems();
                         yearOfStudyDropdown.addItem(1);
                     } else {
@@ -257,6 +256,16 @@ public class MenuGUI {
             }
         });
 
+        viewProgrammeButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
+                commands.populateGUIbyProgramme(getProgrammeInstance(df, viewProgrammeDropdown),
+                        (Integer) viewYearOfStudyDropdown.getSelectedItem(),
+                        (Integer) viewTermDropdown.getSelectedItem());
+            }
+        });
+
     }
 
     private void createUIComponents() {
@@ -282,13 +291,15 @@ public class MenuGUI {
     }
 
     private void viewSectionBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown) {
-        Programme viewProgramme = df.getProgrammeInstanceFromString((String) viewProgrammeDropdown.getSelectedItem());
+        Programme programmeInstance = getProgrammeInstance(df, viewProgrammeDropdown);
         ArrayList<Integer> yearDuplicates = new ArrayList<>();
         ArrayList<Integer> termDuplicates = new ArrayList<>();
         Collections.addAll(yearDuplicates, 1, 2, 3);
         Collections.addAll(termDuplicates, 1, 2);
 
-        for (Module module: viewProgramme.getModules()) {
+        viewYearOfStudyDropdown.removeAllItems();
+        viewTermDropdown.removeAllItems();
+        for (Module module: programmeInstance.getModules()) {
             if (yearDuplicates.contains(module.getYear())) {
                 yearDuplicates.remove((Integer) module.getYear());
                 viewYearOfStudyDropdown.addItem(module.getYear());
@@ -306,7 +317,7 @@ public class MenuGUI {
         switch (programmeOrActivity) {
             case "programme":
                 removeModuleDropdown.removeAllItems();
-                Programme programmeInstance = df.getProgrammeInstanceFromString((String) removeProgrammeDropdown.getSelectedItem());
+                Programme programmeInstance = getProgrammeInstance(df, removeProgrammeDropdown);
                 for (Module module: programmeInstance.getModules()) {
                     removeModuleDropdown.addItem(module.getName());
                 }
@@ -346,6 +357,11 @@ public class MenuGUI {
                 removeActivityDropdown.addItem(classActivity);
             }
         }
+    }
+
+    private Programme getProgrammeInstance(DataFactory df, JComboBox programmeDropdown) {
+        Programme programmeInstance = df.getProgrammeInstanceFromString((String) programmeDropdown.getSelectedItem());
+        return programmeInstance;
     }
 
 }

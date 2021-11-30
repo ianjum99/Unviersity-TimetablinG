@@ -1,10 +1,5 @@
 class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
-    fun populateGUI() {
-        dataFactory.getAllActivities().forEach { activity -> addActivityToGUI(activity) }
-    }
-    //need to delete this method
-
     fun addActivityToGUI(activity: Activity) {
         for (i in 1..activity.duration) {
             gui.getLabelFromCoordinates(activity.day + 1, (activity.time - 8 + i - 1)).text =
@@ -22,7 +17,7 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun populateGUIbyProgramme(programme: Programme, year: Int, term: Int) {
         clearGUI()
-        val activities = (programme.modules!!.filter { module -> module.year == year && module.term == term }).flatMap { it.activities!! }
+        val activities = (programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { it.activities }
         val clashesWithSameProgrammeActivities = activities.map { activity -> dataFactory.checkForClashes(activity) }
 
 //        clashesWithSameProgrammeActivities.forEach { clash ->
