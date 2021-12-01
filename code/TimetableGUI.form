@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TimetableGUI">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="1920" height="1080"/>
@@ -16,36 +16,19 @@
     <children>
       <component id="a61cc" class="javax.swing.JLabel" binding="timetableLabel">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1"/>
-          <font name="Arial Black" size="22" style="1"/>
+          <font name="Arial Black" size="30" style="1"/>
           <foreground color="-1"/>
           <text value="Timetable"/>
-        </properties>
-      </component>
-      <component id="e2ca4" class="javax.swing.JButton" binding="menuButton">
-        <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="100" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-8383690"/>
-          <borderPainted value="true"/>
-          <contentAreaFilled value="true"/>
-          <focusPainted value="false"/>
-          <font name="Arial" size="20" style="1"/>
-          <foreground color="-1"/>
-          <hideActionText value="false"/>
-          <text value="Menu"/>
         </properties>
       </component>
       <grid id="c3603" binding="topBar" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-11466190"/>
@@ -62,21 +45,10 @@
           </component>
         </children>
       </grid>
-      <component id="2f3e2" class="javax.swing.JLabel" binding="dateLabel">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-1"/>
-          <font name="Arial" size="20" style="1"/>
-          <foreground color="-1"/>
-          <text value="Date"/>
-        </properties>
-      </component>
       <grid id="ae351" binding="timetablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-16777216"/>
@@ -84,34 +56,54 @@
         <border type="none"/>
         <children/>
       </grid>
-      <hspacer id="fb0c3">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="50" height="-1"/>
-          </grid>
-        </constraints>
-      </hspacer>
-      <hspacer id="75bd1">
-        <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="50" height="-1"/>
-          </grid>
-        </constraints>
-      </hspacer>
-      <vspacer id="40b68">
-        <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="30"/>
-          </grid>
-        </constraints>
-      </vspacer>
       <vspacer id="fa562">
         <constraints>
-          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="-1" height="30"/>
           </grid>
         </constraints>
       </vspacer>
+      <hspacer id="9e9ca">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <component id="c84b1" class="javax.swing.JButton" binding="menuButton">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="125" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-8383690"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
+          <font name="Arial" size="20" style="1"/>
+          <foreground color="-1"/>
+          <hideActionText value="false"/>
+          <text value="Menu"/>
+        </properties>
+      </component>
+      <hspacer id="2865a">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="25" height="-1"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <component id="37abc" class="javax.swing.JLabel" binding="programmeInfoLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial" size="20" style="2"/>
+          <foreground color="-1"/>
+          <text value="Programme Info"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

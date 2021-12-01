@@ -123,7 +123,7 @@ public class MenuGUI {
         addProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (programmeNameField.getText().length() > 0) {
+                if (programmeNameField.getText().length() > 4) {
                     String programmeType = underOrPostDropdown.getSelectedItem().toString();
                     if (programmeType == "Undergraduate") {
                         programmeType = "U";
@@ -133,6 +133,8 @@ public class MenuGUI {
                     Programme programme = new Programme(programmeNameField.getText(), programmeType, new ArrayList<Module>());
                     df.add(programme);
                     programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Please enter a programme name with at least 4 characters");
                 }
             }
         });
@@ -263,6 +265,9 @@ public class MenuGUI {
                 commands.populateGUIbyProgramme(getProgrammeInstance(df, viewProgrammeDropdown),
                         (Integer) viewYearOfStudyDropdown.getSelectedItem(),
                         (Integer) viewTermDropdown.getSelectedItem());
+                String courseInfo = String.format("%s - Year %s - Term %s", viewProgrammeDropdown.getSelectedItem(),
+                        viewYearOfStudyDropdown.getSelectedItem(), viewTermDropdown.getSelectedItem());
+                gui.programmeInfoLabel.setText(courseInfo);
             }
         });
 

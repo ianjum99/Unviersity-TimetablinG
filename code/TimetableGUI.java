@@ -19,8 +19,8 @@ public class TimetableGUI {
     private JLabel closeButton;
     private JFrame frame;
     private JPanel topBar;
-    private JLabel dateLabel;
     private JPanel timetablePanel;
+    public JLabel programmeInfoLabel;
     private GridLayout grid;
     private JButton buttonGrid;
     int numberOfRows = 13;
