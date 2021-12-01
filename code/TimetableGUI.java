@@ -151,7 +151,6 @@ public class TimetableGUI {
         }
 
 
-
         for (int row = 1; row < numberOfRows; row++){
             for (int column = 1; column < numberOfColumns; column++) {
                 componentHolder[row][column].add(new JTextArea(""));
