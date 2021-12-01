@@ -96,7 +96,7 @@ public class MenuGUI {
 
         viewSectionBoxFiller(df, viewProgrammeDropdown);
 
-        removeSectionBoxFiller(df, removeProgrammeDropdown, "programme");
+        removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -164,6 +164,7 @@ public class MenuGUI {
             }
 
         });
+
 
         addActivityButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -244,7 +245,7 @@ public class MenuGUI {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    removeSectionBoxFiller(df, removeProgrammeDropdown, "programme");
+                    removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
                 }
             }
         });
@@ -253,7 +254,7 @@ public class MenuGUI {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
+                    removeSectionBoxFiller(df, removeProgrammeDropdown, "activity");
                 }
             }
         });
@@ -271,6 +272,32 @@ public class MenuGUI {
             }
         });
 
+        removeProgrammeButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                df.deleteProgramme(getProgrammeInstance(df, removeProgrammeDropdown));
+                programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
+            }
+        });
+
+        removeModuleButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Programme programmeInstance = getProgrammeInstance(df, removeProgrammeDropdown);
+                Module moduleInstance = df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem());
+                df.deleteModule(programmeInstance, moduleInstance);
+                removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
+            }
+        });
+
+        removeActivityButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Module moduleInstance = df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem());
+                df.deleteActivity(moduleInstance, moduleInstance.getActivities().get(removeActivityDropdown.getSelectedIndex()));
+                removeSectionBoxFiller(df, removeProgrammeDropdown, "activity");
+            }
+        });
     }
 
     private void createUIComponents() {
@@ -318,9 +345,9 @@ public class MenuGUI {
     }
 
 
-    private void removeSectionBoxFiller(DataFactory df, JComboBox removeProgrammeDropdown, String programmeOrActivity) {
-        switch (programmeOrActivity) {
-            case "programme":
+    private void removeSectionBoxFiller(DataFactory df, JComboBox removeProgrammeDropdown, String moduleOrActivity) {
+        switch (moduleOrActivity) {
+            case "module":
                 removeModuleDropdown.removeAllItems();
                 Programme programmeInstance = getProgrammeInstance(df, removeProgrammeDropdown);
                 for (Module module: programmeInstance.getModules()) {
@@ -328,7 +355,7 @@ public class MenuGUI {
                 }
                 removeActivityBoxFiller(df, removeModuleDropdown);
                 break;
-            case "module":
+            case "activity":
                 removeActivityBoxFiller(df, removeModuleDropdown);
         }
     }
@@ -337,6 +364,7 @@ public class MenuGUI {
     private void removeActivityBoxFiller(DataFactory df, JComboBox removeModuleDropdown) {
         removeActivityDropdown.removeAllItems();
         if (removeModuleDropdown.getSelectedItem() == null) {
+
         } else {
             Module moduleInstance = (df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem()));
             for (Activity activity: moduleInstance.getActivities()) {
