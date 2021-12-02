@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="scala-sdk-2.13.7" type="Scala">
     <properties>
-      <language-level>Scala_3_1</language-level>
+      <language-level>Scala_2_13</language-level>
       <compiler-classpath>
         <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.13.7.jar" />
         <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.7.jar" />
