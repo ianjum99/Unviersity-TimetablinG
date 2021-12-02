@@ -3,9 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Objects;
-import java.util.Set;
-
 
 
 public class MenuGUI {
@@ -64,8 +61,10 @@ public class MenuGUI {
     private static MenuGUI instance=null;
     private int posX, posY;
 
+
     public MenuGUI(TimetableGUI gui, DataFactory df) {
-        init(gui, df);
+        GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
+        init(gui, df, commands);
     }
 
 
@@ -76,7 +75,7 @@ public class MenuGUI {
         return instance;
     }
 
-    private void init(TimetableGUI gui, DataFactory df) {
+    private void init(TimetableGUI gui, DataFactory df, GUICommands.GUICommands commands) {
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
@@ -85,6 +84,7 @@ public class MenuGUI {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+        df.get(0).getModules().remove(df.get(0).getModules().get(0));
 
         programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
@@ -188,11 +188,14 @@ public class MenuGUI {
                             Integer.parseInt(timeDurationDropdown.getSelectedItem().toString())
                     );
                     df.createActivity(module, activity);
-
                     if (moduleSelectionDropdown.getSelectedItem() == removeModuleDropdown.getSelectedItem()) {
                         removeActivityBoxFiller(df, moduleSelectionDropdown);
                     }
+                    if (gui.programmeNameLabel.getText() != "Programme Info") {
+                        updateGUI(df, gui, commands);
+                    }
                 }
+
             }
         });
 
@@ -240,7 +243,6 @@ public class MenuGUI {
             }
         });
 
-
         removeProgrammeDropdown.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -262,19 +264,18 @@ public class MenuGUI {
         viewProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
-                commands.populateGUIbyProgramme(getProgrammeInstance(df, viewProgrammeDropdown),
-                        (Integer) viewYearOfStudyDropdown.getSelectedItem(),
-                        (Integer) viewTermDropdown.getSelectedItem());
-                String courseInfo = String.format("%s - Year %s - Term %s", viewProgrammeDropdown.getSelectedItem(),
-                        viewYearOfStudyDropdown.getSelectedItem(), viewTermDropdown.getSelectedItem());
-                gui.programmeInfoLabel.setText(courseInfo);
+                updateGUI(df, gui, commands);
             }
         });
 
         removeProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                if (gui.programmeNameLabel.getText() == removeProgrammeDropdown.getSelectedItem()) {
+                    commands.clearGUI();
+                    gui.programmeNameLabel.setText("Programme Name");
+                    gui.programmeYearAndTermLabel.setText("Programme Year/Term");
+                }
                 df.deleteProgramme(getProgrammeInstance(df, removeProgrammeDropdown));
                 programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
             }
@@ -287,6 +288,15 @@ public class MenuGUI {
                 Module moduleInstance = df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem());
                 df.deleteModule(programmeInstance, moduleInstance);
                 removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
+                if (!gui.programmeNameLabel.getText().equals("Programme Name")) {
+                    updateGUI(df, gui, commands);
+                }
+                if (activityProgrammeSelectionDropdown.getSelectedItem() == removeProgrammeDropdown.getSelectedItem()) {
+                    moduleSelectionDropdown.removeAllItems();
+                    for (Module module : programmeInstance.getModules()) {
+                        moduleSelectionDropdown.addItem(module.getName());
+                    }
+                }
             }
         });
 
@@ -296,6 +306,9 @@ public class MenuGUI {
                 Module moduleInstance = df.getModuleInstanceFromString((String) removeModuleDropdown.getSelectedItem());
                 df.deleteActivity(moduleInstance, moduleInstance.getActivities().get(removeActivityDropdown.getSelectedIndex()));
                 removeSectionBoxFiller(df, removeProgrammeDropdown, "activity");
+                if (!gui.programmeNameLabel.getText().equals("Programme Name")) {
+                    updateGUI(df, gui, commands);
+                }
             }
         });
     }
@@ -392,9 +405,22 @@ public class MenuGUI {
         }
     }
 
+
     private Programme getProgrammeInstance(DataFactory df, JComboBox programmeDropdown) {
         Programme programmeInstance = df.getProgrammeInstanceFromString((String) programmeDropdown.getSelectedItem());
         return programmeInstance;
+    }
+
+
+    private void updateGUI(DataFactory df, TimetableGUI gui, GUICommands.GUICommands commands) {
+        commands.populateGUIbyProgramme(getProgrammeInstance(df, viewProgrammeDropdown),
+                (Integer) viewYearOfStudyDropdown.getSelectedItem(),
+                (Integer) viewTermDropdown.getSelectedItem());
+        String programmeYearAndTerm = String.format("Year %s - Term %s",
+                viewYearOfStudyDropdown.getSelectedItem(), viewTermDropdown.getSelectedItem());
+        gui.programmeNameLabel.setText((String) viewProgrammeDropdown.getSelectedItem());
+        gui.programmeYearAndTermLabel.setText(programmeYearAndTerm);
+
     }
 
 }

@@ -20,7 +20,8 @@ public class TimetableGUI {
     private JFrame frame;
     private JPanel topBar;
     private JPanel timetablePanel;
-    public JLabel programmeInfoLabel;
+    public JLabel programmeNameLabel;
+    public JLabel programmeYearAndTermLabel;
     private GridLayout grid;
     private JButton buttonGrid;
     int numberOfRows = 13;
@@ -85,6 +86,8 @@ public class TimetableGUI {
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+//                JsonHandler jsonHandler = new JsonHandler();
+//                jsonHandler.saveJsonFile(df.toJson());
                 System.exit(0);
             }
         });
