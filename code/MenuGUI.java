@@ -297,6 +297,7 @@ public class MenuGUI {
                         moduleSelectionDropdown.addItem(module.getName());
                     }
                 }
+                viewSectionBoxFiller(df, viewProgrammeDropdown);
             }
         });
 
@@ -334,6 +335,7 @@ public class MenuGUI {
             }
         }
     }
+
 
     private void viewSectionBoxFiller(DataFactory df, JComboBox viewProgrammeDropdown) {
         Programme programmeInstance = getProgrammeInstance(df, viewProgrammeDropdown);
