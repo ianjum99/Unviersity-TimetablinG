@@ -56,7 +56,6 @@ public class MenuGUI {
     private JComboBox viewTermDropdown;
     private JButton viewProgrammeButton;
     private JFrame frame;
-    private DataFactory dataFactory;
 
     private static MenuGUI instance=null;
     private int posX, posY;
@@ -84,7 +83,6 @@ public class MenuGUI {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
-        df.get(0).getModules().remove(df.get(0).getModules().get(0));
 
         programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 

@@ -121,6 +121,23 @@
           <text value="Programme Year/Term"/>
         </properties>
       </component>
+      <component id="5aded" class="javax.swing.JButton" binding="clashesButton">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="125" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-8383690"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="false"/>
+          <font name="Arial" size="20" style="1"/>
+          <foreground color="-1"/>
+          <hideActionText value="false"/>
+          <text value="Clashes"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

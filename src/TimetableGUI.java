@@ -22,6 +22,7 @@ public class TimetableGUI {
     private JPanel timetablePanel;
     public JLabel programmeNameLabel;
     public JLabel programmeYearAndTermLabel;
+    private JButton clashesButton;
     private GridLayout grid;
     private JButton buttonGrid;
     int numberOfRows = 13;
@@ -110,6 +111,13 @@ public class TimetableGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MenuGUI menuWindow  = MenuGUI.getInstance(getCurrentInstance(), df);
+            }
+        });
+
+        clashesButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ClashesGUI clashesWindow  = ClashesGUI.getInstance(getCurrentInstance(), df);
             }
         });
 
