@@ -70,15 +70,14 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return (this.flatMap { it.modules}.filter { it.name == moduleName }).first()
     }
 
-    fun getActivitiesInSameYearAndTerm(year: Int,term: Int): List<Activity> {
-        return this.flatMap { it.modules }.filter { module -> module.year == year && module.term == term  }.flatMap {module-> module.activities}
+    fun getActivitiesInSameYearAndTerm(year: Int,term: Int): ArrayList<Activity> {
+        return ArrayList(this.flatMap { it.modules }.filter { module -> module.year == year && module.term == term  }.flatMap {module-> module.activities})
     }
 
-    fun checkForClashes(activity: Activity,
-                        moduleOfActivity: Module = getModuleFromActivity(activity),
+    fun checkForClashes(activity: Activity, moduleOfActivity: Module = getModuleFromActivity(activity),
                         clashesWith:ArrayList<Activity> = ArrayList()): Pair<Activity,ArrayList<Activity>>? {
 
-        val listOfActivities = this.getAllActivities()
+        val listOfActivities = this.getActivitiesInSameYearAndTerm(moduleOfActivity.year, moduleOfActivity.term)
         listOfActivities.remove(activity)
 
         ArrayList(listOfActivities.filter { currentActivity ->
