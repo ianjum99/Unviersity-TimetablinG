@@ -28,6 +28,7 @@ public class TimetableGUI {
     int numberOfRows = 13;
     int numberOfColumns = 6;
     private final JPanel[][] componentHolder = new JPanel[numberOfRows][numberOfColumns];
+    private ImageIcon icon;
 
 
 
@@ -63,25 +64,31 @@ public class TimetableGUI {
     }
 
     private void init(DataFactory dataFactory) {
-        DataFactory df = dataFactory;
+        ImageIcon icon = new ImageIcon("Images/clashDetection.png");
         String chosenClashDetection = "";
+        String[] options = {"Kotlin", "Scala"};
+        DataFactory df = dataFactory;
+
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
         frame.pack();
         frame.setLocationRelativeTo(null);
-        int dialogResponse = JOptionPane.showConfirmDialog(frame,
-                "If you want to use Kotlin for Clash Detection press Yes, otherwise press No to use Scala",
-                "Clash Detection Selection", JOptionPane.YES_NO_OPTION);
+        int questionResponse = JOptionPane.showOptionDialog(frame,
+                "Which clash detection do you wish to use?",
+                "Clash Detection Selection", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon,
+                options, options[0]);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
-        if (dialogResponse == JOptionPane.YES_OPTION) {
+        if (questionResponse == JOptionPane.YES_OPTION) {
             chosenClashDetection = "Kotlin";
-        } else {
+        } else if (questionResponse == JOptionPane.NO_OPTION) {
             chosenClashDetection = "Scala";
+        } else {
+            System.exit(0);
         }
 
         closeButton.addMouseListener(new MouseAdapter() {
