@@ -15,25 +15,11 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         }
     }
 
-//    fun removeDuplicateClashes(list: ArrayList<Pair<Activity, ArrayList<Activity>>?>) {
-//        var newList: ArrayList<Pair<Activity, ArrayList<Activity>>?> = ArrayList()
-//
-//        for (pairs in list) {
-//            list.forEach { pair -> pair!!.second.filter { activity -> list.filter { it.first == activity && pair.first in it.second }}
-//        }
-//    }
     fun populateGUIbyProgramme(programme: Programme, year: Int, term: Int) {
         clearGUI()
         val activities = (programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { it.activities }
-        val clashes = ArrayList(activities.map { activity -> dataFactory.checkForClashes(activity) })
-        clashes.removeAll(listOf(null))
-//        removeDuplicateClashes(clashes)
-        clashes.forEach { clash ->
-            if (clash != null) {
-                println("${dataFactory.getModuleFromActivity(clash.first)} and ${clash.second.forEach { dataFactory.getModuleFromActivity(it).name }}")
-            }
-        }
-
+        val clashes = dataFactory.checkForClashes(programme, year, term)
         activities.forEach { activity -> addActivityToGUI(activity) }
+        println(clashes)
     }
 }

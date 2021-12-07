@@ -31,12 +31,13 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         var suffix = 0
         programme.modules.forEach { module -> arrayOfIds.add(module.id.slice(4..7)) }
         while (true) {
-            suffix = Random.nextInt(1000,1999)
+            suffix = Random.nextInt(1000, 1999)
             if (!(arrayOfIds.contains(suffix.toString()))) {
                 break
             }
         }
-    return prefix+suffix}
+        return prefix + suffix
+    }
 
     fun deleteModule(programme: Programme, module: Module) {
         programme.modules.remove(module)
@@ -51,7 +52,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getProgrammeFromActivity(activity: Activity): Programme {
-        return this.first{programme -> programme.modules.any { module -> module.activities.contains(activity) } }
+        return this.first { programme -> programme.modules.any { module -> module.activities.contains(activity) } }
     }
 
     fun getModuleFromActivity(activity: Activity): Module {
@@ -59,7 +60,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getAllActivities(): ArrayList<Activity> {
-        return ArrayList(this.flatMap { it.modules}.flatMap { it.activities })
+        return ArrayList(this.flatMap { it.modules }.flatMap { it.activities })
     }
 
     fun getProgrammeInstanceFromString(programmeName: String): Programme {
@@ -67,36 +68,35 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getModuleInstanceFromString(moduleName: String): Module {
-        return (this.flatMap { it.modules}.filter { it.name == moduleName }).first()
+        return (this.flatMap { it.modules }.filter { it.name == moduleName }).first()
     }
 
-    fun getActivitiesInSameYearAndTerm(year: Int,term: Int): ArrayList<Activity> {
-        return ArrayList(this.flatMap { it.modules }.filter { module -> module.year == year && module.term == term  }.flatMap {module-> module.activities})
+    fun getActivitiesInSameProgrammeYearTerm(programme: Programme, year: Int, term: Int): ArrayList<Activity> {
+        return ArrayList((programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { module -> module.activities })
     }
 
-    fun checkForClashes(activity: Activity, moduleOfActivity: Module = getModuleFromActivity(activity),
-                        clashesWith:ArrayList<Activity> = ArrayList()): Pair<Activity,ArrayList<Activity>>? {
+    fun checkForClashes(programme: Programme, year: Int, term: Int):  ArrayList<Pair<Activity,List<Activity>?>> {
+        val listOfClashes = ArrayList<Pair<Activity,List<Activity>?>>()
+        val listOfActivities = getActivitiesInSameProgrammeYearTerm(programme,year,term)
 
-        val listOfActivities = this.getActivitiesInSameYearAndTerm(moduleOfActivity.year, moduleOfActivity.term)
-        listOfActivities.remove(activity)
+        for (currentActivity in listOfActivities) {
+            val listCopy = listOfActivities.toMutableList()
+            listCopy.remove(currentActivity)
 
-        ArrayList(listOfActivities.filter { currentActivity ->
-            getModuleFromActivity(currentActivity).year == moduleOfActivity.year &&
-            getModuleFromActivity(currentActivity).term == moduleOfActivity.term &&
-            currentActivity.time == activity.time &&
-            currentActivity.day == activity.day}).forEach { clash -> clashesWith.add(clash) }
+            val clashes = ArrayList(listCopy.filter { activity -> activity.day == currentActivity.day && activity.time == currentActivity.time })
 
-        if (activity.duration > 1) {
-            checkForClashes(Activity(activity.type,activity.day,activity.time+1,activity.duration-1), moduleOfActivity,clashesWith)
+            if (currentActivity.duration > 1) {
+                clashes += ArrayList(listCopy.filter { activity -> activity.day == currentActivity.day && activity.time == currentActivity.time+1 })
+            }
+
+
+            if (clashes.isNotEmpty()) {
+                listOfClashes.add(Pair(currentActivity, clashes))
+            }
         }
-
-        if (clashesWith.isNotEmpty()) {
-            return Pair(activity,clashesWith)
-        }
-        return null
+        return listOfClashes
     }
 }
-
 class Programme (
     val name: String,
     val type: String,
