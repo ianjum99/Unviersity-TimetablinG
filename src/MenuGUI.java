@@ -269,9 +269,13 @@ public class MenuGUI {
                         df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
                                 (Integer) viewYearOfStudyDropdown.getSelectedItem(),
                                 (Integer) viewTermDropdown.getSelectedItem());
+
+                ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df, true);
+                clashesGUI.updateClashList(currentClashes, df);
                 if (!currentClashes.isEmpty()) {
-                    ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df);
-                    clashesGUI.updateClashList(currentClashes, df);
+                    gui.clashAlertLabel.setVisible(true);
+                } else {
+                    gui.clashAlertLabel.setVisible(false);
                 }
                 updateGUI(df, gui, commands);
             }

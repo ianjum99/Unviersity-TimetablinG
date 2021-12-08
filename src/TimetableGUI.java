@@ -23,14 +23,13 @@ public class TimetableGUI {
     public JLabel programmeNameLabel;
     public JLabel programmeYearAndTermLabel;
     private JButton clashesButton;
+    public JLabel clashAlertLabel;
     private GridLayout grid;
     private JButton buttonGrid;
     int numberOfRows = 13;
     int numberOfColumns = 6;
     private final JPanel[][] componentHolder = new JPanel[numberOfRows][numberOfColumns];
     private ImageIcon icon;
-
-
 
     public JPanel[][] getComponentHolder() {
         return componentHolder;
@@ -46,18 +45,6 @@ public class TimetableGUI {
 
     private int posX, posY;
 
-    public static void main(DataFactory df) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    TimetableGUI window = new TimetableGUI(df);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
 
     public TimetableGUI(DataFactory dataFactory) {
         init(dataFactory);
@@ -68,6 +55,7 @@ public class TimetableGUI {
         String chosenClashDetection = "";
         String[] options = {"Kotlin", "Scala"};
         DataFactory df = dataFactory;
+        UIManager.put("ToolTip.background", Color.WHITE);
 
         frame = new JFrame();
         frame.setContentPane(mainPanel);
@@ -125,7 +113,7 @@ public class TimetableGUI {
         clashesButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ClashesGUI clashesWindow  = ClashesGUI.getInstance(getCurrentInstance(), df);
+                ClashesGUI clashesWindow  = ClashesGUI.getInstance(getCurrentInstance(), df, false);
             }
         });
 
@@ -133,7 +121,8 @@ public class TimetableGUI {
 
 
     private void createUIComponents() {
-        closeButton = new JLabel((new ImageIcon("images/close.png")));
+        closeButton = new JLabel(new ImageIcon("Images/close.png"));
+        clashAlertLabel = new JLabel(new ImageIcon("Images/alert.png"));
         timetablePanel = new JPanel();
         ArrayList<JLabel> timeLabels = new ArrayList<JLabel>();
         ArrayList<JLabel> dayLabels = new ArrayList<JLabel>();

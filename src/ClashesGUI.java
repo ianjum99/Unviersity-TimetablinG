@@ -27,12 +27,23 @@ public class ClashesGUI {
     private JPanel componentHolder;
 
 
-    public static ClashesGUI getInstance(TimetableGUI gui, DataFactory df){
-        if (instance == null) {
+    public static ClashesGUI getInstance(TimetableGUI gui, DataFactory df, boolean stayHidden){
+        if (instance == null && !stayHidden) {
             instance = new ClashesGUI(gui, df);
+        } else if (instance == null) {
+            instance = new ClashesGUI(gui, df);
+            instance.frame.setVisible(false);
+        } else if (stayHidden) {
+
+        } else {
+            instance.frame.setVisible(true);
+            instance.frame.toFront();
         }
-        instance.frame.toFront();
         return instance;
+
+//        switch (instance && stayHidden) {
+//
+//        }
     }
 
     public ClashesGUI(TimetableGUI gui, DataFactory df) {

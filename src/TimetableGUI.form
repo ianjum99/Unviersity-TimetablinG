@@ -73,7 +73,7 @@
       <component id="c84b1" class="javax.swing.JButton" binding="menuButton">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="125" height="-1"/>
+            <preferred-size width="125" height="30"/>
           </grid>
         </constraints>
         <properties>
@@ -90,7 +90,7 @@
       <hspacer id="2865a">
         <constraints>
           <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="25" height="-1"/>
+            <preferred-size width="35" height="-1"/>
           </grid>
         </constraints>
       </hspacer>
@@ -124,7 +124,7 @@
       <component id="5aded" class="javax.swing.JButton" binding="clashesButton">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="125" height="-1"/>
+            <preferred-size width="125" height="30"/>
           </grid>
         </constraints>
         <properties>
@@ -136,6 +136,16 @@
           <foreground color="-1"/>
           <hideActionText value="false"/>
           <text value="Clashes"/>
+        </properties>
+      </component>
+      <component id="67576" class="javax.swing.JLabel" binding="clashAlertLabel" custom-create="true">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText value="There are clashes in this timetable!"/>
+          <visible value="false"/>
         </properties>
       </component>
     </children>
