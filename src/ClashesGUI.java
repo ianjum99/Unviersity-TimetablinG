@@ -1,3 +1,5 @@
+import kotlin.Pair;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
@@ -6,6 +8,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClashesGUI {
     private static ClashesGUI instance=null;
@@ -71,6 +75,42 @@ public class ClashesGUI {
         closeButton = new JLabel(new ImageIcon("images/close.png"));
         listScrollPane = new JScrollPane();
         listScrollPane.setBorder(null);
+        clashList = new JList();
+    }
+
+    public void updateClashList(ArrayList<Pair<Activity, List<Activity>>> currentClashes, DataFactory df) {
+        DefaultListModel<String> listModel = new DefaultListModel<String>();
+        for (Pair<Activity, List<Activity>> activity: currentClashes) {
+            Activity firstActivity = activity.getFirst();
+            Activity secondActivity = activity.getSecond().get(0);
+            String firstActivityDay = activityDayConverter(firstActivity.getDay());
+            String secondActivityDay = activityDayConverter(secondActivity.getDay());
+            String clash = String.format("Clash Between: (%s, %s, %s:00-%s:00, %s) and (%s, %s, %s:00-%s:00, %s)",
+                    df.getModuleFromActivity(firstActivity).getId(),
+                    firstActivityDay,
+                    firstActivity.getTime(),
+                    firstActivity.getTime()+firstActivity.getDuration(),
+                    firstActivity.getType(),
+                    df.getModuleFromActivity(secondActivity).getId(),
+                    secondActivityDay,
+                    secondActivity.getTime(),
+                    secondActivity.getTime()+secondActivity.getDuration(),
+                    secondActivity.getType());
+            listModel.addElement(clash);
+        }
+        clashList.setModel(listModel);
+    }
+
+    private String activityDayConverter(Integer day) {
+        String activityDay = "";
+        switch (day) {
+            case 0 -> activityDay = "Monday";
+            case 1 -> activityDay = "Tuesday";
+            case 2 -> activityDay = "Wednesday";
+            case 3 -> activityDay = "Thursday";
+            case 4 -> activityDay = "Friday";
+        }
+        return activityDay;
     }
 
 }

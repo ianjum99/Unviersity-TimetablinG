@@ -1,8 +1,11 @@
+import kotlin.Pair;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 
 public class MenuGUI {
@@ -83,6 +86,8 @@ public class MenuGUI {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+
+        ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df);
 
         programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
@@ -262,6 +267,11 @@ public class MenuGUI {
         viewProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                ArrayList<Pair<Activity, List<Activity>>> currentClashes =
+                        df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
+                                (Integer) viewYearOfStudyDropdown.getSelectedItem(),
+                                (Integer) viewTermDropdown.getSelectedItem());
+                clashesGUI.updateClashList(currentClashes, df);
                 updateGUI(df, gui, commands);
             }
         });

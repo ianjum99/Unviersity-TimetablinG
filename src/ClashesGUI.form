@@ -93,20 +93,14 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="86b7a" class="javax.swing.JList" binding="clashList">
+              <component id="86b7a" class="javax.swing.JList" binding="clashList" custom-create="true">
                 <constraints/>
                 <properties>
                   <background color="-13822932"/>
                   <fixedCellHeight value="25"/>
                   <font name="Arial" size="14" style="0"/>
                   <foreground color="-1"/>
-                  <model>
-                    <item value="Clash Between: (COMP-1862, Monday, 9:00-10:00, Lecture) and (COMP-9362, Monday, 9:00-11:00, Lecture)"/>
-                    <item value="Clash Between: (COMP-1862, Monday, 9:00-10:00, Lecture) and (COMP-9362, Monday, 9:00-11:00, Lecture)"/>
-                    <item value="Clash Between: (COMP-1862, Monday, 9:00-10:00, Lecture) and (COMP-9362, Monday, 9:00-11:00, Lecture)"/>
-                    <item value="Clash Between: (COMP-1862, Monday, 9:00-10:00, Lecture) and (COMP-9362, Monday, 9:00-11:00, Lecture)"/>
-                    <item value="Clash Between: (COMP-1862, Monday, 9:00-10:00, Lecture) and (COMP-9362, Monday, 9:00-11:00, Lecture)"/>
-                  </model>
+                  <model/>
                 </properties>
               </component>
             </children>
