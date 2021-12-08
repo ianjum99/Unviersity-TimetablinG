@@ -31,6 +31,7 @@ public class ClashesGUI {
         if (instance == null) {
             instance = new ClashesGUI(gui, df);
         }
+        instance.frame.toFront();
         return instance;
     }
 

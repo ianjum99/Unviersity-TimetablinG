@@ -74,6 +74,7 @@ public class MenuGUI {
         if (instance == null) {
             instance = new MenuGUI(gui, df);
         }
+        instance.frame.toFront();
         return instance;
     }
 
@@ -86,8 +87,6 @@ public class MenuGUI {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
-
-        ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df);
 
         programmeSelectionBoxFiller(df, moduleProgrammeSelectionDropdown, activityProgrammeSelectionDropdown, viewProgrammeDropdown, removeProgrammeDropdown);
 
@@ -142,6 +141,7 @@ public class MenuGUI {
             }
         });
 
+
         addModuleButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -158,8 +158,7 @@ public class MenuGUI {
                         moduleNameField.getText(),
                         Boolean.parseBoolean(compulsory),
                         Integer.parseInt(moduleTermDropdown.getSelectedItem().toString()),
-                        new ArrayList<Activity>()
-                        );
+                        new ArrayList<Activity>());
                 df.createModule(programmeInstance, module);
                 moduleSelectionDropdown.addItem(module.getName());
                 removeModuleDropdown.addItem(module.getName());
@@ -198,7 +197,6 @@ public class MenuGUI {
                         updateGUI(df, gui, commands);
                     }
                 }
-
             }
         });
 
@@ -271,7 +269,10 @@ public class MenuGUI {
                         df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
                                 (Integer) viewYearOfStudyDropdown.getSelectedItem(),
                                 (Integer) viewTermDropdown.getSelectedItem());
-                clashesGUI.updateClashList(currentClashes, df);
+                if (!currentClashes.isEmpty()) {
+                    ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df);
+                    clashesGUI.updateClashList(currentClashes, df);
+                }
                 updateGUI(df, gui, commands);
             }
         });

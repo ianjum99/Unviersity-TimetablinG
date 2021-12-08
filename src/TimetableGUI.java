@@ -118,6 +118,7 @@ public class TimetableGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
                 MenuGUI menuWindow  = MenuGUI.getInstance(getCurrentInstance(), df);
+
             }
         });
 
