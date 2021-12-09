@@ -265,18 +265,9 @@ public class MenuGUI {
         viewProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ArrayList<Pair<Activity, List<Activity>>> currentClashes =
-                        df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
-                                (Integer) viewYearOfStudyDropdown.getSelectedItem(),
-                                (Integer) viewTermDropdown.getSelectedItem());
-
+                ArrayList<Pair<Activity, Activity>> currentClashes = setCurrentClashes(df);
                 ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df, true);
                 clashesGUI.updateClashList(currentClashes, df);
-                if (!currentClashes.isEmpty()) {
-                    gui.clashAlertLabel.setVisible(true);
-                } else {
-                    gui.clashAlertLabel.setVisible(false);
-                }
                 updateGUI(df, gui, commands);
             }
         });
@@ -435,7 +426,18 @@ public class MenuGUI {
                 viewYearOfStudyDropdown.getSelectedItem(), viewTermDropdown.getSelectedItem());
         gui.programmeNameLabel.setText((String) viewProgrammeDropdown.getSelectedItem());
         gui.programmeYearAndTermLabel.setText(programmeYearAndTerm);
+    }
 
+    private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df) {
+        ArrayList<Pair<Activity, Activity>> currentClashes =
+                df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
+                        (Integer) viewYearOfStudyDropdown.getSelectedItem(),
+                        (Integer) viewTermDropdown.getSelectedItem());
+        return currentClashes;
+    }
+
+    public ArrayList<Pair<Activity, Activity>> getCurrentClashes (DataFactory df) {
+        return setCurrentClashes(df);
     }
 
 }

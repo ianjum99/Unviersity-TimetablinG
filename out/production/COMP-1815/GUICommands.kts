@@ -38,4 +38,5 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         dataFactory.setActivityDayAndHour(activity,pair)
         addActivityToGUI(activity)
     }
+
 }

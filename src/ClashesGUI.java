@@ -40,10 +40,6 @@ public class ClashesGUI {
             instance.frame.toFront();
         }
         return instance;
-
-//        switch (instance && stayHidden) {
-//
-//        }
     }
 
     public ClashesGUI(TimetableGUI gui, DataFactory df) {
@@ -79,6 +75,28 @@ public class ClashesGUI {
             public void mousePressed(MouseEvent e) {
                 posX = e.getX();
                 posY = e.getY();
+            }
+        });
+
+        clashList.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2) {
+                    GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
+                    ArrayList<Pair<Activity, Activity>> clashes = currentClashes(gui, df);
+                    Activity currentActivity = clashes.get(clashList.getSelectedIndex()).getFirst();
+                    Module currentModule = df.getModuleFromActivity(currentActivity);
+                    int questionResponse = JOptionPane.showConfirmDialog(frame, "Would you like to fix the clash?", "Find next available timeslot", JOptionPane.YES_NO_OPTION);
+                    if (questionResponse == JOptionPane.YES_OPTION) {
+                        Pair<Integer, Integer> firstAvailableSlot = commands.findFirstAvailableSlot(currentActivity.getDay(),
+                                currentActivity.getTime(),
+                                df.getActivitiesInSameProgrammeYearTerm(df.getProgrammeFromActivity(currentActivity),
+                                        currentModule.getYear(),
+                                        currentModule.getTerm()));
+                        commands.solveClash(currentActivity, firstAvailableSlot);
+                    }
+                    updateClashList(currentClashes(gui, df), df);
+                }
             }
         });
     }
@@ -123,6 +141,11 @@ public class ClashesGUI {
             case 4 -> activityDay = "Friday";
         }
         return activityDay;
+    }
+
+    private ArrayList<Pair<Activity, Activity>> currentClashes (TimetableGUI gui, DataFactory df) {
+        MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
+        return menuGUI.getCurrentClashes(df);
     }
 
 }
