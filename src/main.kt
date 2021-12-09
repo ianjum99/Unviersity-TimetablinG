@@ -5,6 +5,8 @@ fun main() {
     var dataFactory = fromJson(jsonString)
     val gui = TimetableGUI(dataFactory)
     val commands = GUICommands.GUICommands(gui, dataFactory);
-//    println(dataFactory.checkForClashes(dataFactory[0],1,1))
-    (commands.findFirstAvailableSlot(dataFactory[0],1,1, Activity("Test",3,4,1) ))
+    var freeSlot = (commands.findFirstAvailableSlot(day=4, hour = 10, listOfActivities = dataFactory.getActivitiesInSameProgrammeYearTerm(dataFactory[0],1,1)))
+    if (freeSlot != null) {
+        commands.solveClash(dataFactory[0].modules[0].activities[1], freeSlot)
+    }
 }

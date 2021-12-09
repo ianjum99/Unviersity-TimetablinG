@@ -51,6 +51,11 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         module.activities.remove(activity)
     }
 
+    fun setActivityDayAndHour(activity: Activity,dayHour: Pair<Int,Int>) {
+        activity.day = dayHour.first
+        activity.time = dayHour.second
+    }
+
     fun getProgrammeFromActivity(activity: Activity): Programme {
         return this.first { programme -> programme.modules.any { module -> module.activities.contains(activity) } }
     }

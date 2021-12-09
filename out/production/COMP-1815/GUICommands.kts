@@ -1,3 +1,5 @@
+import java.time.Year
+
 class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun addActivityToGUI(activity: Activity) {
@@ -22,17 +24,18 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         activities.forEach { activity -> addActivityToGUI(activity) }
     }
 
-    fun findFirstAvailableSlot(programme: Programme, year: Int, term: Int, activity: Activity){
-        val listOfActivities = dataFactory.getActivitiesInSameProgrammeYearTerm(programme, year, term)
-
-        for (i in 1..5) {
-            for (k in 1..12) {
-                if ((listOfActivities.filter { it -> it.time == activity.time && it.day == activity.day }).isEmpty()) {
-                    activity.day = i
-                    activity.time = k + 9 + i
-                    addActivityToGUI(activity)
-                }
-            }
+    fun findFirstAvailableSlot(day: Int = 0, hour: Int = 9, listOfActivities: ArrayList<Activity>): Pair<Int, Int>? {
+        return if (listOfActivities.none { it.day == day && it.time == hour} && listOfActivities.none { it.day == day && it.time == hour-1 && it.duration == 2}) {
+            return Pair(day, hour)
+        } else if (hour == 20) {
+            findFirstAvailableSlot(day + 1, 0, listOfActivities)
+        } else {
+            findFirstAvailableSlot(day, hour + 1, listOfActivities)
         }
+    }
+
+    fun solveClash(activity: Activity, pair: Pair<Int, Int>) {
+        dataFactory.setActivityDayAndHour(activity,pair)
+        addActivityToGUI(activity)
     }
 }
