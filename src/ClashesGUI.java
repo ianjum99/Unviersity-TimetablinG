@@ -86,13 +86,15 @@ public class ClashesGUI {
                     ArrayList<Pair<Activity, Activity>> clashes = currentClashes(gui, df);
                     Activity currentActivity = clashes.get(clashList.getSelectedIndex()).getFirst();
                     Module currentModule = df.getModuleFromActivity(currentActivity);
+                    //MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
+
                     int questionResponse = JOptionPane.showConfirmDialog(frame, "Would you like to fix the clash?", "Find next available timeslot", JOptionPane.YES_NO_OPTION);
                     if (questionResponse == JOptionPane.YES_OPTION) {
                         Pair<Integer, Integer> firstAvailableSlot = commands.findFirstAvailableSlot(currentActivity.getDay(),
                                 currentActivity.getTime(),
                                 df.getActivitiesInSameProgrammeYearTerm(df.getProgrammeFromActivity(currentActivity),
                                         currentModule.getYear(),
-                                        currentModule.getTerm()));
+                                        currentModule.getTerm()), currentActivity);
                         commands.solveClash(currentActivity, firstAvailableSlot);
                     }
                     updateClashList(currentClashes(gui, df), df);
