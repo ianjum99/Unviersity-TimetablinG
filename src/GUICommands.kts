@@ -20,6 +20,5 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         val activities = (programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { it.activities }
         val clashes = dataFactory.checkForClashes(programme, year, term)
         activities.forEach { activity -> addActivityToGUI(activity) }
-        println(clashes)
     }
 }

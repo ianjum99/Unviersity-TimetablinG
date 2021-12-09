@@ -64,7 +64,7 @@ public class ClashesGUI {
             @Override
             public void mouseClicked(MouseEvent e) {
                 frame.dispose();
-                instance = null;
+                //instance = null;
             }
         });
 
