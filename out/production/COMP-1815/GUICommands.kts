@@ -9,11 +9,18 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         }
     }
 
+
     fun clearGUI() {
         for (i in 1..5) {
             for (k in 1..12) {
                 gui.getLabelFromCoordinates(i, k).text = String()
             }
+        }
+    }
+
+    fun removeActivityFromGUI(activity: Activity) {
+        for (i in 1..activity.duration) {
+            gui.getLabelFromCoordinates(activity.day + 1, (activity.time - 8 + i - 1)).text = String()
         }
     }
 
@@ -36,6 +43,7 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun solveClash(activity: Activity, pair: Pair<Int, Int>) {
         dataFactory.setActivityDayAndHour(activity,pair)
+
         addActivityToGUI(activity)
     }
 
