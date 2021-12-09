@@ -20,6 +20,19 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         val activities = (programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { it.activities }
         val clashes = dataFactory.checkForClashes(programme, year, term)
         activities.forEach { activity -> addActivityToGUI(activity) }
-        println(clashes)
+    }
+
+    fun findFirstAvailableSlot(programme: Programme, year: Int, term: Int, activity: Activity){
+        val listOfActivities = dataFactory.getActivitiesInSameProgrammeYearTerm(programme, year, term)
+
+        for (i in 1..5) {
+            for (k in 1..12) {
+                if ((listOfActivities.filter { it -> it.time == activity.time && it.day == activity.day }).isEmpty()) {
+                    activity.day = i
+                    activity.time = k + 9 + i
+                    addActivityToGUI(activity)
+                }
+            }
+        }
     }
 }

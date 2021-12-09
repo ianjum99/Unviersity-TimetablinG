@@ -75,8 +75,8 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return ArrayList((programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { module -> module.activities })
     }
 
-    fun checkForClashes(programme: Programme, year: Int, term: Int):  ArrayList<Pair<Activity, List<Activity>?>> {
-        val listOfClashes = ArrayList<Pair<Activity,List<Activity>?>>()
+    fun checkForClashes(programme: Programme, year: Int, term: Int):  ArrayList<Pair<Activity, Activity>> {
+        val listOfClashes = ArrayList<Pair<Activity, Activity>>()
         val listOfActivities = getActivitiesInSameProgrammeYearTerm(programme,year,term)
 
         for (currentActivity in listOfActivities) {
@@ -91,12 +91,15 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
 
 
             if (clashes.isNotEmpty()) {
-                listOfClashes.add(Pair(currentActivity, clashes))
+//                listOfClashes.add(Pair(currentActivity, clashes))
+                clashes.forEach { clashesWith -> listOfClashes.add(Pair(currentActivity,clashesWith))}
             }
         }
         return listOfClashes
     }
+
 }
+
 class Programme (
     val name: String,
     val type: String,
@@ -114,7 +117,7 @@ class Module(
 
 class Activity(
     val type: String,
-    val day: Int,
-    val time: Int,
+    var day: Int,
+    var time: Int,
     val duration: Int,
 )

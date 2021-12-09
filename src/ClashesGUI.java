@@ -90,11 +90,11 @@ public class ClashesGUI {
         clashList = new JList();
     }
 
-    public void updateClashList(ArrayList<Pair<Activity, List<Activity>>> currentClashes, DataFactory df) {
+    public void updateClashList(ArrayList<Pair<Activity, Activity>> currentClashes, DataFactory df) {
         DefaultListModel<String> listModel = new DefaultListModel<String>();
-        for (Pair<Activity, List<Activity>> activity: currentClashes) {
+        for (Pair<Activity,Activity> activity: currentClashes) {
             Activity firstActivity = activity.getFirst();
-            Activity secondActivity = activity.getSecond().get(0);
+            Activity secondActivity = activity.getSecond();
             String firstActivityDay = activityDayConverter(firstActivity.getDay());
             String secondActivityDay = activityDayConverter(secondActivity.getDay());
             String clash = String.format("Clash Between: (%s, %s, %s:00-%s:00, %s) and (%s, %s, %s:00-%s:00, %s)",
