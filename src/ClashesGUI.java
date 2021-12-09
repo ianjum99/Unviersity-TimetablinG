@@ -86,7 +86,7 @@ public class ClashesGUI {
                     ArrayList<Pair<Activity, Activity>> clashes = currentClashes(gui, df);
                     Activity currentActivity = clashes.get(clashList.getSelectedIndex()).getFirst();
                     Module currentModule = df.getModuleFromActivity(currentActivity);
-                    //MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
+                    MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
 
                     int questionResponse = JOptionPane.showConfirmDialog(frame, "Would you like to fix the clash?", "Find next available timeslot", JOptionPane.YES_NO_OPTION);
                     if (questionResponse == JOptionPane.YES_OPTION) {
@@ -98,6 +98,7 @@ public class ClashesGUI {
                         commands.solveClash(currentActivity, firstAvailableSlot);
                     }
                     updateClashList(currentClashes(gui, df), df);
+                    menuGUI.updateGUI(df, gui, commands);
                 }
             }
         });

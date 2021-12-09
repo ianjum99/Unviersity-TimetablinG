@@ -418,7 +418,7 @@ public class MenuGUI {
     }
 
 
-    private void updateGUI(DataFactory df, TimetableGUI gui, GUICommands.GUICommands commands) {
+    public void updateGUI(DataFactory df, TimetableGUI gui, GUICommands.GUICommands commands) {
         commands.populateGUIbyProgramme(getProgrammeInstance(df, viewProgrammeDropdown),
                 (Integer) viewYearOfStudyDropdown.getSelectedItem(),
                 (Integer) viewTermDropdown.getSelectedItem());
@@ -427,6 +427,7 @@ public class MenuGUI {
         gui.programmeNameLabel.setText((String) viewProgrammeDropdown.getSelectedItem());
         gui.programmeYearAndTermLabel.setText(programmeYearAndTerm);
     }
+
 
     private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df) {
         ArrayList<Pair<Activity, Activity>> currentClashes =
