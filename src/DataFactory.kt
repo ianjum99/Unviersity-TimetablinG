@@ -103,7 +103,6 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         }
         return removeDuplicateClashes(listOfClashes)
 
-
     }
 
     fun removeDuplicateClashes(clashes: ArrayList<Pair<Activity, Activity>>): ArrayList<Pair<Activity, Activity>> {
@@ -111,9 +110,8 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         while (i < clashes.size) {
             if (clashes.any { clashes[i].first == it.second && clashes[i].second == it.first }) {
                 clashes.removeAt(i)
-                i+=1
-
             }
+            i+=1
         }
     return clashes}
 }

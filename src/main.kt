@@ -5,8 +5,8 @@ fun main() {
     var dataFactory = fromJson(jsonString)
     val gui = TimetableGUI(dataFactory)
     val commands = GUICommands.GUICommands(gui, dataFactory);
-    var clashes = dataFactory.checkForClashes(dataFactory[1],1,1)
-    println(clashes)
+    //var clashes = dataFactory.checkForClashes(dataFactory[1],1,1)
+    //println(clashes)
 //    scalaClashDetection(dataFactory)
 
 }

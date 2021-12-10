@@ -267,6 +267,7 @@ public class MenuGUI {
             public void mouseClicked(MouseEvent e) {
                 ArrayList<Pair<Activity, Activity>> currentClashes = setCurrentClashes(df);
                 ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df, true);
+
                 clashesGUI.updateClashList(currentClashes, df);
                 updateGUI(df, gui, commands);
             }
@@ -430,11 +431,9 @@ public class MenuGUI {
 
 
     private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df) {
-        ArrayList<Pair<Activity, Activity>> currentClashes =
-                df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
-                        (Integer) viewYearOfStudyDropdown.getSelectedItem(),
-                        (Integer) viewTermDropdown.getSelectedItem());
-        return currentClashes;
+        return df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
+                (Integer) viewYearOfStudyDropdown.getSelectedItem(),
+                (Integer) viewTermDropdown.getSelectedItem());
     }
 
     public ArrayList<Pair<Activity, Activity>> getCurrentClashes (DataFactory df) {
