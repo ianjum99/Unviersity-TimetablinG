@@ -29,12 +29,12 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         activities.forEach { activity -> addActivityToGUI(activity) }
     }
 
-    // BUG WITH REMOVING THE DUPLICATE ACTIVITY CLASH
+
     fun findFirstAvailableSlot(day: Int = 0, hour: Int = 9, listOfActivities: ArrayList<Activity>, activity: Activity): Pair<Int, Int>? {
         return if (listOfActivities.none { it.day == day && it.time == hour} && listOfActivities.none { it.day == day && it.time == hour-1 && it.duration == 2}) {
             return Pair(day, hour)
-        } else if (hour == 19) {
-            findFirstAvailableSlot(day + 1, 0, listOfActivities, activity)
+        } else if (hour >= 19) {
+            findFirstAvailableSlot(day + 1, 9, listOfActivities, activity)
         } else {
             findFirstAvailableSlot(day, hour + 1, listOfActivities, activity)
         }
