@@ -98,11 +98,24 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
             if (clashes.isNotEmpty()) {
 //                listOfClashes.add(Pair(currentActivity, clashes))
                 clashes.forEach { clashesWith -> listOfClashes.add(Pair(currentActivity,clashesWith))}
+
             }
         }
-        return listOfClashes
+        return removeDuplicateClashes(listOfClashes)
+
+
     }
 
+    fun removeDuplicateClashes(clashes: ArrayList<Pair<Activity, Activity>>): ArrayList<Pair<Activity, Activity>> {
+        var i = 0
+        while (i < clashes.size) {
+            if (clashes.any { clashes[i].first == it.second && clashes[i].second == it.first }) {
+                clashes.removeAt(i)
+                i+=1
+
+            }
+        }
+    return clashes}
 }
 
 class Programme (

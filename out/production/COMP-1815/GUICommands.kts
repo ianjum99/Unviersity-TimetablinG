@@ -1,5 +1,3 @@
-import java.time.Year
-
 class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun addActivityToGUI(activity: Activity) {
@@ -40,6 +38,8 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
             findFirstAvailableSlot(day, hour + 1, listOfActivities)
         }
     }
+
+
 
     fun solveClash(activity: Activity, pair: Pair<Int, Int>) {
         dataFactory.setActivityDayAndHour(activity,pair)
