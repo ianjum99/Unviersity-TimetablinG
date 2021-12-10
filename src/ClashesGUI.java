@@ -1,15 +1,11 @@
 import kotlin.Pair;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.MatteBorder;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.sql.Time;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ClashesGUI {
     private static ClashesGUI instance=null;
@@ -23,6 +19,7 @@ public class ClashesGUI {
     private JList clashList;
     private JScrollPane listScrollPane;
     private JLabel clashesSubHeaderLabel;
+    private JButton fixClashButton;
     private JFrame frame;
     private JPanel componentHolder;
 
@@ -78,25 +75,21 @@ public class ClashesGUI {
             }
         });
 
-        clashList.addMouseListener(new MouseAdapter() {
+        fixClashButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (e.getClickCount() == 2) {
+                if (clashList.getSelectedIndex() > -1) {
                     GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
                     ArrayList<Pair<Activity, Activity>> clashes = currentClashes(gui, df);
                     Activity currentActivity = clashes.get(clashList.getSelectedIndex()).getFirst();
                     Module currentModule = df.getModuleFromActivity(currentActivity);
                     MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
-
-                    int questionResponse = JOptionPane.showConfirmDialog(frame, "Would you like to fix the clash?", "Find next available timeslot", JOptionPane.YES_NO_OPTION);
-                    if (questionResponse == JOptionPane.YES_OPTION) {
-                        Pair<Integer, Integer> firstAvailableSlot = commands.findFirstAvailableSlot(currentActivity.getDay(),
-                                currentActivity.getTime(),
-                                df.getActivitiesInSameProgrammeYearTerm(df.getProgrammeFromActivity(currentActivity),
-                                        currentModule.getYear(),
-                                        currentModule.getTerm()), currentActivity);
-                        commands.solveClash(currentActivity, firstAvailableSlot);
-                    }
+                    Pair<Integer, Integer> firstAvailableSlot = commands.findFirstAvailableSlot(currentActivity.getDay(),
+                            currentActivity.getTime(),
+                            df.getActivitiesInSameProgrammeYearTerm(df.getProgrammeFromActivity(currentActivity),
+                                    currentModule.getYear(),
+                                    currentModule.getTerm()), currentActivity);
+                    commands.solveClash(currentActivity, firstAvailableSlot);
                     updateClashList(currentClashes(gui, df), df);
                     menuGUI.updateGUI(df, gui, commands);
                 }
