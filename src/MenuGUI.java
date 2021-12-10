@@ -1,5 +1,4 @@
 import kotlin.Pair;
-import scala.Int;
 
 import javax.swing.*;
 import java.awt.*;
@@ -451,8 +450,10 @@ public class MenuGUI {
             Integer earliestStart = Collections.min(startAndEndTimes);
             Integer maxDuration = Collections.max(startAndEndTimes) - Collections.min(startAndEndTimes);
             for (int i = earliestStart; i < earliestStart+maxDuration; i++) {
-                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).getParent().setBackground(Color.red);
-                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).setBackground(Color.red);
+                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).getParent().setBackground(Color.decode("#801336"));
+                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).setBackground(Color.decode("#801336"));
+                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).setText("CLASH DETECTED\nYou can see details in the clashes window!");
+                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).setFont(new Font("Arial", Font.BOLD, 10));
             }
         }
     }

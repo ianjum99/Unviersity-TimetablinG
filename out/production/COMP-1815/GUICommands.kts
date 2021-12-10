@@ -1,4 +1,5 @@
 import java.awt.Color
+import java.awt.Font
 
 class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
@@ -9,13 +10,13 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         }
     }
 
-
     fun clearGUI() {
         for (i in 1..5) {
             for (k in 1..12) {
                 gui.getLabelFromCoordinates(i, k).text = String()
                 gui.getLabelFromCoordinates(i, k).background = Color.decode("#2D142C")
                 gui.getLabelFromCoordinates(i, k).parent.background = Color.decode("#2D142C")
+                gui.getLabelFromCoordinates(i, k).font = Font("Arial", Font.PLAIN, 10);
             }
         }
     }
