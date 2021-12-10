@@ -91,7 +91,7 @@ public class ClashesGUI {
                                     currentModule.getTerm()), currentActivity);
                     commands.solveClash(currentActivity, firstAvailableSlot);
                     updateClashList(currentClashes(gui, df), df);
-                    menuGUI.updateGUI(df, gui, commands);
+                    menuGUI.updateGUI(df, gui, commands, currentClashes(gui, df));
                 }
             }
         });

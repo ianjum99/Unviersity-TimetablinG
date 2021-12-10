@@ -1,3 +1,5 @@
+import java.awt.Color
+
 class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun addActivityToGUI(activity: Activity) {
@@ -12,6 +14,8 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
         for (i in 1..5) {
             for (k in 1..12) {
                 gui.getLabelFromCoordinates(i, k).text = String()
+                gui.getLabelFromCoordinates(i, k).background = Color.decode("#2D142C")
+                gui.getLabelFromCoordinates(i, k).parent.background = Color.decode("#2D142C")
             }
         }
     }

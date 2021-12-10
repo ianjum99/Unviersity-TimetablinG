@@ -1,4 +1,5 @@
 import kotlin.Pair;
+import scala.Int;
 
 import javax.swing.*;
 import java.awt.*;
@@ -194,7 +195,7 @@ public class MenuGUI {
                         removeActivityBoxFiller(df, moduleSelectionDropdown);
                     }
                     if (gui.programmeNameLabel.getText() != "Programme Info") {
-                        updateGUI(df, gui, commands);
+                        updateGUI(df, gui, commands, getCurrentClashes(df));
                     }
                 }
             }
@@ -267,9 +268,8 @@ public class MenuGUI {
             public void mouseClicked(MouseEvent e) {
                 ArrayList<Pair<Activity, Activity>> currentClashes = setCurrentClashes(df);
                 ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df, true);
-
                 clashesGUI.updateClashList(currentClashes, df);
-                updateGUI(df, gui, commands);
+                updateGUI(df, gui, commands, currentClashes);
             }
         });
 
@@ -294,7 +294,7 @@ public class MenuGUI {
                 df.deleteModule(programmeInstance, moduleInstance);
                 removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
                 if (!gui.programmeNameLabel.getText().equals("Programme Name")) {
-                    updateGUI(df, gui, commands);
+                    updateGUI(df, gui, commands, getCurrentClashes(df));
                 }
                 if (activityProgrammeSelectionDropdown.getSelectedItem() == removeProgrammeDropdown.getSelectedItem()) {
                     moduleSelectionDropdown.removeAllItems();
@@ -313,7 +313,7 @@ public class MenuGUI {
                 df.deleteActivity(moduleInstance, moduleInstance.getActivities().get(removeActivityDropdown.getSelectedIndex()));
                 removeSectionBoxFiller(df, removeProgrammeDropdown, "activity");
                 if (!gui.programmeNameLabel.getText().equals("Programme Name")) {
-                    updateGUI(df, gui, commands);
+                    updateGUI(df, gui, commands, getCurrentClashes(df));
                 }
             }
         });
@@ -419,7 +419,7 @@ public class MenuGUI {
     }
 
 
-    public void updateGUI(DataFactory df, TimetableGUI gui, GUICommands.GUICommands commands) {
+    public void updateGUI(DataFactory df, TimetableGUI gui, GUICommands.GUICommands commands, ArrayList<Pair<Activity, Activity>> clashes) {
         commands.populateGUIbyProgramme(getProgrammeInstance(df, viewProgrammeDropdown),
                 (Integer) viewYearOfStudyDropdown.getSelectedItem(),
                 (Integer) viewTermDropdown.getSelectedItem());
@@ -427,8 +427,8 @@ public class MenuGUI {
                 viewYearOfStudyDropdown.getSelectedItem(), viewTermDropdown.getSelectedItem());
         gui.programmeNameLabel.setText((String) viewProgrammeDropdown.getSelectedItem());
         gui.programmeYearAndTermLabel.setText(programmeYearAndTerm);
+        highlightingClashesOnTimetable(clashes, gui);
     }
-
 
     private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df) {
         return df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
@@ -438,6 +438,23 @@ public class MenuGUI {
 
     public ArrayList<Pair<Activity, Activity>> getCurrentClashes (DataFactory df) {
         return setCurrentClashes(df);
+    }
+
+    public void highlightingClashesOnTimetable(ArrayList<Pair<Activity, Activity>> clashes, TimetableGUI gui) {
+        for (Pair<Activity, Activity> clash : clashes) {
+            Activity firstActivity = clash.getFirst();
+            Activity secondActivity = clash.getSecond();
+            List<Integer> startAndEndTimes = List.of(firstActivity.getTime(),
+                    firstActivity.getTime() + firstActivity.getDuration(),
+                    secondActivity.getTime(),
+                    secondActivity.getTime() + secondActivity.getDuration());
+            Integer earliestStart = Collections.min(startAndEndTimes);
+            Integer maxDuration = Collections.max(startAndEndTimes) - Collections.min(startAndEndTimes);
+            for (int i = earliestStart; i < earliestStart+maxDuration; i++) {
+                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).getParent().setBackground(Color.red);
+                gui.getLabelFromCoordinates(firstActivity.getDay() + 1, i - 8).setBackground(Color.red);
+            }
+        }
     }
 
 }

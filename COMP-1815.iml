@@ -11,5 +11,6 @@
     <orderEntry type="library" name="google.code.gson" level="project" />
     <orderEntry type="library" name="klaxon-5.5" level="project" />
     <orderEntry type="library" name="scala-sdk-3.1.0" level="application" />
+    <orderEntry type="library" name="scala-sdk-3.1.0 (2)" level="application" />
   </component>
 </module>
