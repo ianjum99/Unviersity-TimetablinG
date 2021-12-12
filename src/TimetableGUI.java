@@ -13,10 +13,6 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.GridLayout;
 import java.time.DayOfWeek;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-
-import static java.awt.Component.CENTER_ALIGNMENT;
 
 public class TimetableGUI {
 
@@ -64,7 +60,6 @@ public class TimetableGUI {
         //DELETE LINES ABOVE
         ImageIcon icon = new ImageIcon("Images/clashDetection.png");
         String[] options = {"Kotlin", "Scala"};
-        DataFactory df = dataFactory;
         UIManager.put("ToolTip.background", Color.WHITE);
 
         frame = new JFrame();
@@ -117,7 +112,7 @@ public class TimetableGUI {
         menuButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                MenuGUI menuWindow  = MenuGUI.getInstance(getCurrentInstance(), df);
+                MenuGUI menuWindow  = MenuGUI.getInstance(getCurrentInstance(), dataFactory);
 
             }
         });
@@ -125,7 +120,7 @@ public class TimetableGUI {
         clashesButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ClashesGUI clashesWindow  = ClashesGUI.getInstance(getCurrentInstance(), df, false);
+                ClashesGUI clashesWindow  = ClashesGUI.getInstance(getCurrentInstance(), dataFactory, false);
             }
         });
 
