@@ -14,7 +14,3 @@
  - [X] Clash Detection - Kotlin
  - [X] Clash Detection - Scala
  - [X] Integration of all languages - Scala/Kotlin/Java
- 
- ## Report
- 
-_REPORT TO BE PUT HERE ONCE DONE/BEING WRITTEN_
