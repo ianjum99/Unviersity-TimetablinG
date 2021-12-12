@@ -6,7 +6,7 @@ import java.awt.event.MouseMotionAdapter;
 import java.time.DayOfWeek;
 import java.util.ArrayList;
 
-public class TimetableGUI {
+public class Timetable {
 
     private JLabel timetableLabel;
     private JButton menuButton;
@@ -31,7 +31,7 @@ public class TimetableGUI {
         return componentHolder;
     }
 
-    public TimetableGUI getCurrentInstance() {
+    public Timetable getCurrentInstance() {
         return this;
     }
 
@@ -42,7 +42,7 @@ public class TimetableGUI {
     private int posX, posY;
 
 
-    public TimetableGUI(DataFactory dataFactory) {
+    public Timetable(DataFactory dataFactory) {
         init(dataFactory);
     }
 
@@ -101,7 +101,7 @@ public class TimetableGUI {
         menuButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                MenuGUI menuWindow  = MenuGUI.getInstance(getCurrentInstance(), dataFactory);
+                AdminMenu menuWindow  = AdminMenu.getInstance(getCurrentInstance(), dataFactory);
 
             }
         });
@@ -109,7 +109,7 @@ public class TimetableGUI {
         clashesButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ClashesGUI clashesWindow  = ClashesGUI.getInstance(getCurrentInstance(), dataFactory, false);
+                ClashesWindow clashesWindow  = ClashesWindow.getInstance(getCurrentInstance(), dataFactory, false);
             }
         });
 

@@ -63,10 +63,6 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return (this.flatMap { it.modules }.filter { it.activities.contains(activity) }).first()
     }
 
-    fun getAllActivities(): ArrayList<Activity> {
-        return ArrayList(this.flatMap { it.modules }.flatMap { it.activities })
-    }
-
     fun getProgrammeInstanceFromString(programmeName: String): Programme {
         return this.first { it.name == programmeName }
     }
@@ -109,22 +105,22 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     return clashes}
 }
 
-class Programme (
+data class Programme (
     val name: String,
     val type: String,
-    val modules: ArrayList<Module> = ArrayList<Module>()
+    val modules: ArrayList<Module> = ArrayList()
 )
 
-class Module(
+data class Module(
     var id: String,
     val year: Int,
     val name: String,
     val compulsory: Boolean,
     val term: Int,
-    val activities: ArrayList<Activity> = ArrayList<Activity>(),
+    val activities: ArrayList<Activity> = ArrayList(),
 )
 
-class Activity(
+data class Activity(
     val type: String,
     var day: Int,
     var time: Int,

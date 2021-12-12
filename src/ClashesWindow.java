@@ -7,8 +7,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.util.ArrayList;
 
-public class ClashesGUI {
-    private static ClashesGUI instance=null;
+public class ClashesWindow {
+    private static ClashesWindow instance=null;
     private int posX, posY;
     private JPanel topBar;
     private JLabel closeButton;
@@ -24,11 +24,11 @@ public class ClashesGUI {
     private JPanel componentHolder;
 
 
-    public static ClashesGUI getInstance(TimetableGUI gui, DataFactory df, boolean stayHidden){
+    public static ClashesWindow getInstance(Timetable gui, DataFactory df, boolean stayHidden){
         if (instance == null && !stayHidden) {
-            instance = new ClashesGUI(gui, df);
+            instance = new ClashesWindow(gui, df);
         } else if (instance == null) {
-            instance = new ClashesGUI(gui, df);
+            instance = new ClashesWindow(gui, df);
             instance.frame.setVisible(false);
         } else if (stayHidden) {
 
@@ -39,11 +39,11 @@ public class ClashesGUI {
         return instance;
     }
 
-    public ClashesGUI(TimetableGUI gui, DataFactory df) {
+    public ClashesWindow(Timetable gui, DataFactory df) {
         init(gui, df);
     }
 
-    private void init(TimetableGUI gui, DataFactory df) {
+    private void init(Timetable gui, DataFactory df) {
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
@@ -83,7 +83,7 @@ public class ClashesGUI {
                     ArrayList<Pair<Activity, Activity>> clashes = currentClashes(gui, df);
                     Activity currentActivity = clashes.get(clashList.getSelectedIndex()).getFirst();
                     Module currentModule = df.getModuleFromActivity(currentActivity);
-                    MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
+                    AdminMenu adminMenu = AdminMenu.getInstance(gui, df);
                     Pair<Integer, Integer> firstAvailableSlot = commands.findFirstAvailableSlot(currentActivity.getDay(),
                             currentActivity.getTime(),
                             df.getActivitiesInSameProgrammeYearTerm(df.getProgrammeFromActivity(currentActivity),
@@ -92,7 +92,7 @@ public class ClashesGUI {
                     assert firstAvailableSlot != null;
                     commands.solveClash(currentActivity, firstAvailableSlot);
                     updateClashList(currentClashes(gui, df), df);
-                    menuGUI.updateGUI(df, gui, commands, currentClashes(gui, df));
+                    adminMenu.updateGUI(df, gui, commands, currentClashes(gui, df));
                 }
             }
         });
@@ -140,9 +140,9 @@ public class ClashesGUI {
         return activityDay;
     }
 
-    private ArrayList<Pair<Activity, Activity>> currentClashes (TimetableGUI gui, DataFactory df) {
-        MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
-        return menuGUI.getCurrentClashes(df, gui);
+    private ArrayList<Pair<Activity, Activity>> currentClashes (Timetable gui, DataFactory df) {
+        AdminMenu adminMenu = AdminMenu.getInstance(gui, df);
+        return adminMenu.getCurrentClashes(df, gui);
     }
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class MenuGUI{
+public class AdminMenu {
     private JPanel mainPanel, topBar;
     private JLabel adminMenuLabel;
     private JLabel closeButton;
@@ -64,24 +64,24 @@ public class MenuGUI{
     private JButton viewProgrammeButton;
     private JFrame frame;
 
-    private static MenuGUI instance=null;
+    private static AdminMenu instance=null;
     private int posX, posY;
 
-    public MenuGUI(TimetableGUI gui, DataFactory df)  {
+    public AdminMenu(Timetable gui, DataFactory df)  {
         GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
         init(gui, df, commands);
     }
 
 
-    public static MenuGUI getInstance(TimetableGUI gui, DataFactory df){
+    public static AdminMenu getInstance(Timetable gui, DataFactory df){
         if (instance == null) {
-            instance = new MenuGUI(gui, df);
+            instance = new AdminMenu(gui, df);
         }
         instance.frame.toFront();
         return instance;
     }
 
-    private void init(TimetableGUI gui, DataFactory df, GUICommands.GUICommands commands) {
+    private void init(Timetable gui, DataFactory df, GUICommands.GUICommands commands) {
         frame = new JFrame();
         frame.setContentPane(mainPanel);
         frame.setUndecorated(true);
@@ -251,7 +251,7 @@ public class MenuGUI{
             @Override
             public void mouseClicked(MouseEvent e) {
                 ArrayList<Pair<Activity, Activity>> currentClashes = setCurrentClashes(df, gui);
-                ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df, true);
+                ClashesWindow clashesGUI = ClashesWindow.getInstance(gui, df, true);
                 clashesGUI.updateClashList(currentClashes, df);
                 updateGUI(df, gui, commands, currentClashes);
             }
@@ -391,7 +391,7 @@ public class MenuGUI{
     }
 
 
-    public void updateGUI(DataFactory df, TimetableGUI gui, GUICommands.GUICommands commands, ArrayList<Pair<Activity, Activity>> clashes) {
+    public void updateGUI(DataFactory df, Timetable gui, GUICommands.GUICommands commands, ArrayList<Pair<Activity, Activity>> clashes) {
         commands.populateGUIbyProgramme(getProgrammeInstance(df, viewProgrammeDropdown),
                 (Integer) Objects.requireNonNull(viewYearOfStudyDropdown.getSelectedItem()),
                 (Integer) Objects.requireNonNull(viewTermDropdown.getSelectedItem()));
@@ -402,7 +402,7 @@ public class MenuGUI{
         highlightingClashesOnTimetable(clashes, gui);
     }
 
-    private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df, TimetableGUI gui) {
+    private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df, Timetable gui) {
         int yearOfStudy = (Integer) Objects.requireNonNull(viewYearOfStudyDropdown.getSelectedItem());
         int Term = (Integer) Objects.requireNonNull(viewTermDropdown.getSelectedItem());
         Programme currentProgramme = getProgrammeInstance(df, viewProgrammeDropdown);
@@ -419,11 +419,11 @@ public class MenuGUI{
 
     }
 
-    public ArrayList<Pair<Activity, Activity>> getCurrentClashes (DataFactory df, TimetableGUI gui) {
+    public ArrayList<Pair<Activity, Activity>> getCurrentClashes (DataFactory df, Timetable gui) {
         return setCurrentClashes(df, gui);
     }
 
-    public void highlightingClashesOnTimetable(ArrayList<Pair<Activity, Activity>> clashes, TimetableGUI gui) {
+    public void highlightingClashesOnTimetable(ArrayList<Pair<Activity, Activity>> clashes, Timetable gui) {
         for (Pair<Activity, Activity> clash : clashes) {
             Activity firstActivity = clash.getFirst();
             Activity secondActivity = clash.getSecond();
