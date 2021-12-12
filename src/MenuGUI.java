@@ -1,4 +1,6 @@
 import kotlin.Pair;
+import scala.collection.JavaConverters;
+import scala.jdk.javaapi.CollectionConverters;
 
 import javax.swing.*;
 import java.awt.*;
@@ -194,7 +196,7 @@ public class MenuGUI {
                         removeActivityBoxFiller(df, moduleSelectionDropdown);
                     }
                     if (gui.programmeNameLabel.getText() != "Programme Info") {
-                        updateGUI(df, gui, commands, getCurrentClashes(df));
+                        updateGUI(df, gui, commands, getCurrentClashes(df, gui));
                     }
                 }
             }
@@ -265,7 +267,7 @@ public class MenuGUI {
         viewProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ArrayList<Pair<Activity, Activity>> currentClashes = setCurrentClashes(df);
+                ArrayList<Pair<Activity, Activity>> currentClashes = setCurrentClashes(df,gui);
                 ClashesGUI clashesGUI = ClashesGUI.getInstance(gui, df, true);
                 clashesGUI.updateClashList(currentClashes, df);
                 updateGUI(df, gui, commands, currentClashes);
@@ -293,7 +295,7 @@ public class MenuGUI {
                 df.deleteModule(programmeInstance, moduleInstance);
                 removeSectionBoxFiller(df, removeProgrammeDropdown, "module");
                 if (!gui.programmeNameLabel.getText().equals("Programme Name")) {
-                    updateGUI(df, gui, commands, getCurrentClashes(df));
+                    updateGUI(df, gui, commands, getCurrentClashes(df,gui));
                 }
                 if (activityProgrammeSelectionDropdown.getSelectedItem() == removeProgrammeDropdown.getSelectedItem()) {
                     moduleSelectionDropdown.removeAllItems();
@@ -312,7 +314,7 @@ public class MenuGUI {
                 df.deleteActivity(moduleInstance, moduleInstance.getActivities().get(removeActivityDropdown.getSelectedIndex()));
                 removeSectionBoxFiller(df, removeProgrammeDropdown, "activity");
                 if (!gui.programmeNameLabel.getText().equals("Programme Name")) {
-                    updateGUI(df, gui, commands, getCurrentClashes(df));
+                    updateGUI(df, gui, commands, getCurrentClashes(df, gui));
                 }
             }
         });
@@ -429,14 +431,23 @@ public class MenuGUI {
         highlightingClashesOnTimetable(clashes, gui);
     }
 
-    private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df) {
-        return df.checkForClashes(getProgrammeInstance(df, viewProgrammeDropdown),
-                (Integer) viewYearOfStudyDropdown.getSelectedItem(),
-                (Integer) viewTermDropdown.getSelectedItem());
+    private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df, TimetableGUI gui) {
+        if (gui.chosenClashDetection) {
+            System.out.println("Kotlin clash");
+            return df.getClashes(getProgrammeInstance(df, viewProgrammeDropdown),
+                    (Integer) viewYearOfStudyDropdown.getSelectedItem(),
+                    (Integer) viewTermDropdown.getSelectedItem());
+        }
+        System.out.println("Scala clash");
+        ScalaClashDetection scala = new ScalaClashDetection(JavaConverters.asScalaIteratorConverter(df.getActivitiesInSameProgrammeYearTerm(df.get(1), 1, 1).iterator()).asScala().toSeq());
+        ArrayList<Pair<Activity, Activity>> clashes = new ArrayList<>(CollectionConverters.asJava(scala.getClashes()));
+        clashes = df.removeDuplicateClashes(clashes);
+        return clashes;
+
     }
 
-    public ArrayList<Pair<Activity, Activity>> getCurrentClashes (DataFactory df) {
-        return setCurrentClashes(df);
+    public ArrayList<Pair<Activity, Activity>> getCurrentClashes (DataFactory df, TimetableGUI gui) {
+        return setCurrentClashes(df, gui);
     }
 
     public void highlightingClashesOnTimetable(ArrayList<Pair<Activity, Activity>> clashes, TimetableGUI gui) {

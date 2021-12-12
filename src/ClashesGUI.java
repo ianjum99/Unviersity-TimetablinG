@@ -141,7 +141,7 @@ public class ClashesGUI {
 
     private ArrayList<Pair<Activity, Activity>> currentClashes (TimetableGUI gui, DataFactory df) {
         MenuGUI menuGUI = MenuGUI.getInstance(gui, df);
-        return menuGUI.getCurrentClashes(df);
+        return menuGUI.getCurrentClashes(df, gui);
     }
 
 }

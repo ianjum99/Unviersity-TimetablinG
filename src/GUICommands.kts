@@ -30,7 +30,7 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
     fun populateGUIbyProgramme(programme: Programme, year: Int, term: Int) {
         clearGUI()
         val activities = (programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { it.activities }
-        val clashes = dataFactory.checkForClashes(programme, year, term)
+        val clashes = dataFactory.getClashes(programme, year, term)
         activities.forEach { activity -> addActivityToGUI(activity) }
     }
 

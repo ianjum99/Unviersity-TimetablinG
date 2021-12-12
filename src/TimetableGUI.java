@@ -1,5 +1,9 @@
+import kotlin.Pair;
 import scala.collection.JavaConverters;
+import scala.collection.convert.JavaCollectionWrappers;
 import scala.collection.immutable.Seq;
+import scala.concurrent.JavaConversions;
+import scala.jdk.javaapi.CollectionConverters;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,6 +37,7 @@ public class TimetableGUI {
     int numberOfColumns = 6;
     private final JPanel[][] componentHolder = new JPanel[numberOfRows][numberOfColumns];
     private ImageIcon icon;
+    public Boolean chosenClashDetection = true;
 
     public JPanel[][] getComponentHolder() {
         return componentHolder;
@@ -54,11 +59,10 @@ public class TimetableGUI {
     }
 
     private void init(DataFactory dataFactory) {
-        scalaClashDetection test = new scalaClashDetection(JavaConverters.asScalaIteratorConverter(dataFactory.getActivitiesInSameProgrammeYearTerm(dataFactory.get(1), 1, 1).iterator()).asScala().toSeq());
-        System.out.println(test.findClashes());
+//        scalaClashDetection test = new scalaClashDetection(JavaConverters.asScalaIteratorConverter(dataFactory.getActivitiesInSameProgrammeYearTerm(dataFactory.get(1), 1, 1).iterator()).asScala().toSeq());
+//        System.out.println(CollectionConverters.asJava(test.getClashes()));
         //DELETE LINES ABOVE
         ImageIcon icon = new ImageIcon("Images/clashDetection.png");
-        String chosenClashDetection = "";
         String[] options = {"Kotlin", "Scala"};
         DataFactory df = dataFactory;
         UIManager.put("ToolTip.background", Color.WHITE);
@@ -78,9 +82,9 @@ public class TimetableGUI {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         if (questionResponse == JOptionPane.YES_OPTION) {
-            chosenClashDetection = "Kotlin";
+            chosenClashDetection = true;
         } else if (questionResponse == JOptionPane.NO_OPTION) {
-            chosenClashDetection = "Scala";
+            chosenClashDetection = false;
         } else {
             System.exit(0);
         }

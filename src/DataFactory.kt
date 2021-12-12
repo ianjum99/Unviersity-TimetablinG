@@ -80,7 +80,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         return ArrayList((programme.modules.filter { module -> module.year == year && module.term == term }).flatMap { module -> module.activities })
     }
 
-    fun checkForClashes(programme: Programme, year: Int, term: Int):  ArrayList<Pair<Activity, Activity>> {
+    fun getClashes(programme: Programme, year: Int, term: Int):  ArrayList<Pair<Activity, Activity>> {
         val listOfClashes = ArrayList<Pair<Activity, Activity>>()
         val listOfActivities = getActivitiesInSameProgrammeYearTerm(programme,year,term)
 
