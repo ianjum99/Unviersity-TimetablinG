@@ -1,5 +1,4 @@
-import com.beust.klaxon.*
-import com.google.gson.Gson
+import com.beust.klaxon.Klaxon
 import com.google.gson.GsonBuilder
 import kotlin.random.Random
 
@@ -10,6 +9,10 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
 
     companion object {
         fun fromJson(json: String) = DataFactory(klaxon.parseArray(json)!!)
+    }
+
+    fun getDataFactoryInstance(): DataFactory {
+        return this
     }
 
     fun createProgramme(programme: Programme) {
