@@ -1,16 +1,8 @@
-import kotlin.Pair;
-import scala.collection.JavaConverters;
-import scala.collection.convert.JavaCollectionWrappers;
-import scala.collection.immutable.Seq;
-import scala.concurrent.JavaConversions;
-import scala.jdk.javaapi.CollectionConverters;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.awt.GridLayout;
 import java.time.DayOfWeek;
 import java.util.ArrayList;
 

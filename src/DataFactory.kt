@@ -11,10 +11,6 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
         fun fromJson(json: String) = DataFactory(klaxon.parseArray(json)!!)
     }
 
-    fun getDataFactoryInstance(): DataFactory {
-        return this
-    }
-
     fun createProgramme(programme: Programme) {
         this.add(programme)
     }

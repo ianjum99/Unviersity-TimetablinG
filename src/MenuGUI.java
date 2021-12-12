@@ -67,10 +67,6 @@ public class MenuGUI{
     private static MenuGUI instance=null;
     private int posX, posY;
 
-//    DataFactory dataFactory;
-//    DataFactory df = dataFactory.getDataFactoryInstance();
-
-
     public MenuGUI(TimetableGUI gui, DataFactory df)  {
         GUICommands.GUICommands commands = new GUICommands.GUICommands(gui, df);
         init(gui, df, commands);

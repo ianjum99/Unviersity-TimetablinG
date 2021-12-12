@@ -5,8 +5,13 @@ class GUICommands (val gui: TimetableGUI, var dataFactory: DataFactory) {
 
     fun addActivityToGUI(activity: Activity) {
         for (i in 1..activity.duration) {
+            var compulsoryOrOptional = if (dataFactory.getModuleFromActivity(activity).compulsory) {
+                "Compulsory"
+            } else {
+                "Optional"
+            }
             gui.getLabelFromCoordinates(activity.day + 1, (activity.time - 8 + i - 1)).text =
-                "${dataFactory.getModuleFromActivity(activity).id}\n${dataFactory.getModuleFromActivity(activity).name}\n${activity.type}"
+                "${dataFactory.getModuleFromActivity(activity).id}\n${dataFactory.getModuleFromActivity(activity).name}\n${activity.type}\n${compulsoryOrOptional}"
         }
     }
 
