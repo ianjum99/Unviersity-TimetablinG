@@ -84,22 +84,16 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     }
 
     fun getClashes(programme: Programme, year: Int, term: Int):  ArrayList<Pair<Activity, Activity>> {
-        val listOfClashes = ArrayList<Pair<Activity, Activity>>()
         val listOfActivities = getActivitiesInSameProgrammeYearTerm(programme,year,term)
+        val listOfClashes = ArrayList<Pair<Activity, Activity>>()
 
         for (currentActivity in listOfActivities) {
-            val listCopy = listOfActivities.toMutableList()
-            listCopy.remove(currentActivity)
-
-            val clashes = ArrayList(listCopy.filter { activity -> activity.day == currentActivity.day && activity.time == currentActivity.time })
-
-            if (currentActivity.duration > 1) {
-                clashes += ArrayList(listCopy.filter { activity -> activity.day == currentActivity.day && activity.time == currentActivity.time+1 })
-            }
-
+            val clashes = ArrayList<Activity>()
+            clashes += (listOfActivities.filter { activity -> activity.day == currentActivity.day
+                    && (activity.time == currentActivity.time || (activity.time-1 == currentActivity.time && currentActivity.duration > 1))
+                    && activity != currentActivity })
 
             if (clashes.isNotEmpty()) {
-//                listOfClashes.add(Pair(currentActivity, clashes))
                 clashes.forEach { clashesWith -> listOfClashes.add(Pair(currentActivity,clashesWith))}
 
             }

@@ -55,9 +55,6 @@ public class TimetableGUI {
     }
 
     private void init(DataFactory dataFactory) {
-//        scalaClashDetection test = new scalaClashDetection(JavaConverters.asScalaIteratorConverter(dataFactory.getActivitiesInSameProgrammeYearTerm(dataFactory.get(1), 1, 1).iterator()).asScala().toSeq());
-//        System.out.println(CollectionConverters.asJava(test.getClashes()));
-        //DELETE LINES ABOVE
         ImageIcon icon = new ImageIcon("Images/clashDetection.png");
         String[] options = {"Kotlin", "Scala"};
         UIManager.put("ToolTip.background", Color.WHITE);

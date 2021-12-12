@@ -3,9 +3,9 @@ import kotlin.Pair
 class ScalaClashDetection(activities: Seq[Activity]) {
 
   def findClashes(activity: Activity) = {
-    for (duration <- 0 to activity.getDuration;
-         clashes <- activities.filter(act => act.getDay == activity.getDay && act.getTime == activity.getTime+duration && act != activity)
-    if (clashes != null)) yield clashes
+    activities.filter(act => act.getDay == activity.getDay
+      && (act.getTime == activity.getTime || act.getTime == activity.getTime-1 && act.getDuration>1)
+      && act != activity)
   }
 
   def getClashes() = {

@@ -415,6 +415,7 @@ public class MenuGUI{
                     yearOfStudy,
                     Term);
         }
+
         ScalaClashDetection scala = new ScalaClashDetection(JavaConverters.asScalaIteratorConverter(df.getActivitiesInSameProgrammeYearTerm(currentProgramme, yearOfStudy, Term).iterator()).asScala().toSeq());
         ArrayList<Pair<Activity, Activity>> clashes = new ArrayList<>(CollectionConverters.asJava(scala.getClashes()));
         clashes = df.removeDuplicateClashes(clashes);

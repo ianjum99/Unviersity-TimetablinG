@@ -1,9 +1,8 @@
 import DataFactory.Companion.fromJson
 
 fun main() {
-    val jsonString = JsonHandler().readJSONFile().toString()
-    var dataFactory = fromJson(jsonString)
+    var dataFactory = fromJson(JsonHandler().readJSONFile().toString())
     val gui = TimetableGUI(dataFactory)
-    val commands = GUICommands.GUICommands(gui, dataFactory)
+
 
 }
