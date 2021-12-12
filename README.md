@@ -12,8 +12,8 @@
  - [X] Implement OOP design - Kotlin/Java
  - [X] Persistence and Lambda (Save state functionality) - Kotlin
  - [X] Clash Detection - Kotlin
- - [ ] Clash Detection - Scala
- - [ ] Integration of all languages - Scala/Kotlin/Java
+ - [X] Clash Detection - Scala
+ - [X] Integration of all languages - Scala/Kotlin/Java
  
  ## Report
  
