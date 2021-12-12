@@ -33,7 +33,7 @@ public class TimetableGUI {
     int numberOfColumns = 6;
     private final JPanel[][] componentHolder = new JPanel[numberOfRows][numberOfColumns];
     private ImageIcon icon;
-    public Boolean chosenClashDetection = true;
+    public Boolean chosenClashDetection;
 
     public JPanel[][] getComponentHolder() {
         return componentHolder;

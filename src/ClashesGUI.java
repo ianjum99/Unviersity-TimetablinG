@@ -16,7 +16,7 @@ public class ClashesGUI {
     private JLabel clashesLabel;
     private JScrollPane clashScrollPane;
     private JPanel clashesPanel;
-    private JList clashList;
+    private JList<String> clashList;
     private JScrollPane listScrollPane;
     private JLabel clashesSubHeaderLabel;
     private JButton fixClashButton;
@@ -89,6 +89,7 @@ public class ClashesGUI {
                             df.getActivitiesInSameProgrammeYearTerm(df.getProgrammeFromActivity(currentActivity),
                                     currentModule.getYear(),
                                     currentModule.getTerm()), currentActivity);
+                    assert firstAvailableSlot != null;
                     commands.solveClash(currentActivity, firstAvailableSlot);
                     updateClashList(currentClashes(gui, df), df);
                     menuGUI.updateGUI(df, gui, commands, currentClashes(gui, df));
@@ -101,11 +102,11 @@ public class ClashesGUI {
         closeButton = new JLabel(new ImageIcon("images/close.png"));
         listScrollPane = new JScrollPane();
         listScrollPane.setBorder(null);
-        clashList = new JList();
+        clashList = new JList<>();
     }
 
     public void updateClashList(ArrayList<Pair<Activity, Activity>> currentClashes, DataFactory df) {
-        DefaultListModel<String> listModel = new DefaultListModel<String>();
+        DefaultListModel<String> listModel = new DefaultListModel<>();
         for (Pair<Activity,Activity> activity: currentClashes) {
             Activity firstActivity = activity.getFirst();
             Activity secondActivity = activity.getSecond();
