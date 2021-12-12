@@ -1,3 +1,6 @@
+import scala.collection.JavaConverters;
+import scala.collection.immutable.Seq;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -51,6 +54,9 @@ public class TimetableGUI {
     }
 
     private void init(DataFactory dataFactory) {
+        scalaClashDetection test = new scalaClashDetection(JavaConverters.asScalaIteratorConverter(dataFactory.getActivitiesInSameProgrammeYearTerm(dataFactory.get(1), 1, 1).iterator()).asScala().toSeq());
+        System.out.println(test.findClashes());
+        //DELETE LINES ABOVE
         ImageIcon icon = new ImageIcon("Images/clashDetection.png");
         String chosenClashDetection = "";
         String[] options = {"Kotlin", "Scala"};
@@ -85,8 +91,10 @@ public class TimetableGUI {
 //                JsonHandler jsonHandler = new JsonHandler();
 //                jsonHandler.saveJsonFile(df.toJson());
                 System.exit(0);
+
             }
         });
+
 
         topBar.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
@@ -179,5 +187,7 @@ public class TimetableGUI {
             componentHolder[0][column+1].add(dayLabels.get(column));
         }
     }
+
+
 }
 
