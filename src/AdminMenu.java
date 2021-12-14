@@ -308,8 +308,6 @@ public class AdminMenu {
         programmeNameField = new JTextField();
         moduleNameField = new JTextField();
         JTextField activityNameField = new JTextField();
-        //addModuleButton = new JButton();
-
         programmeNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
         moduleNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));
         activityNameField.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black));

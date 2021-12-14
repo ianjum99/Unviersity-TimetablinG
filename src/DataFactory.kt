@@ -105,7 +105,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     return clashes}
 }
 
-data class Programme (
+data class Programme  (
     val name: String,
     val type: String,
     val modules: ArrayList<Module> = ArrayList()

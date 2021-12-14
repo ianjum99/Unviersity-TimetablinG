@@ -6,7 +6,7 @@ class JsonHandler {
     fun readJSONFile(): String? {
         var jsonData: String? = null
         try {
-            val file = File("programmes.json")
+            val file = File("data.json")
             val  inputStream: InputStream = file.inputStream()
             jsonData = inputStream.bufferedReader().use{it.readText()}
         } catch (e: Exception) {
