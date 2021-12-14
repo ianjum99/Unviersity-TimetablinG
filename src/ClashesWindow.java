@@ -37,6 +37,8 @@ public class ClashesWindow {
             instance.frame.toFront();
         }
         return instance;
+
+
     }
 
     public ClashesWindow(Timetable gui, DataFactory df) {
@@ -57,7 +59,6 @@ public class ClashesWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 frame.dispose();
-                //instance = null;
             }
         });
 

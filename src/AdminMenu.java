@@ -117,6 +117,7 @@ public class AdminMenu {
                 frame.setLocation(frame.getX() + e.getX() - posX, frame.getY() + e.getY() - posY);
             }
         });
+
         topBar.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -128,7 +129,7 @@ public class AdminMenu {
         addProgrammeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (programmeNameField.getText().length() > 4) {
+                if (programmeNameField.getText().length() >= 4) {
                     String programmeType = (String) underOrPostDropdown.getSelectedItem();
                     assert programmeType != null;
                     if (programmeType.equals("Undergraduate")) {
@@ -411,9 +412,8 @@ public class AdminMenu {
         }
 
         ScalaClashDetection scala = new ScalaClashDetection(JavaConverters.asScalaIteratorConverter(df.getActivitiesInSameProgrammeYearTerm(currentProgramme, yearOfStudy, Term).iterator()).asScala().toSeq());
-        ArrayList<Pair<Activity, Activity>> clashes = new ArrayList<>(CollectionConverters.asJava(scala.getClashes()));
-        clashes = df.removeDuplicateClashes(clashes);
-        return clashes;
+        //clashes = df.removeDuplicateClashes(clashes);
+        return new ArrayList<>(CollectionConverters.asJava(scala.getClashes()));
 
     }
 
