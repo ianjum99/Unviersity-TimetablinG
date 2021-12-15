@@ -1,6 +1,6 @@
 import DataFactory.Companion.fromJson
 
 fun main() {
-    val dataFactory = fromJson(JsonHandler().readJSONFile().toString())
-    Timetable(dataFactory)
+    Timetable(fromJson(JsonHandler().readJSONFile().toString()))
+    //The line above calls the class Timetable so the GUI opens.
 }

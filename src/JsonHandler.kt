@@ -16,9 +16,15 @@ class JsonHandler {
         return jsonData
     }
 
+    //The function above will open the file "data.json" and it will parse into a string, which is the data format
+    //that "fromJson" in DataFactory uses to turn it into data classes.
+
     fun saveJSONFile(JsonData : String) {
-        File("programmes.json").bufferedWriter().use { out ->
+        File("data.json").bufferedWriter().use { out ->
             out.write(JsonData)
         }
     }
+
+    //This function takes the output of the method "toJson" in DataFactory, which is a string, and saves it to
+    //"data.json", achieving persistence.
 }
