@@ -16,7 +16,7 @@ class JsonHandler {
         return jsonData
     }
 
-    fun saveJsonFile(JsonData : String) {
+    fun saveJSONFile(JsonData : String) {
         File("programmes.json").bufferedWriter().use { out ->
             out.write(JsonData)
         }

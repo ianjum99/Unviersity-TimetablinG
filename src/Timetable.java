@@ -77,7 +77,7 @@ public class Timetable {
             @Override
             public void mouseClicked(MouseEvent e) {
 //                JsonHandler jsonHandler = new JsonHandler();
-//                jsonHandler.saveJsonFile(df.toJson());
+//                jsonHandler.saveJsonFile(dataFactory.toJson());
                 System.exit(0);
 
             }

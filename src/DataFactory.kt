@@ -105,13 +105,13 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
     return clashes}
 }
 
-data class Programme  (
+class Programme  (
     val name: String,
     val type: String,
     val modules: ArrayList<Module> = ArrayList()
 )
 
-data class Module(
+class Module(
     var id: String,
     val year: Int,
     val name: String,
@@ -120,7 +120,7 @@ data class Module(
     val activities: ArrayList<Activity> = ArrayList(),
 )
 
-data class Activity(
+class Activity(
     val type: String,
     var day: Int,
     var time: Int,
