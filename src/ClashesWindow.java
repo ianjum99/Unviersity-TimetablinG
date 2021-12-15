@@ -37,13 +37,15 @@ public class ClashesWindow {
             instance.frame.toFront();
         }
         return instance;
-
-
     }
+    //This first method is used by other classes to check whether an instance of ClashesWindow already exists
+    //it will also sometimes open but stay hidden so it can fill the list with clashes but it will not appear
+    //until the user has pressed the clashes button on the timetable
 
     public ClashesWindow(Timetable gui, DataFactory df) {
         init(gui, df);
     }
+    //The constructor for the class which passes gui and df to the init method
 
     private void init(Timetable gui, DataFactory df) {
         frame = new JFrame();
@@ -54,6 +56,7 @@ public class ClashesWindow {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+        //This creates the jframe and adds the content pane plus a few other customisations
 
         closeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -75,6 +78,7 @@ public class ClashesWindow {
                 posY = e.getY();
             }
         });
+        //The 3 listeners above are for the top bar of the window which allow you to drag or close the window
 
         fixClashButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -97,6 +101,10 @@ public class ClashesWindow {
                 }
             }
         });
+        //This button is used to fix clashes, it calls the currentClashes method to get an arraylist of clashes then
+        //it calls the firstAvailableSlot method from GUICommands to find an available timeslot to fix the clash
+        //once this is found it will then solve the clash using solveClash method from GUICommands
+        //then update the clash list and timetable gui
     }
 
     private void createUIComponents() {
@@ -105,6 +113,7 @@ public class ClashesWindow {
         listScrollPane.setBorder(null);
         clashList = new JList<>();
     }
+    //Creates a close button with an icon, a scroll pane and a list
 
     public void updateClashList(ArrayList<Pair<Activity, Activity>> currentClashes, DataFactory df) {
         DefaultListModel<String> listModel = new DefaultListModel<>();
@@ -128,6 +137,10 @@ public class ClashesWindow {
         }
         clashList.setModel(listModel);
     }
+    //The updateClashList is used for updating the clash list with details of the clash, it gets a list of the clashes
+    //and creates a new listModel then it adds pairs but first they are formatted so they are more readable by a user,
+    //these are added one by one until there are no more clashes to add then the entire listModel is added to
+    //the clashList JList
 
     private String activityDayConverter(Integer day) {
         String activityDay = "";
@@ -140,10 +153,12 @@ public class ClashesWindow {
         }
         return activityDay;
     }
+    //A simple method used to convert numbers to days as the data structure in data.json stores numbers instead of
+    //name of days
 
     private ArrayList<Pair<Activity, Activity>> currentClashes (Timetable gui, DataFactory df) {
         AdminMenu adminMenu = AdminMenu.getInstance(gui, df);
         return adminMenu.getCurrentClashes(df, gui);
     }
-
+    //This calls the getter from AdminMenu to fetch the current clashes in the timetable
 }

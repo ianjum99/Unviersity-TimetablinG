@@ -132,7 +132,7 @@ class DataFactory(elements: Collection<Programme>) : ArrayList<Programme>(elemen
             }
             i+=1
         }
-    return clashes}
+        return clashes}
 
     //The functions above are in charge of detecting and returning all the clashes present in a specific programme,
     //year, and term. getClashes works by going through the list of activities and for each of them it filters out
