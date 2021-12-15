@@ -65,11 +65,16 @@ class GUICommands (val gui: Timetable, var dataFactory: DataFactory) {
     }
 
     //This function is called when the user wants to fix a clash in the clashes window. This function does not used nested
-    //loops, but recursion, as it calls itself. This method will check
+    //loops, but recursion, as it calls itself. This method will check that none of the activities takes place before
+    //the activity passed to the function, and if that is the case it means that there is a free slot available to move
+    //the activity to, avoiding the clash.
 
 
     fun solveClash(activity: Activity, pair: Pair<Int, Int>) {
         dataFactory.setActivityDayAndHour(activity,pair)
         addActivityToGUI(activity)
     }
+
+    //This function takes an activity and what gets returned by findFirstAvailableSlot as parameters, and it will
+    //simply change the activity's day and time and add it to the guy, solving the clash.
 }
