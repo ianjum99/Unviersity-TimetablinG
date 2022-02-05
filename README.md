@@ -14,3 +14,8 @@ This application is based on a university timetable where an admin can schedule 
  - [X] Clash Detection - Kotlin
  - [X] Clash Detection - Scala
  - [X] Integration of all languages - Scala/Kotlin/Java
+
+## Prerequisites
+* Java
+* Kotlin
+* Scala
