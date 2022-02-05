@@ -1,5 +1,5 @@
-# COMP-1815
- This is a repo with all work regarding COMP-1815 JVM programming languages
+# University Timetable
+ This application is based on a university timetable where an admin can schedule programmes, modules and activities.
  
  ## Group Members
  - Alfie Murphy
