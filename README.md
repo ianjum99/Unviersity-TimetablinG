@@ -1,5 +1,5 @@
 # University Timetable
- This application is based on a university timetable where an admin can schedule programmes, modules and activities.
+This application is based on a university timetable where an admin can schedule programmes, modules and activities. There is also a clash detection feature which will alert the user if any activties are overlapping and it will provide a quick fix solution.
  
  ## Group Members
  - Alfie Murphy
