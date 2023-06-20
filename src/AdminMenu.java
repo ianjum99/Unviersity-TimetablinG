@@ -431,7 +431,7 @@ public class AdminMenu {
     //The updateGUI method is responsible for updating the timetable with activities, it calls a method in GUICommands
     //to populate the gui as well as highlighting any clashes which are detected
 
-    private ArrayList<Pair<Activity, Activity>> setCurrentClashes (DataFactory df, Timetable gui) {
+    private ArrayList setCurrentClashes (DataFactory df, Timetable gui) {
         int yearOfStudy = (Integer) Objects.requireNonNull(viewYearOfStudyDropdown.getSelectedItem());
         int Term = (Integer) Objects.requireNonNull(viewTermDropdown.getSelectedItem());
         Programme currentProgramme = getProgrammeInstance(df, viewProgrammeDropdown);
@@ -441,7 +441,7 @@ public class AdminMenu {
                     Term);
         }
         ScalaClashDetection scala = new ScalaClashDetection(JavaConverters.asScalaIteratorConverter(df.getActivitiesInSameProgrammeYearTerm(currentProgramme, yearOfStudy, Term).iterator()).asScala().toSeq());
-        return new ArrayList<>(CollectionConverters.asJava(scala.getClashes()));
+        return scala.getClashes();
     }
     //This method is used to get the current clashes from the current timetable, first it checks the chosenClashDetection
     //variable from the first dialog and then it uses the chosen language for the clash detection, returning an
