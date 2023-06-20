@@ -19,6 +19,3 @@ This application is based on a university timetable where an admin can schedule 
 * Java
 * Kotlin
 * Scala
-
-
-## Deez nuts lmao
